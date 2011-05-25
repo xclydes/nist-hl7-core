@@ -1,0 +1,2400 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SequenceNumbers xmlns="http://www.nist.gov/healthcare/generation/message">
+	<Segment Name="ABS">
+		<Field Name="Discharge Care Provider" Position="1"/>
+		<Field Name="Transfer Medical Service Code" Position="2"/>
+		<Field Name="Severity of Illness Code" Position="3"/>
+		<Field Name="Date/Time of Attestation" Position="4"/>
+		<Field Name="Attested By" Position="5"/>
+		<Field Name="Triage Code" Position="6"/>
+		<Field Name="Abstract Completion Date/Time" Position="7"/>
+		<Field Name="Abstracted By" Position="8"/>
+		<Field Name="Case Category Code" Position="9"/>
+		<Field Name="Caesarian Section Indicator" Position="10"/>
+		<Field Name="Gestation Category Code" Position="11"/>
+		<Field Name="Gestation Period - Weeks" Position="12"/>
+		<Field Name="Newborn Code" Position="13"/>
+		<Field Name="Stillborn Indicator" Position="14"/>
+	</Segment>
+	<Segment Name="ACC">
+		<Field Name="Accident Date/Time" Position="1"/>
+		<Field Name="Accident Code" Position="2"/>
+		<Field Name="Accident Location" Position="3"/>
+		<Field Name="Auto Accident State" Position="4"/>
+		<Field Name="Accident Job Related Indicator" Position="5"/>
+		<Field Name="Accident Death Indicator" Position="6"/>
+		<Field Name="Entered By" Position="7"/>
+		<Field Name="Accident Description" Position="8"/>
+		<Field Name="Brought In By" Position="9"/>
+		<Field Name="Police Notified Indicator" Position="10"/>
+		<Field Name="Accident Address" Position="11"/>
+	</Segment>
+	<Segment Name="ADD">
+		<Field Name="Addendum Continuation Pointer" Position="1"/>
+	</Segment>
+	<Segment Name="AFF">
+		<Field Name="Set ID _ AFF" Position="1"/>
+		<Field Name="Professional Organization" Position="2"/>
+		<Field Name="Professional Organization Address" Position="3"/>
+		<Field Name="Professional Organization Affiliation Date Range" Position="4"/>
+		<Field Name="Professional Affiliation Additional Information" Position="5"/>
+	</Segment>
+	<Segment Name="AIG">
+		<Field Name="Set ID - AIG" Position="1"/>
+		<Field Name="Segment Action Code" Position="2"/>
+		<Field Name="Resource ID" Position="3"/>
+		<Field Name="Resource Type" Position="4"/>
+		<Field Name="Resource Group" Position="5"/>
+		<Field Name="Resource Quantity" Position="6"/>
+		<Field Name="Resource Quantity Units" Position="7"/>
+		<Field Name="Start Date/Time" Position="8"/>
+		<Field Name="Start Date/Time Offset" Position="9"/>
+		<Field Name="Start Date/Time Offset Units" Position="10"/>
+		<Field Name="Duration" Position="11"/>
+		<Field Name="Duration Units" Position="12"/>
+		<Field Name="Allow Substitution Code" Position="13"/>
+		<Field Name="Filler Status Code" Position="14"/>
+	</Segment>
+	<Segment Name="AIL">
+		<Field Name="Set ID - AIL" Position="1"/>
+		<Field Name="Segment Action Code" Position="2"/>
+		<Field Name="Location Resource ID" Position="3"/>
+		<Field Name="Location Type-AIL" Position="4"/>
+		<Field Name="Location Group" Position="5"/>
+		<Field Name="Start Date/Time" Position="6"/>
+		<Field Name="Start Date/Time Offset" Position="7"/>
+		<Field Name="Start Date/Time Offset Units" Position="8"/>
+		<Field Name="Duration" Position="9"/>
+		<Field Name="Duration Units" Position="10"/>
+		<Field Name="Allow Substitution Code" Position="11"/>
+		<Field Name="Filler Status Code" Position="12"/>
+	</Segment>
+	<Segment Name="AIP">
+		<Field Name="Set ID - AIP" Position="1"/>
+		<Field Name="Segment Action Code" Position="2"/>
+		<Field Name="Personnel Resource ID" Position="3"/>
+		<Field Name="Resource Type" Position="4"/>
+		<Field Name="Resource Group" Position="5"/>
+		<Field Name="Start Date/Time" Position="6"/>
+		<Field Name="Start Date/Time Offset" Position="7"/>
+		<Field Name="Start Date/Time Offset Units" Position="8"/>
+		<Field Name="Duration" Position="9"/>
+		<Field Name="Duration Units" Position="10"/>
+		<Field Name="Allow Substitution Code" Position="11"/>
+		<Field Name="Filler Status Code" Position="12"/>
+	</Segment>
+	<Segment Name="AIS">
+		<Field Name="Set ID - AIS" Position="1"/>
+		<Field Name="Segment Action Code" Position="2"/>
+		<Field Name="Universal Service Identifier" Position="3"/>
+		<Field Name="Start Date/Time" Position="4"/>
+		<Field Name="Start Date/Time Offset" Position="5"/>
+		<Field Name="Start Date/Time Offset Units" Position="6"/>
+		<Field Name="Duration" Position="7"/>
+		<Field Name="Duration Units" Position="8"/>
+		<Field Name="Allow Substitution Code" Position="9"/>
+		<Field Name="Filler Status Code" Position="10"/>
+		<Field Name="Placer Supplemental Service Information" Position="11"/>
+		<Field Name="Filler Supplemental Service Information" Position="12"/>
+	</Segment>
+	<Segment Name="AL1">
+		<Field Name="Set ID - AL1" Position="1"/>
+		<Field Name="Allergen Type Code" Position="2"/>
+		<Field Name="Allergen Code/Mnemonic/Description" Position="3"/>
+		<Field Name="Allergy Severity Code" Position="4"/>
+		<Field Name="Allergy Reaction Code" Position="5"/>
+		<Field Name="Identification Date" Position="6"/>
+	</Segment>
+	<Segment Name="APR">
+		<Field Name="Time Selection Criteria" Position="1"/>
+		<Field Name="Resource Selection Criteria" Position="2"/>
+		<Field Name="Location Selection Criteria" Position="3"/>
+		<Field Name="Slot Spacing Criteria" Position="4"/>
+		<Field Name="Filler Override Criteria" Position="5"/>
+	</Segment>
+	<Segment Name="ARQ">
+		<Field Name="Placer Appointment ID" Position="1"/>
+		<Field Name="Filler Appointment ID" Position="2"/>
+		<Field Name="Occurrence Number" Position="3"/>
+		<Field Name="Placer Group Number" Position="4"/>
+		<Field Name="Schedule ID" Position="5"/>
+		<Field Name="Request Event Reason" Position="6"/>
+		<Field Name="Appointment Reason" Position="7"/>
+		<Field Name="Appointment Type" Position="8"/>
+		<Field Name="Appointment Duration" Position="9"/>
+		<Field Name="Appointment Duration Units" Position="10"/>
+		<Field Name="Requested Start Date/Time Range" Position="11"/>
+		<Field Name="Priority-ARQ" Position="12"/>
+		<Field Name="Repeating Interval" Position="13"/>
+		<Field Name="Repeating Interval Duration" Position="14"/>
+		<Field Name="Placer Contact Person" Position="15"/>
+		<Field Name="Placer Contact Phone Number" Position="16"/>
+		<Field Name="Placer Contact Address" Position="17"/>
+		<Field Name="Placer Contact Location" Position="18"/>
+		<Field Name="Entered By Person" Position="19"/>
+		<Field Name="Entered By Phone Number" Position="20"/>
+		<Field Name="Entered By Location" Position="21"/>
+		<Field Name="Parent Placer Appointment ID" Position="22"/>
+		<Field Name="Parent Filler Appointment ID" Position="23"/>
+		<Field Name="Placer Order Number" Position="24"/>
+		<Field Name="Filler Order Number" Position="25"/>
+	</Segment>
+	<Segment Name="AUT">
+		<Field Name="Authorizing Payor, Plan ID" Position="1"/>
+		<Field Name="Authorizing Payor, Company ID" Position="2"/>
+		<Field Name="Authorizing Payor, Company Name" Position="3"/>
+		<Field Name="Authorization Effective Date" Position="4"/>
+		<Field Name="Authorization Expiration Date" Position="5"/>
+		<Field Name="Authorization Identifier" Position="6"/>
+		<Field Name="Reimbursement Limit" Position="7"/>
+		<Field Name="Requested Number of Treatments" Position="8"/>
+		<Field Name="Authorized Number of Treatments" Position="9"/>
+		<Field Name="Process Date" Position="10"/>
+	</Segment>
+	<Segment Name="BHS">
+		<Field Name="Batch Field Separator" Position="1"/>
+		<Field Name="Batch Encoding Characters" Position="2"/>
+		<Field Name="Batch Sending Application" Position="3"/>
+		<Field Name="Batch Sending Facility" Position="4"/>
+		<Field Name="Batch Receiving Application" Position="5"/>
+		<Field Name="Batch Receiving Facility" Position="6"/>
+		<Field Name="Batch Creation Date/Time" Position="7"/>
+		<Field Name="Batch Security" Position="8"/>
+		<Field Name="Batch Name/ID/Type" Position="9"/>
+		<Field Name="Batch Comment" Position="10"/>
+		<Field Name="Batch Control ID" Position="11"/>
+		<Field Name="Reference Batch Control ID" Position="12"/>
+	</Segment>
+	<Segment Name="BLC">
+		<Field Name="Blood Product Code" Position="1"/>
+		<Field Name="Blood Amount" Position="2"/>
+	</Segment>
+	<Segment Name="BLG">
+		<Field Name="When to Charge" Position="1"/>
+		<Field Name="Charge Type" Position="2"/>
+		<Field Name="Account ID" Position="3"/>
+		<Field Name="Charge Type Reason" Position="4"/>
+	</Segment>
+	<Segment Name="BPO">
+		<Field Name="Set ID _ BPO" Position="1"/>
+		<Field Name="BP Universal Service ID" Position="2"/>
+		<Field Name="BP  Processing Requirements" Position="3"/>
+		<Field Name="BP Quantity" Position="4"/>
+		<Field Name="BP Amount" Position="5"/>
+		<Field Name="BP Units" Position="6"/>
+		<Field Name="BP Intended Use Date/Time" Position="7"/>
+		<Field Name="BP Intended Dispense From Location" Position="8"/>
+		<Field Name="BP Intended Dispense From Address" Position="9"/>
+		<Field Name="BP Requested Dispense Date/Time" Position="10"/>
+		<Field Name="BP Requested Dispense To Location" Position="11"/>
+		<Field Name="BP Requested Dispense To Address" Position="12"/>
+		<Field Name="BP Indication for Use" Position="13"/>
+		<Field Name="BP Informed Consent Indicator" Position="14"/>
+	</Segment>
+	<Segment Name="BPX">
+		<Field Name="Set ID _ BPX" Position="1"/>
+		<Field Name="BP Dispense Status" Position="2"/>
+		<Field Name="BP Status" Position="3"/>
+		<Field Name="BP Date/Time of Status" Position="4"/>
+		<Field Name="BC Donation ID" Position="5"/>
+		<Field Name="BC Component" Position="6"/>
+		<Field Name="BC Donation Type / Intended Use" Position="7"/>
+		<Field Name="CP Commercial Product" Position="8"/>
+		<Field Name="CP Manufacturer" Position="9"/>
+		<Field Name="CP Lot Number" Position="10"/>
+		<Field Name="BP Blood Group" Position="11"/>
+		<Field Name="BC Special Testing" Position="12"/>
+		<Field Name="BP Expiration Date/Time" Position="13"/>
+		<Field Name="BP Quantity" Position="14"/>
+		<Field Name="BP Amount" Position="15"/>
+		<Field Name="BP Units" Position="16"/>
+		<Field Name="BP Unique ID" Position="17"/>
+		<Field Name="BP Actual Dispensed To Location" Position="18"/>
+		<Field Name="BP Actual Dispensed To Address" Position="19"/>
+		<Field Name="BP Dispensed to Receiver" Position="20"/>
+		<Field Name="BP Dispensing Individual" Position="21"/>
+	</Segment>
+	<Segment Name="BTS">
+		<Field Name="Batch Message Count" Position="1"/>
+		<Field Name="Batch Comment" Position="2"/>
+		<Field Name="Batch Totals" Position="3"/>
+	</Segment>
+	<Segment Name="BTX">
+		<Field Name="Set ID _ BTX" Position="1"/>
+		<Field Name="BC Donation ID" Position="2"/>
+		<Field Name="BC Component" Position="3"/>
+		<Field Name="BC Blood Group" Position="4"/>
+		<Field Name="CP Commercial Product" Position="5"/>
+		<Field Name="CP Manufacturer" Position="6"/>
+		<Field Name="CP Lot Number" Position="7"/>
+		<Field Name="BP Quantity" Position="8"/>
+		<Field Name="BP Amount" Position="9"/>
+		<Field Name="BP Units" Position="10"/>
+		<Field Name="BP Transfusion/Disposition Status" Position="11"/>
+		<Field Name="BP Message Status" Position="12"/>
+		<Field Name="BP Date/Time of Status" Position="13"/>
+		<Field Name="BP Administrator" Position="14"/>
+		<Field Name="BP Verifier" Position="15"/>
+		<Field Name="BP Transfusion Start Date/Time of Status" Position="16"/>
+		<Field Name="BP Transfusion End Date/Time of Status" Position="17"/>
+		<Field Name="BP Adverse Reaction Type" Position="18"/>
+		<Field Name="BP Transfusion Interrupted Reason" Position="19"/>
+	</Segment>
+	<Segment Name="CDM">
+		<Field Name="Primary Key Value - CDM" Position="1"/>
+		<Field Name="Charge Code Alias" Position="2"/>
+		<Field Name="Charge Description Short" Position="3"/>
+		<Field Name="Charge Description Long" Position="4"/>
+		<Field Name="Description Override Indicator" Position="5"/>
+		<Field Name="Exploding Charges" Position="6"/>
+		<Field Name="Procedure Code" Position="7"/>
+		<Field Name="Active/Inactive Flag" Position="8"/>
+		<Field Name="Inventory Number" Position="9"/>
+		<Field Name="Resource Load" Position="10"/>
+		<Field Name="Contract Number" Position="11"/>
+		<Field Name="Contract Organization" Position="12"/>
+		<Field Name="Room Fee Indicator" Position="13"/>
+	</Segment>
+	<Segment Name="CER">
+		<Field Name="Set ID _ CER" Position="1"/>
+		<Field Name="Serial Number" Position="2"/>
+		<Field Name="Version" Position="3"/>
+		<Field Name="Granting Authority" Position="4"/>
+		<Field Name="Issuing Authority" Position="5"/>
+		<Field Name="Signature of Issuing Authority" Position="6"/>
+		<Field Name="Granting Country" Position="7"/>
+		<Field Name="Granting State/Province" Position="8"/>
+		<Field Name="Granting County/Parish" Position="9"/>
+		<Field Name="Certificate Type" Position="10"/>
+		<Field Name="Certificate Domain" Position="11"/>
+		<Field Name="Subject ID" Position="12"/>
+		<Field Name="Subject Name" Position="13"/>
+		<Field Name="Subject Directory Attribute Extension (Health Professional Data)" Position="14"/>
+		<Field Name="Subject Public Key Info" Position="15"/>
+		<Field Name="Authority Key Identifier" Position="16"/>
+		<Field Name="Basic Constraint" Position="17"/>
+		<Field Name="CRL Distribution Point" Position="18"/>
+		<Field Name="Jurisdiction Country" Position="19"/>
+		<Field Name="Jurisdiction State/Province" Position="20"/>
+		<Field Name="Jurisdiction County/Parish" Position="21"/>
+		<Field Name="Jurisdiction Breadth" Position="22"/>
+		<Field Name="Granting Date" Position="23"/>
+		<Field Name="Issuing Date" Position="24"/>
+		<Field Name="Activation Date" Position="25"/>
+		<Field Name="Inactivation Date" Position="26"/>
+		<Field Name="Expiration Date" Position="27"/>
+		<Field Name="Renewal Date" Position="28"/>
+		<Field Name="Revocation Date" Position="29"/>
+		<Field Name="Revocation Reason Code" Position="30"/>
+		<Field Name="Certificate Status" Position="31"/>
+	</Segment>
+	<Segment Name="CM0">
+		<Field Name="Set ID - CM0" Position="1"/>
+		<Field Name="Sponsor Study ID" Position="2"/>
+		<Field Name="Alternate Study ID" Position="3"/>
+		<Field Name="Title of Study" Position="4"/>
+		<Field Name="Chairman of Study" Position="5"/>
+		<Field Name="Last IRB Approval Date" Position="6"/>
+		<Field Name="Total Accrual to Date" Position="7"/>
+		<Field Name="Last Accrual Date" Position="8"/>
+		<Field Name="Contact for Study" Position="9"/>
+		<Field Name="Contact's Telephone Number" Position="10"/>
+		<Field Name="Contact's Address" Position="11"/>
+	</Segment>
+	<Segment Name="CM1">
+		<Field Name="Set ID - CM1" Position="1"/>
+		<Field Name="Study Phase Identifier" Position="2"/>
+		<Field Name="Description of Study Phase" Position="3"/>
+	</Segment>
+	<Segment Name="CM2">
+		<Field Name="Set ID- CM2" Position="1"/>
+		<Field Name="Scheduled Time Point" Position="2"/>
+		<Field Name="Description of Time Point" Position="3"/>
+		<Field Name="Events Scheduled This Time Point" Position="4"/>
+	</Segment>
+	<Segment Name="CNS">
+		<Field Name="Starting Notification Reference Number" Position="1"/>
+		<Field Name="Ending Notification Reference Number" Position="2"/>
+		<Field Name="Starting Notification Date/Time" Position="3"/>
+		<Field Name="Ending Notification Date/Time" Position="4"/>
+		<Field Name="Starting Notification Code" Position="5"/>
+		<Field Name="Ending Notification Code" Position="6"/>
+	</Segment>
+	<Segment Name="CON">
+		<Field Name="Set ID - CON" Position="1"/>
+		<Field Name="Consent Type" Position="2"/>
+		<Field Name="Consent Form ID" Position="3"/>
+		<Field Name="Consent Form Number" Position="4"/>
+		<Field Name="Consent Text" Position="5"/>
+		<Field Name="Subject-specific Consent Text" Position="6"/>
+		<Field Name="Consent Background" Position="7"/>
+		<Field Name="Subject-specific Consent Background" Position="8"/>
+		<Field Name="Consenter-imposed limitations" Position="9"/>
+		<Field Name="Consent Mode" Position="10"/>
+		<Field Name="Consent Status" Position="11"/>
+		<Field Name="Consent Discussion Date/Time" Position="12"/>
+		<Field Name="Consent Decision Date/Time" Position="13"/>
+		<Field Name="Consent Effective Date/Time" Position="14"/>
+		<Field Name="Consent End Date/Time" Position="15"/>
+		<Field Name="Subject Competence Indicator" Position="16"/>
+		<Field Name="Translator Assistance Indicator" Position="17"/>
+		<Field Name="Language Translated To" Position="18"/>
+		<Field Name="Informational Material Supplied Indicator" Position="19"/>
+		<Field Name="Consent Bypass Reason" Position="20"/>
+		<Field Name="Consent Disclosure Level" Position="21"/>
+		<Field Name="Consent Non-disclosure Reason" Position="22"/>
+		<Field Name="Non-subject Consenter Reason" Position="23"/>
+		<Field Name="Consenter ID" Position="24"/>
+		<Field Name="Relationship to Subject Table" Position="25"/>
+	</Segment>
+	<Segment Name="CSP">
+		<Field Name="Study Phase Identifier" Position="1"/>
+		<Field Name="Date/time Study Phase Began" Position="2"/>
+		<Field Name="Date/time Study Phase Ended" Position="3"/>
+		<Field Name="Study Phase Evaluability" Position="4"/>
+	</Segment>
+	<Segment Name="CSR">
+		<Field Name="Sponsor Study ID" Position="1"/>
+		<Field Name="Alternate Study ID" Position="2"/>
+		<Field Name="Institution Registering the Patient" Position="3"/>
+		<Field Name="Sponsor Patient ID" Position="4"/>
+		<Field Name="Alternate Patient ID - CSR" Position="5"/>
+		<Field Name="Date/Time Of Patient Study Registration" Position="6"/>
+		<Field Name="Person Performing Study Registration" Position="7"/>
+		<Field Name="Study Authorizing Provider" Position="8"/>
+		<Field Name="Date/time Patient Study Consent Signed" Position="9"/>
+		<Field Name="Patient Study Eligibility Status" Position="10"/>
+		<Field Name="Study Randomization Date/time" Position="11"/>
+		<Field Name="Randomized Study Arm" Position="12"/>
+		<Field Name="Stratum for Study Randomization" Position="13"/>
+		<Field Name="Patient Evaluability Status" Position="14"/>
+		<Field Name="Date/time Ended Study" Position="15"/>
+		<Field Name="Reason Ended Study" Position="16"/>
+	</Segment>
+	<Segment Name="CSS">
+		<Field Name="Study Scheduled Time Point" Position="1"/>
+		<Field Name="Study Scheduled Patient Time Point" Position="2"/>
+		<Field Name="Study Quality Control Codes" Position="3"/>
+	</Segment>
+	<Segment Name="CTD">
+		<Field Name="Contact Role" Position="1"/>
+		<Field Name="Contact Name" Position="2"/>
+		<Field Name="Contact Address" Position="3"/>
+		<Field Name="Contact Location" Position="4"/>
+		<Field Name="Contact Communication Information" Position="5"/>
+		<Field Name="Preferred Method of Contact" Position="6"/>
+		<Field Name="Contact Identifiers" Position="7"/>
+	</Segment>
+	<Segment Name="CTI">
+		<Field Name="Sponsor Study ID" Position="1"/>
+		<Field Name="Study Phase Identifier" Position="2"/>
+		<Field Name="Study Scheduled Time Point" Position="3"/>
+	</Segment>
+	<Segment Name="DB1">
+		<Field Name="Set ID - DB1" Position="1"/>
+		<Field Name="Disabled Person Code" Position="2"/>
+		<Field Name="Disabled Person Identifier" Position="3"/>
+		<Field Name="Disabled Indicator" Position="4"/>
+		<Field Name="Disability Start Date" Position="5"/>
+		<Field Name="Disability End Date" Position="6"/>
+		<Field Name="Disability Return to Work Date" Position="7"/>
+		<Field Name="Disability Unable to Work Date" Position="8"/>
+	</Segment>
+	<Segment Name="DG1">
+		<Field Name="Set ID - DG1" Position="1"/>
+		<Field Name="Diagnosis Coding Method" Position="2"/>
+		<Field Name="Diagnosis Code - DG1" Position="3"/>
+		<Field Name="Diagnosis Description" Position="4"/>
+		<Field Name="Diagnosis Date/Time" Position="5"/>
+		<Field Name="Diagnosis Type" Position="6"/>
+		<Field Name="Major Diagnostic Category" Position="7"/>
+		<Field Name="Diagnostic Related Group" Position="8"/>
+		<Field Name="DRG Approval Indicator" Position="9"/>
+		<Field Name="DRG Grouper Review Code" Position="10"/>
+		<Field Name="Outlier Type" Position="11"/>
+		<Field Name="Outlier Days" Position="12"/>
+		<Field Name="Outlier Cost" Position="13"/>
+		<Field Name="Grouper Version And Type" Position="14"/>
+		<Field Name="Diagnosis Priority" Position="15"/>
+		<Field Name="Diagnosing Clinician" Position="16"/>
+		<Field Name="Diagnosis Classification" Position="17"/>
+		<Field Name="Confidential Indicator" Position="18"/>
+		<Field Name="Attestation Date/Time" Position="19"/>
+		<Field Name="Diagnosis Identifier" Position="20"/>
+		<Field Name="Diagnosis Action Code" Position="21"/>
+	</Segment>
+	<Segment Name="DRG">
+		<Field Name="Diagnostic Related Group" Position="1"/>
+		<Field Name="DRG Assigned Date/Time" Position="2"/>
+		<Field Name="DRG Approval Indicator" Position="3"/>
+		<Field Name="DRG Grouper Review Code" Position="4"/>
+		<Field Name="Outlier Type" Position="5"/>
+		<Field Name="Outlier Days" Position="6"/>
+		<Field Name="Outlier Cost" Position="7"/>
+		<Field Name="DRG Payor" Position="8"/>
+		<Field Name="Outlier Reimbursement" Position="9"/>
+		<Field Name="Confidential Indicator" Position="10"/>
+		<Field Name="DRG Transfer Type" Position="11"/>
+	</Segment>
+	<Segment Name="DSC">
+		<Field Name="Continuation Pointer" Position="1"/>
+		<Field Name="Continuation Style" Position="2"/>
+	</Segment>
+	<Segment Name="DSP">
+		<Field Name="Set ID - DSP" Position="1"/>
+		<Field Name="Display Level" Position="2"/>
+		<Field Name="Data Line" Position="3"/>
+		<Field Name="Logical Break Point" Position="4"/>
+		<Field Name="Result ID" Position="5"/>
+	</Segment>
+	<Segment Name="ECD">
+		<Field Name="Reference Command Number" Position="1"/>
+		<Field Name="Remote Control Command" Position="2"/>
+		<Field Name="Response Required" Position="3"/>
+		<Field Name="Requested Completion Time" Position="4"/>
+		<Field Name="Parameters" Position="5"/>
+	</Segment>
+	<Segment Name="ECR">
+		<Field Name="Command Response" Position="1"/>
+		<Field Name="Date/Time Completed" Position="2"/>
+		<Field Name="Command Response Parameters" Position="3"/>
+	</Segment>
+	<Segment Name="EDU">
+		<Field Name="Set ID _ EDU" Position="1"/>
+		<Field Name="Academic Degree" Position="2"/>
+		<Field Name="Academic Degree Program Date Range" Position="3"/>
+		<Field Name="Academic Degree Program Participation Date Range" Position="4"/>
+		<Field Name="Academic Degree Granted Date" Position="5"/>
+		<Field Name="School" Position="6"/>
+		<Field Name="School Type Code" Position="7"/>
+		<Field Name="School Address" Position="8"/>
+		<Field Name="Major Field of Study" Position="9"/>
+	</Segment>
+	<Segment Name="EQL">
+		<Field Name="Query Tag" Position="1"/>
+		<Field Name="Query/Response Format Code" Position="2"/>
+		<Field Name="EQL Query Name" Position="3"/>
+		<Field Name="EQL Query Statement" Position="4"/>
+	</Segment>
+	<Segment Name="EQP">
+		<Field Name="Event type" Position="1"/>
+		<Field Name="File Name" Position="2"/>
+		<Field Name="Start Date/Time" Position="3"/>
+		<Field Name="End Date/Time" Position="4"/>
+		<Field Name="Transaction Data" Position="5"/>
+	</Segment>
+	<Segment Name="EQU">
+		<Field Name="Equipment Instance Identifier" Position="1"/>
+		<Field Name="Event Date/Time" Position="2"/>
+		<Field Name="Equipment State" Position="3"/>
+		<Field Name="Local/Remote Control State" Position="4"/>
+		<Field Name="Alert Level" Position="5"/>
+	</Segment>
+	<Segment Name="ERQ">
+		<Field Name="Query Tag" Position="1"/>
+		<Field Name="Event Identifier" Position="2"/>
+		<Field Name="Input Parameter List" Position="3"/>
+	</Segment>
+	<Segment Name="ERR">
+		<Field Name="Error Code and Location" Position="1"/>
+		<Field Name="Error Location" Position="2"/>
+		<Field Name="HL7 Error Code" Position="3"/>
+		<Field Name="Severity" Position="4"/>
+		<Field Name="Application Error Code" Position="5"/>
+		<Field Name="Application Error Parameter" Position="6"/>
+		<Field Name="Diagnostic Information" Position="7"/>
+		<Field Name="User Message" Position="8"/>
+		<Field Name="Inform Person Indicator" Position="9"/>
+		<Field Name="Override Type" Position="10"/>
+		<Field Name="Override Reason Code" Position="11"/>
+		<Field Name="Help Desk Contact Point" Position="12"/>
+	</Segment>
+	<Segment Name="EVN">
+		<Field Name="Event Type Code" Position="1"/>
+		<Field Name="Recorded Date/Time" Position="2"/>
+		<Field Name="Date/Time Planned Event" Position="3"/>
+		<Field Name="Event Reason Code" Position="4"/>
+		<Field Name="Operator ID" Position="5"/>
+		<Field Name="Event Occurred" Position="6"/>
+		<Field Name="Event Facility" Position="7"/>
+	</Segment>
+	<Segment Name="FAC">
+		<Field Name="Facility ID-FAC" Position="1"/>
+		<Field Name="Facility Type" Position="2"/>
+		<Field Name="Facility Address" Position="3"/>
+		<Field Name="Facility Telecommunication" Position="4"/>
+		<Field Name="Contact Person" Position="5"/>
+		<Field Name="Contact Title" Position="6"/>
+		<Field Name="Contact Address" Position="7"/>
+		<Field Name="Contact Telecommunication" Position="8"/>
+		<Field Name="Signature Authority" Position="9"/>
+		<Field Name="Signature Authority Title" Position="10"/>
+		<Field Name="Signature Authority Address" Position="11"/>
+		<Field Name="Signature Authority Telecommunication" Position="12"/>
+	</Segment>
+	<Segment Name="FHS">
+		<Field Name="File Field Separator" Position="1"/>
+		<Field Name="File Encoding Characters" Position="2"/>
+		<Field Name="File Sending Application" Position="3"/>
+		<Field Name="File Sending Facility" Position="4"/>
+		<Field Name="File Receiving Application" Position="5"/>
+		<Field Name="File Receiving Facility" Position="6"/>
+		<Field Name="File Creation Date/Time" Position="7"/>
+		<Field Name="File Security" Position="8"/>
+		<Field Name="File Name/ID" Position="9"/>
+		<Field Name="File Header Comment" Position="10"/>
+		<Field Name="File Control ID" Position="11"/>
+		<Field Name="Reference File Control ID" Position="12"/>
+	</Segment>
+	<Segment Name="FT1">
+		<Field Name="Set ID - FT1" Position="1"/>
+		<Field Name="Transaction ID" Position="2"/>
+		<Field Name="Transaction Batch ID" Position="3"/>
+		<Field Name="Transaction Date" Position="4"/>
+		<Field Name="Transaction Posting Date" Position="5"/>
+		<Field Name="Transaction Type" Position="6"/>
+		<Field Name="Transaction Code" Position="7"/>
+		<Field Name="Transaction Description" Position="8"/>
+		<Field Name="Transaction Description - Alt" Position="9"/>
+		<Field Name="Transaction Quantity" Position="10"/>
+		<Field Name="Transaction Amount - Extended" Position="11"/>
+		<Field Name="Transaction Amount - Unit" Position="12"/>
+		<Field Name="Department Code" Position="13"/>
+		<Field Name="Insurance Plan ID" Position="14"/>
+		<Field Name="Insurance Amount" Position="15"/>
+		<Field Name="Assigned Patient Location" Position="16"/>
+		<Field Name="Fee Schedule" Position="17"/>
+		<Field Name="Patient Type" Position="18"/>
+		<Field Name="Diagnosis Code - FT1" Position="19"/>
+		<Field Name="Performed By Code" Position="20"/>
+		<Field Name="Ordered By Code" Position="21"/>
+		<Field Name="Unit Cost" Position="22"/>
+		<Field Name="Filler Order Number" Position="23"/>
+		<Field Name="Entered By Code" Position="24"/>
+		<Field Name="Procedure Code" Position="25"/>
+		<Field Name="Procedure Code Modifier" Position="26"/>
+		<Field Name="Advanced Beneficiary Notice Code" Position="27"/>
+		<Field Name="Medically Necessary Duplicate Procedure Reason." Position="28"/>
+		<Field Name="NDC Code" Position="29"/>
+		<Field Name="Payment Reference ID" Position="30"/>
+		<Field Name="Transaction Reference Key" Position="31"/>
+	</Segment>
+	<Segment Name="FTS">
+		<Field Name="File Batch Count" Position="1"/>
+		<Field Name="File Trailer Comment" Position="2"/>
+	</Segment>
+	<Segment Name="GOL">
+		<Field Name="Action Code" Position="1"/>
+		<Field Name="Action Date/Time" Position="2"/>
+		<Field Name="Goal ID" Position="3"/>
+		<Field Name="Goal Instance ID" Position="4"/>
+		<Field Name="Episode of Care ID" Position="5"/>
+		<Field Name="Goal List Priority" Position="6"/>
+		<Field Name="Goal Established Date/Time" Position="7"/>
+		<Field Name="Expected Goal Achieve Date/Time" Position="8"/>
+		<Field Name="Goal Classification" Position="9"/>
+		<Field Name="Goal Management Discipline" Position="10"/>
+		<Field Name="Current Goal Review Status" Position="11"/>
+		<Field Name="Current Goal Review Date/Time" Position="12"/>
+		<Field Name="Next Goal Review Date/Time" Position="13"/>
+		<Field Name="Previous Goal Review Date/Time" Position="14"/>
+		<Field Name="Goal Review Interval" Position="15"/>
+		<Field Name="Goal Evaluation" Position="16"/>
+		<Field Name="Goal Evaluation Comment" Position="17"/>
+		<Field Name="Goal Life Cycle Status" Position="18"/>
+		<Field Name="Goal Life Cycle Status Date/Time" Position="19"/>
+		<Field Name="Goal Target Type" Position="20"/>
+		<Field Name="Goal Target Name" Position="21"/>
+	</Segment>
+	<Segment Name="GP1">
+		<Field Name="Type of Bill Code" Position="1"/>
+		<Field Name="Revenue Code" Position="2"/>
+		<Field Name="Overall Claim Disposition Code" Position="3"/>
+		<Field Name="OCE Edits per Visit Code" Position="4"/>
+		<Field Name="Outlier Cost" Position="5"/>
+	</Segment>
+	<Segment Name="GP2">
+		<Field Name="Revenue Code" Position="1"/>
+		<Field Name="Number of Service Units" Position="2"/>
+		<Field Name="Charge" Position="3"/>
+		<Field Name="Reimbursement Action Code" Position="4"/>
+		<Field Name="Denial or Rejection Code" Position="5"/>
+		<Field Name="OCE Edit Code" Position="6"/>
+		<Field Name="Ambulatory Payment Classification Code" Position="7"/>
+		<Field Name="Modifier Edit Code" Position="8"/>
+		<Field Name="Payment Adjustment Code" Position="9"/>
+		<Field Name="Packaging Status Code" Position="10"/>
+		<Field Name="Expected CMS Payment Amount" Position="11"/>
+		<Field Name="Reimbursement Type Code" Position="12"/>
+		<Field Name="Co-Pay Amount" Position="13"/>
+		<Field Name="Pay Rate per Service Unit" Position="14"/>
+	</Segment>
+	<Segment Name="GT1">
+		<Field Name="Set ID - GT1" Position="1"/>
+		<Field Name="Guarantor Number" Position="2"/>
+		<Field Name="Guarantor Name" Position="3"/>
+		<Field Name="Guarantor Spouse Name" Position="4"/>
+		<Field Name="Guarantor Address" Position="5"/>
+		<Field Name="Guarantor Ph Num - Home" Position="6"/>
+		<Field Name="Guarantor Ph Num - Business" Position="7"/>
+		<Field Name="Guarantor Date/Time Of Birth" Position="8"/>
+		<Field Name="Guarantor Administrative Sex" Position="9"/>
+		<Field Name="Guarantor Type" Position="10"/>
+		<Field Name="Guarantor Relationship" Position="11"/>
+		<Field Name="Guarantor SSN" Position="12"/>
+		<Field Name="Guarantor Date - Begin" Position="13"/>
+		<Field Name="Guarantor Date - End" Position="14"/>
+		<Field Name="Guarantor Priority" Position="15"/>
+		<Field Name="Guarantor Employer Name" Position="16"/>
+		<Field Name="Guarantor Employer Address" Position="17"/>
+		<Field Name="Guarantor Employer Phone Number" Position="18"/>
+		<Field Name="Guarantor Employee ID Number" Position="19"/>
+		<Field Name="Guarantor Employment Status" Position="20"/>
+		<Field Name="Guarantor Organization Name" Position="21"/>
+		<Field Name="Guarantor Billing Hold Flag" Position="22"/>
+		<Field Name="Guarantor Credit Rating Code" Position="23"/>
+		<Field Name="Guarantor Death Date And Time" Position="24"/>
+		<Field Name="Guarantor Death Flag" Position="25"/>
+		<Field Name="Guarantor Charge Adjustment Code" Position="26"/>
+		<Field Name="Guarantor Household Annual Income" Position="27"/>
+		<Field Name="Guarantor Household Size" Position="28"/>
+		<Field Name="Guarantor Employer ID Number" Position="29"/>
+		<Field Name="Guarantor Marital Status Code" Position="30"/>
+		<Field Name="Guarantor Hire Effective Date" Position="31"/>
+		<Field Name="Employment Stop Date" Position="32"/>
+		<Field Name="Living Dependency" Position="33"/>
+		<Field Name="Ambulatory Status" Position="34"/>
+		<Field Name="Citizenship" Position="35"/>
+		<Field Name="Primary Language" Position="36"/>
+		<Field Name="Living Arrangement" Position="37"/>
+		<Field Name="Publicity Code" Position="38"/>
+		<Field Name="Protection Indicator" Position="39"/>
+		<Field Name="Student Indicator" Position="40"/>
+		<Field Name="Religion" Position="41"/>
+		<Field Name="Mother's Maiden Name" Position="42"/>
+		<Field Name="Nationality" Position="43"/>
+		<Field Name="Ethnic Group" Position="44"/>
+		<Field Name="Contact Person's Name" Position="45"/>
+		<Field Name="Contact Person's Telephone Number" Position="46"/>
+		<Field Name="Contact Reason" Position="47"/>
+		<Field Name="Contact Relationship" Position="48"/>
+		<Field Name="Job Title" Position="49"/>
+		<Field Name="Job Code/Class" Position="50"/>
+		<Field Name="Guarantor Employer's Organization Name" Position="51"/>
+		<Field Name="Handicap" Position="52"/>
+		<Field Name="Job Status" Position="53"/>
+		<Field Name="Guarantor Financial Class" Position="54"/>
+		<Field Name="Guarantor Race" Position="55"/>
+		<Field Name="Guarantor Birth Place" Position="56"/>
+		<Field Name="VIP Indicator" Position="57"/>
+	</Segment>
+	<Segment Name="Hxx"/>
+	<Segment Name="IAM">
+		<Field Name="Set ID - IAM" Position="1"/>
+		<Field Name="Allergen Type Code" Position="2"/>
+		<Field Name="Allergen Code/Mnemonic/Description" Position="3"/>
+		<Field Name="Allergy Severity Code" Position="4"/>
+		<Field Name="Allergy Reaction Code" Position="5"/>
+		<Field Name="Allergy Action Code" Position="6"/>
+		<Field Name="Allergy Unique Identifier" Position="7"/>
+		<Field Name="Action Reason" Position="8"/>
+		<Field Name="Sensitivity to Causative Agent Code" Position="9"/>
+		<Field Name="Allergen Group Code/Mnemonic/Description" Position="10"/>
+		<Field Name="Onset Date" Position="11"/>
+		<Field Name="Onset Date Text" Position="12"/>
+		<Field Name="Reported Date/Time" Position="13"/>
+		<Field Name="Reported By" Position="14"/>
+		<Field Name="Relationship to Patient Code" Position="15"/>
+		<Field Name="Alert Device Code" Position="16"/>
+		<Field Name="Allergy Clinical Status Code" Position="17"/>
+		<Field Name="Statused by Person" Position="18"/>
+		<Field Name="Statused by Organization" Position="19"/>
+		<Field Name="Statused at Date/Time" Position="20"/>
+	</Segment>
+	<Segment Name="IIM">
+		<Field Name="Primary Key Value - IIM" Position="1"/>
+		<Field Name="Service Item Code" Position="2"/>
+		<Field Name="Inventory Lot Number" Position="3"/>
+		<Field Name="Inventory Expiration Date" Position="4"/>
+		<Field Name="Inventory Manufacturer Name" Position="5"/>
+		<Field Name="Inventory Location" Position="6"/>
+		<Field Name="Inventory Received Date" Position="7"/>
+		<Field Name="Inventory Received Quantity" Position="8"/>
+		<Field Name="Inventory Received Quantity Unit" Position="9"/>
+		<Field Name="Inventory Received Item Cost" Position="10"/>
+		<Field Name="Inventory On Hand Date" Position="11"/>
+		<Field Name="Inventory On Hand Quantity" Position="12"/>
+		<Field Name="Inventory On Hand Quantity Unit" Position="13"/>
+		<Field Name="Procedure Code" Position="14"/>
+		<Field Name="Procedure Code Modifier" Position="15"/>
+	</Segment>
+	<Segment Name="IN1">
+		<Field Name="Set ID - IN1" Position="1"/>
+		<Field Name="Insurance Plan ID" Position="2"/>
+		<Field Name="Insurance Company ID" Position="3"/>
+		<Field Name="Insurance Company Name" Position="4"/>
+		<Field Name="Insurance Company Address" Position="5"/>
+		<Field Name="Insurance Co Contact Person" Position="6"/>
+		<Field Name="Insurance Co Phone Number" Position="7"/>
+		<Field Name="Group Number" Position="8"/>
+		<Field Name="Group Name" Position="9"/>
+		<Field Name="Insured's Group Emp ID" Position="10"/>
+		<Field Name="Insured's Group Emp Name" Position="11"/>
+		<Field Name="Plan Effective Date" Position="12"/>
+		<Field Name="Plan Expiration Date" Position="13"/>
+		<Field Name="Authorization Information" Position="14"/>
+		<Field Name="Plan Type" Position="15"/>
+		<Field Name="Name Of Insured" Position="16"/>
+		<Field Name="Insured's Relationship To Patient" Position="17"/>
+		<Field Name="Insured's Date Of Birth" Position="18"/>
+		<Field Name="Insured's Address" Position="19"/>
+		<Field Name="Assignment Of Benefits" Position="20"/>
+		<Field Name="Coordination Of Benefits" Position="21"/>
+		<Field Name="Coord Of Ben. Priority" Position="22"/>
+		<Field Name="Notice Of Admission Flag" Position="23"/>
+		<Field Name="Notice Of Admission Date" Position="24"/>
+		<Field Name="Report Of Eligibility Flag" Position="25"/>
+		<Field Name="Report Of Eligibility Date" Position="26"/>
+		<Field Name="Release Information Code" Position="27"/>
+		<Field Name="Pre-Admit Cert (PAC)" Position="28"/>
+		<Field Name="Verification Date/Time" Position="29"/>
+		<Field Name="Verification By" Position="30"/>
+		<Field Name="Type Of Agreement Code" Position="31"/>
+		<Field Name="Billing Status" Position="32"/>
+		<Field Name="Lifetime Reserve Days" Position="33"/>
+		<Field Name="Delay Before L.R. Day" Position="34"/>
+		<Field Name="Company Plan Code" Position="35"/>
+		<Field Name="Policy Number" Position="36"/>
+		<Field Name="Policy Deductible" Position="37"/>
+		<Field Name="Policy Limit - Amount" Position="38"/>
+		<Field Name="Policy Limit - Days" Position="39"/>
+		<Field Name="Room Rate - Semi-Private" Position="40"/>
+		<Field Name="Room Rate - Private" Position="41"/>
+		<Field Name="Insured's Employment Status" Position="42"/>
+		<Field Name="Insured's Administrative Sex" Position="43"/>
+		<Field Name="Insured's Employer's Address" Position="44"/>
+		<Field Name="Verification Status" Position="45"/>
+		<Field Name="Prior Insurance Plan ID" Position="46"/>
+		<Field Name="Coverage Type" Position="47"/>
+		<Field Name="Handicap" Position="48"/>
+		<Field Name="Insured's ID Number" Position="49"/>
+		<Field Name="Signature Code" Position="50"/>
+		<Field Name="Signature Code Date" Position="51"/>
+		<Field Name="Insured_s Birth Place" Position="52"/>
+		<Field Name="VIP Indicator" Position="53"/>
+	</Segment>
+	<Segment Name="IN2">
+		<Field Name="Insured's Employee ID" Position="1"/>
+		<Field Name="Insured's Social Security Number" Position="2"/>
+		<Field Name="Insured's Employer's Name and ID" Position="3"/>
+		<Field Name="Employer Information Data" Position="4"/>
+		<Field Name="Mail Claim Party" Position="5"/>
+		<Field Name="Medicare Health Ins Card Number" Position="6"/>
+		<Field Name="Medicaid Case Name" Position="7"/>
+		<Field Name="Medicaid Case Number" Position="8"/>
+		<Field Name="Military Sponsor Name" Position="9"/>
+		<Field Name="Military ID Number" Position="10"/>
+		<Field Name="Dependent Of Military Recipient" Position="11"/>
+		<Field Name="Military Organization" Position="12"/>
+		<Field Name="Military Station" Position="13"/>
+		<Field Name="Military Service" Position="14"/>
+		<Field Name="Military Rank/Grade" Position="15"/>
+		<Field Name="Military Status" Position="16"/>
+		<Field Name="Military Retire Date" Position="17"/>
+		<Field Name="Military Non-Avail Cert On File" Position="18"/>
+		<Field Name="Baby Coverage" Position="19"/>
+		<Field Name="Combine Baby Bill" Position="20"/>
+		<Field Name="Blood Deductible" Position="21"/>
+		<Field Name="Special Coverage Approval Name" Position="22"/>
+		<Field Name="Special Coverage Approval Title" Position="23"/>
+		<Field Name="Non-Covered Insurance Code" Position="24"/>
+		<Field Name="Payor ID" Position="25"/>
+		<Field Name="Payor Subscriber ID" Position="26"/>
+		<Field Name="Eligibility Source" Position="27"/>
+		<Field Name="Room Coverage Type/Amount" Position="28"/>
+		<Field Name="Policy Type/Amount" Position="29"/>
+		<Field Name="Daily Deductible" Position="30"/>
+		<Field Name="Living Dependency" Position="31"/>
+		<Field Name="Ambulatory Status" Position="32"/>
+		<Field Name="Citizenship" Position="33"/>
+		<Field Name="Primary Language" Position="34"/>
+		<Field Name="Living Arrangement" Position="35"/>
+		<Field Name="Publicity Code" Position="36"/>
+		<Field Name="Protection Indicator" Position="37"/>
+		<Field Name="Student Indicator" Position="38"/>
+		<Field Name="Religion" Position="39"/>
+		<Field Name="Mother's Maiden Name" Position="40"/>
+		<Field Name="Nationality" Position="41"/>
+		<Field Name="Ethnic Group" Position="42"/>
+		<Field Name="Marital Status" Position="43"/>
+		<Field Name="Insured's Employment Start Date" Position="44"/>
+		<Field Name="Employment Stop Date" Position="45"/>
+		<Field Name="Job Title" Position="46"/>
+		<Field Name="Job Code/Class" Position="47"/>
+		<Field Name="Job Status" Position="48"/>
+		<Field Name="Employer Contact Person Name" Position="49"/>
+		<Field Name="Employer Contact Person Phone Number" Position="50"/>
+		<Field Name="Employer Contact Reason" Position="51"/>
+		<Field Name="Insured's Contact Person's Name" Position="52"/>
+		<Field Name="Insured's Contact Person Phone Number" Position="53"/>
+		<Field Name="Insured's Contact Person Reason" Position="54"/>
+		<Field Name="Relationship to the Patient Start Date" Position="55"/>
+		<Field Name="Relationship to the Patient Stop Date" Position="56"/>
+		<Field Name="Insurance Co. Contact Reason" Position="57"/>
+		<Field Name="Insurance Co Contact Phone Number" Position="58"/>
+		<Field Name="Policy Scope" Position="59"/>
+		<Field Name="Policy Source" Position="60"/>
+		<Field Name="Patient Member Number" Position="61"/>
+		<Field Name="Guarantor's Relationship To Insured" Position="62"/>
+		<Field Name="Insured's Phone Number - Home" Position="63"/>
+		<Field Name="Insured's Employer Phone Number" Position="64"/>
+		<Field Name="Military Handicapped Program" Position="65"/>
+		<Field Name="Suspend Flag" Position="66"/>
+		<Field Name="Copay Limit Flag" Position="67"/>
+		<Field Name="Stoploss Limit Flag" Position="68"/>
+		<Field Name="Insured Organization Name and ID" Position="69"/>
+		<Field Name="Insured Employer Organization Name and ID" Position="70"/>
+		<Field Name="Race" Position="71"/>
+		<Field Name="CMS Patient_s Relationship to Insured" Position="72"/>
+	</Segment>
+	<Segment Name="IN3">
+		<Field Name="Set ID - IN3" Position="1"/>
+		<Field Name="Certification Number" Position="2"/>
+		<Field Name="Certified By" Position="3"/>
+		<Field Name="Certification Required" Position="4"/>
+		<Field Name="Penalty" Position="5"/>
+		<Field Name="Certification Date/Time" Position="6"/>
+		<Field Name="Certification Modify Date/Time" Position="7"/>
+		<Field Name="Operator" Position="8"/>
+		<Field Name="Certification Begin Date" Position="9"/>
+		<Field Name="Certification End Date" Position="10"/>
+		<Field Name="Days" Position="11"/>
+		<Field Name="Non-Concur Code/Description" Position="12"/>
+		<Field Name="Non-Concur Effective Date/Time" Position="13"/>
+		<Field Name="Physician Reviewer" Position="14"/>
+		<Field Name="Certification Contact" Position="15"/>
+		<Field Name="Certification Contact Phone Number" Position="16"/>
+		<Field Name="Appeal Reason" Position="17"/>
+		<Field Name="Certification Agency" Position="18"/>
+		<Field Name="Certification Agency Phone Number" Position="19"/>
+		<Field Name="Pre-Certification Requirement" Position="20"/>
+		<Field Name="Case Manager" Position="21"/>
+		<Field Name="Second Opinion Date" Position="22"/>
+		<Field Name="Second Opinion Status" Position="23"/>
+		<Field Name="Second Opinion Documentation Received" Position="24"/>
+		<Field Name="Second Opinion Physician" Position="25"/>
+	</Segment>
+	<Segment Name="INV">
+		<Field Name="Substance Identifier" Position="1"/>
+		<Field Name="Substance Status" Position="2"/>
+		<Field Name="Substance Type" Position="3"/>
+		<Field Name="Inventory Container Identifier" Position="4"/>
+		<Field Name="Container Carrier Identifier" Position="5"/>
+		<Field Name="Position on Carrier" Position="6"/>
+		<Field Name="Initial Quantity" Position="7"/>
+		<Field Name="Current Quantity" Position="8"/>
+		<Field Name="Available Quantity" Position="9"/>
+		<Field Name="Consumption Quantity" Position="10"/>
+		<Field Name="Quantity Units" Position="11"/>
+		<Field Name="Expiration Date/Time" Position="12"/>
+		<Field Name="First Used Date/Time" Position="13"/>
+		<Field Name="On Board Stability Duration" Position="14"/>
+		<Field Name="Test/Fluid Identifier(s)" Position="15"/>
+		<Field Name="Manufacturer Lot Number" Position="16"/>
+		<Field Name="Manufacturer Identifier" Position="17"/>
+		<Field Name="Supplier Identifier" Position="18"/>
+		<Field Name="On Board Stability Time" Position="19"/>
+		<Field Name="Target Value" Position="20"/>
+	</Segment>
+	<Segment Name="IPC">
+		<Field Name="Accession Identifier" Position="1"/>
+		<Field Name="Requested Procedure ID" Position="2"/>
+		<Field Name="Study Instance UID" Position="3"/>
+		<Field Name="Scheduled Procedure Step ID" Position="4"/>
+		<Field Name="Modality" Position="5"/>
+		<Field Name="Protocol Code" Position="6"/>
+		<Field Name="Scheduled Station Name" Position="7"/>
+		<Field Name="Scheduled Procedure Step Location" Position="8"/>
+		<Field Name="Scheduled AE Title" Position="9"/>
+	</Segment>
+	<Segment Name="ISD">
+		<Field Name="Reference Interaction Number (unique identifier)" Position="1"/>
+		<Field Name="Interaction Type Identifier" Position="2"/>
+		<Field Name="Interaction Active State" Position="3"/>
+	</Segment>
+	<Segment Name="LAN">
+		<Field Name="Set ID _ LAN" Position="1"/>
+		<Field Name="Language Code" Position="2"/>
+		<Field Name="Language Ability Code" Position="3"/>
+		<Field Name="Language Proficiency Code" Position="4"/>
+	</Segment>
+	<Segment Name="LCC">
+		<Field Name="Primary Key Value - LCC" Position="1"/>
+		<Field Name="Location Department" Position="2"/>
+		<Field Name="Accommodation Type" Position="3"/>
+		<Field Name="Charge Code" Position="4"/>
+	</Segment>
+	<Segment Name="LCH">
+		<Field Name="Primary Key Value - LCH" Position="1"/>
+		<Field Name="Segment Action Code" Position="2"/>
+		<Field Name="Segment Unique Key" Position="3"/>
+		<Field Name="Location Characteristic ID" Position="4"/>
+		<Field Name="Location Characteristic Value-LCH" Position="5"/>
+	</Segment>
+	<Segment Name="LDP">
+		<Field Name="Primary Key Value - LDP" Position="1"/>
+		<Field Name="Location Department" Position="2"/>
+		<Field Name="Location Service" Position="3"/>
+		<Field Name="Specialty Type" Position="4"/>
+		<Field Name="Valid Patient Classes" Position="5"/>
+		<Field Name="Active/Inactive Flag" Position="6"/>
+		<Field Name="Activation Date  LDP" Position="7"/>
+		<Field Name="Inactivation Date - LDP" Position="8"/>
+		<Field Name="Inactivated Reason" Position="9"/>
+		<Field Name="Visiting Hours" Position="10"/>
+		<Field Name="Contact Phone" Position="11"/>
+		<Field Name="Location Cost Center" Position="12"/>
+	</Segment>
+	<Segment Name="LOC">
+		<Field Name="Primary Key Value - LOC" Position="1"/>
+		<Field Name="Location Description" Position="2"/>
+		<Field Name="Location Type - LOC" Position="3"/>
+		<Field Name="Organization Name - LOC" Position="4"/>
+		<Field Name="Location Address" Position="5"/>
+		<Field Name="Location Phone" Position="6"/>
+		<Field Name="License Number" Position="7"/>
+		<Field Name="Location Equipment" Position="8"/>
+		<Field Name="Location Service Code" Position="9"/>
+	</Segment>
+	<Segment Name="LRL">
+		<Field Name="Primary Key Value - LRL" Position="1"/>
+		<Field Name="Segment Action Code" Position="2"/>
+		<Field Name="Segment Unique Key" Position="3"/>
+		<Field Name="Location Relationship ID" Position="4"/>
+		<Field Name="Organizational Location Relationship Value" Position="5"/>
+		<Field Name="Patient Location Relationship Value" Position="6"/>
+	</Segment>
+	<Segment Name="MFA">
+		<Field Name="Record-Level Event Code" Position="1"/>
+		<Field Name="MFN Control ID" Position="2"/>
+		<Field Name="Event Completion Date/Time" Position="3"/>
+		<Field Name="MFN Record Level Error Return" Position="4"/>
+		<Field Name="Primary Key Value - MFA" Position="5"/>
+		<Field Name="Primary Key Value Type - MFA" Position="6"/>
+	</Segment>
+	<Segment Name="MFE">
+		<Field Name="Record-Level Event Code" Position="1"/>
+		<Field Name="MFN Control ID" Position="2"/>
+		<Field Name="Effective Date/Time" Position="3"/>
+		<Field Name="Primary Key Value - MFE" Position="4"/>
+		<Field Name="Primary Key Value Type" Position="5"/>
+	</Segment>
+	<Segment Name="MFI">
+		<Field Name="Master File Identifier" Position="1"/>
+		<Field Name="Master File Application Identifier" Position="2"/>
+		<Field Name="File-Level Event Code" Position="3"/>
+		<Field Name="Entered Date/Time" Position="4"/>
+		<Field Name="Effective Date/Time" Position="5"/>
+		<Field Name="Response Level Code" Position="6"/>
+	</Segment>
+	<Segment Name="MRG">
+		<Field Name="Prior Patient Identifier List" Position="1"/>
+		<Field Name="Prior Alternate Patient ID" Position="2"/>
+		<Field Name="Prior Patient Account Number" Position="3"/>
+		<Field Name="Prior Patient ID" Position="4"/>
+		<Field Name="Prior Visit Number" Position="5"/>
+		<Field Name="Prior Alternate Visit ID" Position="6"/>
+		<Field Name="Prior Patient Name" Position="7"/>
+	</Segment>
+	<Segment Name="MSA">
+		<Field Name="Acknowledgment Code" Position="1"/>
+		<Field Name="Message Control ID" Position="2"/>
+		<Field Name="Text Message" Position="3"/>
+		<Field Name="Expected Sequence Number" Position="4"/>
+		<Field Name="Delayed Acknowledgment Type" Position="5"/>
+		<Field Name="Error Condition" Position="6"/>
+	</Segment>
+	<Segment Name="MSH">
+		<Field Name="Field Separator" Position="1"/>
+		<Field Name="Encoding Characters" Position="2"/>
+		<Field Name="Sending Application" Position="3"/>
+		<Field Name="Sending Facility" Position="4"/>
+		<Field Name="Receiving Application" Position="5"/>
+		<Field Name="Receiving Facility" Position="6"/>
+		<Field Name="Date/Time Of Message" Position="7"/>
+		<Field Name="Security" Position="8"/>
+		<Field Name="Message Type" Position="9"/>
+		<Field Name="Message Control ID" Position="10"/>
+		<Field Name="Processing ID" Position="11"/>
+		<Field Name="Version ID" Position="12"/>
+		<Field Name="Sequence Number" Position="13"/>
+		<Field Name="Continuation Pointer" Position="14"/>
+		<Field Name="Accept Acknowledgment Type" Position="15"/>
+		<Field Name="Application Acknowledgment Type" Position="16"/>
+		<Field Name="Country Code" Position="17"/>
+		<Field Name="Character Set" Position="18"/>
+		<Field Name="Principal Language Of Message" Position="19"/>
+		<Field Name="Alternate Character Set Handling Scheme" Position="20"/>
+		<Field Name="Message Profile Identifier" Position="21"/>
+	</Segment>
+	<Segment Name="NCK">
+		<Field Name="System Date/Time" Position="1"/>
+	</Segment>
+	<Segment Name="NDS">
+		<Field Name="Notification Reference Number" Position="1"/>
+		<Field Name="Notification Date/Time" Position="2"/>
+		<Field Name="Notification Alert Severity" Position="3"/>
+		<Field Name="Notification Code" Position="4"/>
+	</Segment>
+	<Segment Name="NK1">
+		<Field Name="Set ID - NK1" Position="1"/>
+		<Field Name="Name" Position="2"/>
+		<Field Name="Relationship" Position="3"/>
+		<Field Name="Address" Position="4"/>
+		<Field Name="Phone Number" Position="5"/>
+		<Field Name="Business Phone Number" Position="6"/>
+		<Field Name="Contact Role" Position="7"/>
+		<Field Name="Start Date" Position="8"/>
+		<Field Name="End Date" Position="9"/>
+		<Field Name="Next of Kin / Associated Parties Job Title" Position="10"/>
+		<Field Name="Next of Kin / Associated Parties Job Code/Class" Position="11"/>
+		<Field Name="Next of Kin / Associated Parties Employee Number" Position="12"/>
+		<Field Name="Organization Name - NK1" Position="13"/>
+		<Field Name="Marital Status" Position="14"/>
+		<Field Name="Administrative Sex" Position="15"/>
+		<Field Name="Date/Time of Birth" Position="16"/>
+		<Field Name="Living Dependency" Position="17"/>
+		<Field Name="Ambulatory Status" Position="18"/>
+		<Field Name="Citizenship" Position="19"/>
+		<Field Name="Primary Language" Position="20"/>
+		<Field Name="Living Arrangement" Position="21"/>
+		<Field Name="Publicity Code" Position="22"/>
+		<Field Name="Protection Indicator" Position="23"/>
+		<Field Name="Student Indicator" Position="24"/>
+		<Field Name="Religion" Position="25"/>
+		<Field Name="Mother's Maiden Name" Position="26"/>
+		<Field Name="Nationality" Position="27"/>
+		<Field Name="Ethnic Group" Position="28"/>
+		<Field Name="Contact Reason" Position="29"/>
+		<Field Name="Contact Person's Name" Position="30"/>
+		<Field Name="Contact Person's Telephone Number" Position="31"/>
+		<Field Name="Contact Person's Address" Position="32"/>
+		<Field Name="Next of Kin/Associated Party's Identifiers" Position="33"/>
+		<Field Name="Job Status" Position="34"/>
+		<Field Name="Race" Position="35"/>
+		<Field Name="Handicap" Position="36"/>
+		<Field Name="Contact Person Social Security Number" Position="37"/>
+		<Field Name="Next of Kin Birth Place" Position="38"/>
+		<Field Name="VIP Indicator" Position="39"/>
+	</Segment>
+	<Segment Name="NPU">
+		<Field Name="Bed Location" Position="1"/>
+		<Field Name="Bed Status" Position="2"/>
+	</Segment>
+	<Segment Name="NSC">
+		<Field Name="Application Change Type" Position="1"/>
+		<Field Name="Current CPU" Position="2"/>
+		<Field Name="Current Fileserver" Position="3"/>
+		<Field Name="Current Application" Position="4"/>
+		<Field Name="Current Facility" Position="5"/>
+		<Field Name="New CPU" Position="6"/>
+		<Field Name="New Fileserver" Position="7"/>
+		<Field Name="New Application" Position="8"/>
+		<Field Name="New Facility" Position="9"/>
+	</Segment>
+	<Segment Name="NST">
+		<Field Name="Statistics Available" Position="1"/>
+		<Field Name="Source Identifier" Position="2"/>
+		<Field Name="Source Type" Position="3"/>
+		<Field Name="Statistics Start" Position="4"/>
+		<Field Name="Statistics End" Position="5"/>
+		<Field Name="Receive Character Count" Position="6"/>
+		<Field Name="Send Character Count" Position="7"/>
+		<Field Name="Messages Received" Position="8"/>
+		<Field Name="Messages Sent" Position="9"/>
+		<Field Name="Checksum Errors Received" Position="10"/>
+		<Field Name="Length Errors Received" Position="11"/>
+		<Field Name="Other Errors Received" Position="12"/>
+		<Field Name="Connect Timeouts" Position="13"/>
+		<Field Name="Receive Timeouts" Position="14"/>
+		<Field Name="Application control-level Errors" Position="15"/>
+	</Segment>
+	<Segment Name="NTE">
+		<Field Name="Set ID - NTE" Position="1"/>
+		<Field Name="Source of Comment" Position="2"/>
+		<Field Name="Comment" Position="3"/>
+		<Field Name="Comment Type" Position="4"/>
+	</Segment>
+	<Segment Name="OBR">
+		<Field Name="Set ID - OBR" Position="1"/>
+		<Field Name="Placer Order Number" Position="2"/>
+		<Field Name="Filler Order Number" Position="3"/>
+		<Field Name="Universal Service Identifier" Position="4"/>
+		<Field Name="Priority _ OBR" Position="5"/>
+		<Field Name="Requested Date/Time" Position="6"/>
+		<Field Name="Observation Date/Time" Position="7"/>
+		<Field Name="Observation End Date/Time" Position="8"/>
+		<Field Name="Collection Volume" Position="9"/>
+		<Field Name="Collector Identifier" Position="10"/>
+		<Field Name="Specimen Action Code" Position="11"/>
+		<Field Name="Danger Code" Position="12"/>
+		<Field Name="Relevant Clinical Information" Position="13"/>
+		<Field Name="Specimen Received Date/Time" Position="14"/>
+		<Field Name="Specimen Source" Position="15"/>
+		<Field Name="Ordering Provider" Position="16"/>
+		<Field Name="Order Callback Phone Number" Position="17"/>
+		<Field Name="Placer Field 1" Position="18"/>
+		<Field Name="Placer Field 2" Position="19"/>
+		<Field Name="Filler Field 1" Position="20"/>
+		<Field Name="Filler Field 2" Position="21"/>
+		<Field Name="Results Rpt/Status Chng - Date/Time" Position="22"/>
+		<Field Name="Charge to Practice" Position="23"/>
+		<Field Name="Diagnostic Serv Sect ID" Position="24"/>
+		<Field Name="Result Status" Position="25"/>
+		<Field Name="Parent Result" Position="26"/>
+		<Field Name="Quantity/Timing" Position="27"/>
+		<Field Name="Result Copies To" Position="28"/>
+		<Field Name="Parent" Position="29"/>
+		<Field Name="Transportation Mode" Position="30"/>
+		<Field Name="Reason for Study" Position="31"/>
+		<Field Name="Principal Result Interpreter" Position="32"/>
+		<Field Name="Assistant Result Interpreter" Position="33"/>
+		<Field Name="Technician" Position="34"/>
+		<Field Name="Transcriptionist" Position="35"/>
+		<Field Name="Scheduled Date/Time" Position="36"/>
+		<Field Name="Number of Sample Containers *" Position="37"/>
+		<Field Name="Transport Logistics of Collected Sample" Position="38"/>
+		<Field Name="Collector's Comment *" Position="39"/>
+		<Field Name="Transport Arrangement Responsibility" Position="40"/>
+		<Field Name="Transport Arranged" Position="41"/>
+		<Field Name="Escort Required" Position="42"/>
+		<Field Name="Planned Patient Transport Comment" Position="43"/>
+		<Field Name="Procedure Code" Position="44"/>
+		<Field Name="Procedure Code Modifier" Position="45"/>
+		<Field Name="Placer Supplemental Service Information" Position="46"/>
+		<Field Name="Filler Supplemental Service Information" Position="47"/>
+		<Field Name="Medically Necessary Duplicate Procedure Reason." Position="48"/>
+		<Field Name="Result Handling" Position="49"/>
+	</Segment>
+	<Segment Name="OBX">
+		<Field Name="Set ID - OBX" Position="1"/>
+		<Field Name="Value Type" Position="2"/>
+		<Field Name="Observation Identifier" Position="3"/>
+		<Field Name="Observation Sub-ID" Position="4"/>
+		<Field Name="Observation Value" Position="5"/>
+		<Field Name="Units" Position="6"/>
+		<Field Name="References Range" Position="7"/>
+		<Field Name="Abnormal Flags" Position="8"/>
+		<Field Name="Probability" Position="9"/>
+		<Field Name="Nature of Abnormal Test" Position="10"/>
+		<Field Name="Observation Result Status" Position="11"/>
+		<Field Name="Effective Date of Reference Range" Position="12"/>
+		<Field Name="User Defined Access Checks" Position="13"/>
+		<Field Name="Date/Time of the Observation" Position="14"/>
+		<Field Name="Producer's ID" Position="15"/>
+		<Field Name="Responsible Observer" Position="16"/>
+		<Field Name="Observation Method" Position="17"/>
+		<Field Name="Equipment Instance Identifier" Position="18"/>
+		<Field Name="Date/Time of the Analysis" Position="19"/>
+	</Segment>
+	<Segment Name="ODS">
+		<Field Name="Type" Position="1"/>
+		<Field Name="Service Period" Position="2"/>
+		<Field Name="Diet, Supplement, or Preference Code" Position="3"/>
+		<Field Name="Text Instruction" Position="4"/>
+	</Segment>
+	<Segment Name="ODT">
+		<Field Name="Tray Type" Position="1"/>
+		<Field Name="Service Period" Position="2"/>
+		<Field Name="Text Instruction" Position="3"/>
+	</Segment>
+	<Segment Name="OM1">
+		<Field Name="Sequence Number - Test/Observation Master File" Position="1"/>
+		<Field Name="Producer's Service/Test/Observation ID" Position="2"/>
+		<Field Name="Permitted Data Types" Position="3"/>
+		<Field Name="Specimen Required" Position="4"/>
+		<Field Name="Producer ID" Position="5"/>
+		<Field Name="Observation Description" Position="6"/>
+		<Field Name="Other Service/Test/Observation IDs for the Observation" Position="7"/>
+		<Field Name="Other Names" Position="8"/>
+		<Field Name="Preferred Report Name for the Observation" Position="9"/>
+		<Field Name="Preferred Short Name or Mnemonic for Observation" Position="10"/>
+		<Field Name="Preferred Long Name for the Observation" Position="11"/>
+		<Field Name="Orderability" Position="12"/>
+		<Field Name="Identity of Instrument Used to Perform this Study" Position="13"/>
+		<Field Name="Coded Representation of Method" Position="14"/>
+		<Field Name="Portable Device Indicator" Position="15"/>
+		<Field Name="Observation Producing Department/Section" Position="16"/>
+		<Field Name="Telephone Number of Section" Position="17"/>
+		<Field Name="Nature of Service/Test/Observation" Position="18"/>
+		<Field Name="Report Subheader" Position="19"/>
+		<Field Name="Report Display Order" Position="20"/>
+		<Field Name="Date/Time Stamp for any change in Definition for the Observation" Position="21"/>
+		<Field Name="Effective Date/Time of Change" Position="22"/>
+		<Field Name="Typical Turn-Around Time" Position="23"/>
+		<Field Name="Processing Time" Position="24"/>
+		<Field Name="Processing Priority" Position="25"/>
+		<Field Name="Reporting Priority" Position="26"/>
+		<Field Name="Outside Site(s) Where Observation may be Performed" Position="27"/>
+		<Field Name="Address of Outside Site(s)" Position="28"/>
+		<Field Name="Phone Number of Outside Site" Position="29"/>
+		<Field Name="Confidentiality Code" Position="30"/>
+		<Field Name="Observations Required to Interpret the Observation" Position="31"/>
+		<Field Name="Interpretation of Observations" Position="32"/>
+		<Field Name="Contraindications to Observations" Position="33"/>
+		<Field Name="Reflex Tests/Observations" Position="34"/>
+		<Field Name="Rules that Trigger Reflex Testing" Position="35"/>
+		<Field Name="Fixed Canned Message" Position="36"/>
+		<Field Name="Patient Preparation" Position="37"/>
+		<Field Name="Procedure Medication" Position="38"/>
+		<Field Name="Factors that may Affect the Observation" Position="39"/>
+		<Field Name="Service/Test/Observation Performance Schedule" Position="40"/>
+		<Field Name="Description of Test Methods" Position="41"/>
+		<Field Name="Kind of Quantity Observed" Position="42"/>
+		<Field Name="Point Versus Interval" Position="43"/>
+		<Field Name="Challenge Information" Position="44"/>
+		<Field Name="Relationship Modifier" Position="45"/>
+		<Field Name="Target Anatomic Site Of Test" Position="46"/>
+		<Field Name="Modality Of Imaging Measurement" Position="47"/>
+	</Segment>
+	<Segment Name="OM2">
+		<Field Name="Sequence Number - Test/Observation Master File" Position="1"/>
+		<Field Name="Units of Measure" Position="2"/>
+		<Field Name="Range of Decimal Precision" Position="3"/>
+		<Field Name="Corresponding SI Units of Measure" Position="4"/>
+		<Field Name="SI Conversion Factor" Position="5"/>
+		<Field Name="Reference (Normal) Range - Ordinal and Continuous Observations" Position="6"/>
+		<Field Name="Critical Range for Ordinal and Continuous Observations" Position="7"/>
+		<Field Name="Absolute Range for Ordinal and Continuous Observations" Position="8"/>
+		<Field Name="Delta Check Criteria" Position="9"/>
+		<Field Name="Minimum Meaningful Increments" Position="10"/>
+	</Segment>
+	<Segment Name="OM3">
+		<Field Name="Sequence Number - Test/Observation Master File" Position="1"/>
+		<Field Name="Preferred Coding System" Position="2"/>
+		<Field Name="Valid Coded &quot;Answers&quot;" Position="3"/>
+		<Field Name="Normal Text/Codes for Categorical Observations" Position="4"/>
+		<Field Name="Abnormal Text/Codes for Categorical Observations" Position="5"/>
+		<Field Name="Critical Text/Codes for Categorical Observations" Position="6"/>
+		<Field Name="Value Type" Position="7"/>
+	</Segment>
+	<Segment Name="OM4">
+		<Field Name="Sequence Number - Test/Observation Master File" Position="1"/>
+		<Field Name="Derived Specimen" Position="2"/>
+		<Field Name="Container Description" Position="3"/>
+		<Field Name="Container Volume" Position="4"/>
+		<Field Name="Container Units" Position="5"/>
+		<Field Name="Specimen" Position="6"/>
+		<Field Name="Additive" Position="7"/>
+		<Field Name="Preparation" Position="8"/>
+		<Field Name="Special Handling Requirements" Position="9"/>
+		<Field Name="Normal Collection Volume" Position="10"/>
+		<Field Name="Minimum Collection Volume" Position="11"/>
+		<Field Name="Specimen Requirements" Position="12"/>
+		<Field Name="Specimen Priorities" Position="13"/>
+		<Field Name="Specimen Retention Time" Position="14"/>
+	</Segment>
+	<Segment Name="OM5">
+		<Field Name="Sequence Number - Test/Observation Master File" Position="1"/>
+		<Field Name="Test/Observations Included within an Ordered Test Battery" Position="2"/>
+		<Field Name="Observation ID Suffixes" Position="3"/>
+	</Segment>
+	<Segment Name="OM6">
+		<Field Name="Sequence Number - Test/Observation Master File" Position="1"/>
+		<Field Name="Derivation Rule" Position="2"/>
+	</Segment>
+	<Segment Name="OM7">
+		<Field Name="Sequence Number - Test/Observation Master File" Position="1"/>
+		<Field Name="Universal Service Identifier" Position="2"/>
+		<Field Name="Category Identifier" Position="3"/>
+		<Field Name="Category Description" Position="4"/>
+		<Field Name="Category Synonym" Position="5"/>
+		<Field Name="Effective Test/Service Start Date/Time" Position="6"/>
+		<Field Name="Effective Test/Service End Date/Time" Position="7"/>
+		<Field Name="Test/Service Default Duration Quantity" Position="8"/>
+		<Field Name="Test/Service Default Duration Units" Position="9"/>
+		<Field Name="Test/Service Default Frequency" Position="10"/>
+		<Field Name="Consent Indicator" Position="11"/>
+		<Field Name="Consent Identifier" Position="12"/>
+		<Field Name="Consent Effective Start Date/Time" Position="13"/>
+		<Field Name="Consent Effective End Date/Time" Position="14"/>
+		<Field Name="Consent Interval Quantity" Position="15"/>
+		<Field Name="Consent Interval Units" Position="16"/>
+		<Field Name="Consent Waiting Period Quantity" Position="17"/>
+		<Field Name="Consent Waiting Period Units" Position="18"/>
+		<Field Name="Effective Date/Time of Change" Position="19"/>
+		<Field Name="Entered By" Position="20"/>
+		<Field Name="Orderable-at Location" Position="21"/>
+		<Field Name="Formulary Status" Position="22"/>
+		<Field Name="Special Order Indicator" Position="23"/>
+		<Field Name="Primary Key Value - CDM" Position="24"/>
+	</Segment>
+	<Segment Name="ORC">
+		<Field Name="Order Control" Position="1"/>
+		<Field Name="Placer Order Number" Position="2"/>
+		<Field Name="Filler Order Number" Position="3"/>
+		<Field Name="Placer Group Number" Position="4"/>
+		<Field Name="Order Status" Position="5"/>
+		<Field Name="Response Flag" Position="6"/>
+		<Field Name="Quantity/Timing" Position="7"/>
+		<Field Name="Parent" Position="8"/>
+		<Field Name="Date/Time of Transaction" Position="9"/>
+		<Field Name="Entered By" Position="10"/>
+		<Field Name="Verified By" Position="11"/>
+		<Field Name="Ordering Provider" Position="12"/>
+		<Field Name="Enterer's Location" Position="13"/>
+		<Field Name="Call Back Phone Number" Position="14"/>
+		<Field Name="Order Effective Date/Time" Position="15"/>
+		<Field Name="Order Control Code Reason" Position="16"/>
+		<Field Name="Entering Organization" Position="17"/>
+		<Field Name="Entering Device" Position="18"/>
+		<Field Name="Action By" Position="19"/>
+		<Field Name="Advanced Beneficiary Notice Code" Position="20"/>
+		<Field Name="Ordering Facility Name" Position="21"/>
+		<Field Name="Ordering Facility Address" Position="22"/>
+		<Field Name="Ordering Facility Phone Number" Position="23"/>
+		<Field Name="Ordering Provider Address" Position="24"/>
+		<Field Name="Order Status Modifier" Position="25"/>
+		<Field Name="Advanced Beneficiary Notice Override Reason" Position="26"/>
+		<Field Name="Filler's Expected Availability Date/Time" Position="27"/>
+		<Field Name="Confidentiality Code" Position="28"/>
+		<Field Name="Order Type" Position="29"/>
+		<Field Name="Enterer Authorization Mode" Position="30"/>
+	</Segment>
+	<Segment Name="ORG">
+		<Field Name="Set ID _ ORG" Position="1"/>
+		<Field Name="Organization Unit Code" Position="2"/>
+		<Field Name="Organization Unit Type Code" Position="3"/>
+		<Field Name="Primary Org Unit Indicator" Position="4"/>
+		<Field Name="Practitioner Org Unit Identifier" Position="5"/>
+		<Field Name="Health Care Provider Type Code" Position="6"/>
+		<Field Name="Health Care Provider Classification Code" Position="7"/>
+		<Field Name="Health Care Provider Area of Specialization Code" Position="8"/>
+		<Field Name="Effective Date Range" Position="9"/>
+		<Field Name="Employment Status Code" Position="10"/>
+		<Field Name="Board Approval Indicator" Position="11"/>
+		<Field Name="Primary Care Physician Indicator" Position="12"/>
+	</Segment>
+	<Segment Name="OVR">
+		<Field Name="Business Rule Override Type" Position="1"/>
+		<Field Name="Business Rule Override Code" Position="2"/>
+		<Field Name="Override Comments" Position="3"/>
+		<Field Name="Override Entered By" Position="4"/>
+		<Field Name="Override Authorized By" Position="5"/>
+	</Segment>
+	<Segment Name="PCR">
+		<Field Name="Implicated Product" Position="1"/>
+		<Field Name="Generic Product" Position="2"/>
+		<Field Name="Product Class" Position="3"/>
+		<Field Name="Total Duration Of Therapy" Position="4"/>
+		<Field Name="Product Manufacture Date" Position="5"/>
+		<Field Name="Product Expiration Date" Position="6"/>
+		<Field Name="Product Implantation Date" Position="7"/>
+		<Field Name="Product Explantation Date" Position="8"/>
+		<Field Name="Single Use Device" Position="9"/>
+		<Field Name="Indication For Product Use" Position="10"/>
+		<Field Name="Product Problem" Position="11"/>
+		<Field Name="Product Serial/Lot Number" Position="12"/>
+		<Field Name="Product Available For Inspection" Position="13"/>
+		<Field Name="Product Evaluation Performed" Position="14"/>
+		<Field Name="Product Evaluation Status" Position="15"/>
+		<Field Name="Product Evaluation Results" Position="16"/>
+		<Field Name="Evaluated Product Source" Position="17"/>
+		<Field Name="Date Product Returned To Manufacturer" Position="18"/>
+		<Field Name="Device Operator Qualifications" Position="19"/>
+		<Field Name="Relatedness Assessment" Position="20"/>
+		<Field Name="Action Taken In Response To The Event" Position="21"/>
+		<Field Name="Event Causality Observations" Position="22"/>
+		<Field Name="Indirect Exposure Mechanism" Position="23"/>
+	</Segment>
+	<Segment Name="PD1">
+		<Field Name="Living Dependency" Position="1"/>
+		<Field Name="Living Arrangement" Position="2"/>
+		<Field Name="Patient Primary Facility" Position="3"/>
+		<Field Name="Patient Primary Care Provider Name &amp; ID No." Position="4"/>
+		<Field Name="Student Indicator" Position="5"/>
+		<Field Name="Handicap" Position="6"/>
+		<Field Name="Living Will Code" Position="7"/>
+		<Field Name="Organ Donor Code" Position="8"/>
+		<Field Name="Separate Bill" Position="9"/>
+		<Field Name="Duplicate Patient" Position="10"/>
+		<Field Name="Publicity Code" Position="11"/>
+		<Field Name="Protection Indicator" Position="12"/>
+		<Field Name="Protection Indicator Effective Date" Position="13"/>
+		<Field Name="Place of Worship" Position="14"/>
+		<Field Name="Advance Directive Code" Position="15"/>
+		<Field Name="Immunization Registry Status" Position="16"/>
+		<Field Name="Immunization Registry Status Effective Date" Position="17"/>
+		<Field Name="Publicity Code Effective Date" Position="18"/>
+		<Field Name="Military Branch" Position="19"/>
+		<Field Name="Military Rank/Grade" Position="20"/>
+		<Field Name="Military Status" Position="21"/>
+	</Segment>
+	<Segment Name="PDA">
+		<Field Name="Death Cause Code" Position="1"/>
+		<Field Name="Death Location" Position="2"/>
+		<Field Name="Death Certified Indicator" Position="3"/>
+		<Field Name="Death Certificate Signed Date/Time" Position="4"/>
+		<Field Name="Death Certified By" Position="5"/>
+		<Field Name="Autopsy Indicator" Position="6"/>
+		<Field Name="Autopsy Start and End Date/Time" Position="7"/>
+		<Field Name="Autopsy Performed By" Position="8"/>
+		<Field Name="Coroner Indicator" Position="9"/>
+	</Segment>
+	<Segment Name="PDC">
+		<Field Name="Manufacturer/Distributor" Position="1"/>
+		<Field Name="Country" Position="2"/>
+		<Field Name="Brand Name" Position="3"/>
+		<Field Name="Device Family Name" Position="4"/>
+		<Field Name="Generic Name" Position="5"/>
+		<Field Name="Model Identifier" Position="6"/>
+		<Field Name="Catalogue Identifier" Position="7"/>
+		<Field Name="Other Identifier" Position="8"/>
+		<Field Name="Product Code" Position="9"/>
+		<Field Name="Marketing Basis" Position="10"/>
+		<Field Name="Marketing Approval ID" Position="11"/>
+		<Field Name="Labeled Shelf Life" Position="12"/>
+		<Field Name="Expected Shelf Life" Position="13"/>
+		<Field Name="Date First Marketed" Position="14"/>
+		<Field Name="Date Last Marketed" Position="15"/>
+	</Segment>
+	<Segment Name="PEO">
+		<Field Name="Event Identifiers Used" Position="1"/>
+		<Field Name="Event Symptom/Diagnosis Code" Position="2"/>
+		<Field Name="Event Onset Date/Time" Position="3"/>
+		<Field Name="Event Exacerbation Date/Time" Position="4"/>
+		<Field Name="Event Improved Date/Time" Position="5"/>
+		<Field Name="Event Ended Data/Time" Position="6"/>
+		<Field Name="Event Location Occurred Address" Position="7"/>
+		<Field Name="Event Qualification" Position="8"/>
+		<Field Name="Event Serious" Position="9"/>
+		<Field Name="Event Expected" Position="10"/>
+		<Field Name="Event Outcome" Position="11"/>
+		<Field Name="Patient Outcome" Position="12"/>
+		<Field Name="Event Description From Others" Position="13"/>
+		<Field Name="Event From Original Reporter" Position="14"/>
+		<Field Name="Event Description From Patient" Position="15"/>
+		<Field Name="Event Description From Practitioner" Position="16"/>
+		<Field Name="Event Description From Autopsy" Position="17"/>
+		<Field Name="Cause Of Death" Position="18"/>
+		<Field Name="Primary Observer Name" Position="19"/>
+		<Field Name="Primary Observer Address" Position="20"/>
+		<Field Name="Primary Observer Telephone" Position="21"/>
+		<Field Name="Primary Observer's Qualification" Position="22"/>
+		<Field Name="Confirmation Provided By" Position="23"/>
+		<Field Name="Primary Observer Aware Date/Time" Position="24"/>
+		<Field Name="Primary Observer's identity May Be Divulged" Position="25"/>
+	</Segment>
+	<Segment Name="PES">
+		<Field Name="Sender Organization Name" Position="1"/>
+		<Field Name="Sender Individual Name" Position="2"/>
+		<Field Name="Sender Address" Position="3"/>
+		<Field Name="Sender Telephone" Position="4"/>
+		<Field Name="Sender Event Identifier" Position="5"/>
+		<Field Name="Sender Sequence Number" Position="6"/>
+		<Field Name="Sender Event Description" Position="7"/>
+		<Field Name="Sender Comment" Position="8"/>
+		<Field Name="Sender Aware Date/Time" Position="9"/>
+		<Field Name="Event Report Date" Position="10"/>
+		<Field Name="Event Report Timing/Type" Position="11"/>
+		<Field Name="Event Report Source" Position="12"/>
+		<Field Name="Event Reported To" Position="13"/>
+	</Segment>
+	<Segment Name="PID">
+		<Field Name="Set ID - PID" Position="1"/>
+		<Field Name="Patient ID" Position="2"/>
+		<Field Name="Patient Identifier List" Position="3"/>
+		<Field Name="Alternate Patient ID - PID" Position="4"/>
+		<Field Name="Patient Name" Position="5"/>
+		<Field Name="Mother's Maiden Name" Position="6"/>
+		<Field Name="Date/Time of Birth" Position="7"/>
+		<Field Name="Administrative Sex" Position="8"/>
+		<Field Name="Patient Alias" Position="9"/>
+		<Field Name="Race" Position="10"/>
+		<Field Name="Patient Address" Position="11"/>
+		<Field Name="County Code" Position="12"/>
+		<Field Name="Phone Number - Home" Position="13"/>
+		<Field Name="Phone Number - Business" Position="14"/>
+		<Field Name="Primary Language" Position="15"/>
+		<Field Name="Marital Status" Position="16"/>
+		<Field Name="Religion" Position="17"/>
+		<Field Name="Patient Account Number" Position="18"/>
+		<Field Name="SSN Number - Patient" Position="19"/>
+		<Field Name="Driver's License Number - Patient" Position="20"/>
+		<Field Name="Mother's Identifier" Position="21"/>
+		<Field Name="Ethnic Group" Position="22"/>
+		<Field Name="Birth Place" Position="23"/>
+		<Field Name="Multiple Birth Indicator" Position="24"/>
+		<Field Name="Birth Order" Position="25"/>
+		<Field Name="Citizenship" Position="26"/>
+		<Field Name="Veterans Military Status" Position="27"/>
+		<Field Name="Nationality" Position="28"/>
+		<Field Name="Patient Death Date and Time" Position="29"/>
+		<Field Name="Patient Death Indicator" Position="30"/>
+		<Field Name="Identity Unknown Indicator" Position="31"/>
+		<Field Name="Identity Reliability Code" Position="32"/>
+		<Field Name="Last Update Date/Time" Position="33"/>
+		<Field Name="Last Update Facility" Position="34"/>
+		<Field Name="Species Code" Position="35"/>
+		<Field Name="Breed Code" Position="36"/>
+		<Field Name="Strain" Position="37"/>
+		<Field Name="Production Class Code" Position="38"/>
+		<Field Name="Tribal Citizenship" Position="39"/>
+	</Segment>
+	<Segment Name="PR1">
+		<Field Name="Set ID - PR1" Position="1"/>
+		<Field Name="Procedure Coding Method" Position="2"/>
+		<Field Name="Procedure Code" Position="3"/>
+		<Field Name="Procedure Description" Position="4"/>
+		<Field Name="Procedure Date/Time" Position="5"/>
+		<Field Name="Procedure Functional Type" Position="6"/>
+		<Field Name="Procedure Minutes" Position="7"/>
+		<Field Name="Anesthesiologist" Position="8"/>
+		<Field Name="Anesthesia Code" Position="9"/>
+		<Field Name="Anesthesia Minutes" Position="10"/>
+		<Field Name="Surgeon" Position="11"/>
+		<Field Name="Procedure Practitioner" Position="12"/>
+		<Field Name="Consent Code" Position="13"/>
+		<Field Name="Procedure Priority" Position="14"/>
+		<Field Name="Associated Diagnosis Code" Position="15"/>
+		<Field Name="Procedure Code Modifier" Position="16"/>
+		<Field Name="Procedure DRG Type" Position="17"/>
+		<Field Name="Tissue Type Code" Position="18"/>
+		<Field Name="Procedure Identifier" Position="19"/>
+		<Field Name="Procedure Action Code" Position="20"/>
+	</Segment>
+	<Segment Name="PRA">
+		<Field Name="Primary Key Value - PRA" Position="1"/>
+		<Field Name="Practitioner Group" Position="2"/>
+		<Field Name="Practitioner Category" Position="3"/>
+		<Field Name="Provider Billing" Position="4"/>
+		<Field Name="Specialty" Position="5"/>
+		<Field Name="Practitioner ID Numbers" Position="6"/>
+		<Field Name="Privileges" Position="7"/>
+		<Field Name="Date Entered Practice" Position="8"/>
+		<Field Name="Institution" Position="9"/>
+		<Field Name="Date Left Practice" Position="10"/>
+		<Field Name="Government Reimbursement Billing Eligibility" Position="11"/>
+		<Field Name="Set ID - PRA" Position="12"/>
+	</Segment>
+	<Segment Name="PRB">
+		<Field Name="Action Code" Position="1"/>
+		<Field Name="Action Date/Time" Position="2"/>
+		<Field Name="Problem ID" Position="3"/>
+		<Field Name="Problem Instance ID" Position="4"/>
+		<Field Name="Episode of Care ID" Position="5"/>
+		<Field Name="Problem List Priority" Position="6"/>
+		<Field Name="Problem Established Date/Time" Position="7"/>
+		<Field Name="Anticipated Problem Resolution Date/Time" Position="8"/>
+		<Field Name="Actual Problem Resolution Date/Time" Position="9"/>
+		<Field Name="Problem Classification" Position="10"/>
+		<Field Name="Problem Management Discipline" Position="11"/>
+		<Field Name="Problem Persistence" Position="12"/>
+		<Field Name="Problem Confirmation Status" Position="13"/>
+		<Field Name="Problem Life Cycle Status" Position="14"/>
+		<Field Name="Problem Life Cycle Status Date/Time" Position="15"/>
+		<Field Name="Problem Date of Onset" Position="16"/>
+		<Field Name="Problem Onset Text" Position="17"/>
+		<Field Name="Problem Ranking" Position="18"/>
+		<Field Name="Certainty of Problem" Position="19"/>
+		<Field Name="Probability of Problem (0-1)" Position="20"/>
+		<Field Name="Individual Awareness of Problem" Position="21"/>
+		<Field Name="Problem Prognosis" Position="22"/>
+		<Field Name="Individual Awareness of Prognosis" Position="23"/>
+		<Field Name="Family/Significant Other Awareness of Problem/Prognosis" Position="24"/>
+		<Field Name="Security/Sensitivity" Position="25"/>
+	</Segment>
+	<Segment Name="PRC">
+		<Field Name="Primary Key Value - PRC" Position="1"/>
+		<Field Name="Facility ID - PRC" Position="2"/>
+		<Field Name="Department" Position="3"/>
+		<Field Name="Valid Patient Classes" Position="4"/>
+		<Field Name="Price" Position="5"/>
+		<Field Name="Formula" Position="6"/>
+		<Field Name="Minimum Quantity" Position="7"/>
+		<Field Name="Maximum Quantity" Position="8"/>
+		<Field Name="Minimum Price" Position="9"/>
+		<Field Name="Maximum Price" Position="10"/>
+		<Field Name="Effective Start Date" Position="11"/>
+		<Field Name="Effective End Date" Position="12"/>
+		<Field Name="Price Override Flag" Position="13"/>
+		<Field Name="Billing Category" Position="14"/>
+		<Field Name="Chargeable Flag" Position="15"/>
+		<Field Name="Active/Inactive Flag" Position="16"/>
+		<Field Name="Cost" Position="17"/>
+		<Field Name="Charge On Indicator" Position="18"/>
+	</Segment>
+	<Segment Name="PRD">
+		<Field Name="Provider Role" Position="1"/>
+		<Field Name="Provider Name" Position="2"/>
+		<Field Name="Provider Address" Position="3"/>
+		<Field Name="Provider Location" Position="4"/>
+		<Field Name="Provider Communication Information" Position="5"/>
+		<Field Name="Preferred Method of Contact" Position="6"/>
+		<Field Name="Provider Identifiers" Position="7"/>
+		<Field Name="Effective Start Date of Provider Role" Position="8"/>
+		<Field Name="Effective End Date of Provider Role" Position="9"/>
+	</Segment>
+	<Segment Name="PSH">
+		<Field Name="Report Type" Position="1"/>
+		<Field Name="Report Form Identifier" Position="2"/>
+		<Field Name="Report Date" Position="3"/>
+		<Field Name="Report Interval Start Date" Position="4"/>
+		<Field Name="Report Interval End Date" Position="5"/>
+		<Field Name="Quantity Manufactured" Position="6"/>
+		<Field Name="Quantity Distributed" Position="7"/>
+		<Field Name="Quantity Distributed Method" Position="8"/>
+		<Field Name="Quantity Distributed Comment" Position="9"/>
+		<Field Name="Quantity in Use" Position="10"/>
+		<Field Name="Quantity in Use Method" Position="11"/>
+		<Field Name="Quantity in Use Comment" Position="12"/>
+		<Field Name="Number of Product Experience Reports Filed by Facility" Position="13"/>
+		<Field Name="Number of Product Experience Reports Filed by Distributor" Position="14"/>
+	</Segment>
+	<Segment Name="PTH">
+		<Field Name="Action Code" Position="1"/>
+		<Field Name="Pathway ID" Position="2"/>
+		<Field Name="Pathway Instance ID" Position="3"/>
+		<Field Name="Pathway Established Date/Time" Position="4"/>
+		<Field Name="Pathway Life Cycle Status" Position="5"/>
+		<Field Name="Change Pathway Life Cycle Status Date/Time" Position="6"/>
+	</Segment>
+	<Segment Name="PV1">
+		<Field Name="Set ID - PV1" Position="1"/>
+		<Field Name="Patient Class" Position="2"/>
+		<Field Name="Assigned Patient Location" Position="3"/>
+		<Field Name="Admission Type" Position="4"/>
+		<Field Name="Preadmit Number" Position="5"/>
+		<Field Name="Prior Patient Location" Position="6"/>
+		<Field Name="Attending Doctor" Position="7"/>
+		<Field Name="Referring Doctor" Position="8"/>
+		<Field Name="Consulting Doctor" Position="9"/>
+		<Field Name="Hospital Service" Position="10"/>
+		<Field Name="Temporary Location" Position="11"/>
+		<Field Name="Preadmit Test Indicator" Position="12"/>
+		<Field Name="Re-admission Indicator" Position="13"/>
+		<Field Name="Admit Source" Position="14"/>
+		<Field Name="Ambulatory Status" Position="15"/>
+		<Field Name="VIP Indicator" Position="16"/>
+		<Field Name="Admitting Doctor" Position="17"/>
+		<Field Name="Patient Type" Position="18"/>
+		<Field Name="Visit Number" Position="19"/>
+		<Field Name="Financial Class" Position="20"/>
+		<Field Name="Charge Price Indicator" Position="21"/>
+		<Field Name="Courtesy Code" Position="22"/>
+		<Field Name="Credit Rating" Position="23"/>
+		<Field Name="Contract Code" Position="24"/>
+		<Field Name="Contract Effective Date" Position="25"/>
+		<Field Name="Contract Amount" Position="26"/>
+		<Field Name="Contract Period" Position="27"/>
+		<Field Name="Interest Code" Position="28"/>
+		<Field Name="Transfer to Bad Debt Code" Position="29"/>
+		<Field Name="Transfer to Bad Debt Date" Position="30"/>
+		<Field Name="Bad Debt Agency Code" Position="31"/>
+		<Field Name="Bad Debt Transfer Amount" Position="32"/>
+		<Field Name="Bad Debt Recovery Amount" Position="33"/>
+		<Field Name="Delete Account Indicator" Position="34"/>
+		<Field Name="Delete Account Date" Position="35"/>
+		<Field Name="Discharge Disposition" Position="36"/>
+		<Field Name="Discharged to Location" Position="37"/>
+		<Field Name="Diet Type" Position="38"/>
+		<Field Name="Servicing Facility" Position="39"/>
+		<Field Name="Bed Status" Position="40"/>
+		<Field Name="Account Status" Position="41"/>
+		<Field Name="Pending Location" Position="42"/>
+		<Field Name="Prior Temporary Location" Position="43"/>
+		<Field Name="Admit Date/Time" Position="44"/>
+		<Field Name="Discharge Date/Time" Position="45"/>
+		<Field Name="Current Patient Balance" Position="46"/>
+		<Field Name="Total Charges" Position="47"/>
+		<Field Name="Total Adjustments" Position="48"/>
+		<Field Name="Total Payments" Position="49"/>
+		<Field Name="Alternate Visit ID" Position="50"/>
+		<Field Name="Visit Indicator" Position="51"/>
+		<Field Name="Other Healthcare Provider" Position="52"/>
+	</Segment>
+	<Segment Name="PV2">
+		<Field Name="Prior Pending Location" Position="1"/>
+		<Field Name="Accommodation Code" Position="2"/>
+		<Field Name="Admit Reason" Position="3"/>
+		<Field Name="Transfer Reason" Position="4"/>
+		<Field Name="Patient Valuables" Position="5"/>
+		<Field Name="Patient Valuables Location" Position="6"/>
+		<Field Name="Visit User Code" Position="7"/>
+		<Field Name="Expected Admit Date/Time" Position="8"/>
+		<Field Name="Expected Discharge Date/Time" Position="9"/>
+		<Field Name="Estimated Length of Inpatient Stay" Position="10"/>
+		<Field Name="Actual Length of Inpatient Stay" Position="11"/>
+		<Field Name="Visit Description" Position="12"/>
+		<Field Name="Referral Source Code" Position="13"/>
+		<Field Name="Previous Service Date" Position="14"/>
+		<Field Name="Employment Illness Related Indicator" Position="15"/>
+		<Field Name="Purge Status Code" Position="16"/>
+		<Field Name="Purge Status Date" Position="17"/>
+		<Field Name="Special Program Code" Position="18"/>
+		<Field Name="Retention Indicator" Position="19"/>
+		<Field Name="Expected Number of Insurance Plans" Position="20"/>
+		<Field Name="Visit Publicity Code" Position="21"/>
+		<Field Name="Visit Protection Indicator" Position="22"/>
+		<Field Name="Clinic Organization Name" Position="23"/>
+		<Field Name="Patient Status Code" Position="24"/>
+		<Field Name="Visit Priority Code" Position="25"/>
+		<Field Name="Previous Treatment Date" Position="26"/>
+		<Field Name="Expected Discharge Disposition" Position="27"/>
+		<Field Name="Signature on File Date" Position="28"/>
+		<Field Name="First Similar Illness Date" Position="29"/>
+		<Field Name="Patient Charge Adjustment Code" Position="30"/>
+		<Field Name="Recurring Service Code" Position="31"/>
+		<Field Name="Billing Media Code" Position="32"/>
+		<Field Name="Expected Surgery Date and Time" Position="33"/>
+		<Field Name="Military Partnership Code" Position="34"/>
+		<Field Name="Military Non-Availability Code" Position="35"/>
+		<Field Name="Newborn Baby Indicator" Position="36"/>
+		<Field Name="Baby Detained Indicator" Position="37"/>
+		<Field Name="Mode of Arrival Code" Position="38"/>
+		<Field Name="Recreational Drug Use Code" Position="39"/>
+		<Field Name="Admission Level of Care Code" Position="40"/>
+		<Field Name="Precaution Code" Position="41"/>
+		<Field Name="Patient Condition Code" Position="42"/>
+		<Field Name="Living Will Code" Position="43"/>
+		<Field Name="Organ Donor Code" Position="44"/>
+		<Field Name="Advance Directive Code" Position="45"/>
+		<Field Name="Patient Status Effective Date" Position="46"/>
+		<Field Name="Expected LOA Return Date/Time" Position="47"/>
+		<Field Name="Expected Pre-admission Testing Date/Time" Position="48"/>
+		<Field Name="Notify Clergy Code" Position="49"/>
+	</Segment>
+	<Segment Name="QAK">
+		<Field Name="Query Tag" Position="1"/>
+		<Field Name="Query Response Status" Position="2"/>
+		<Field Name="Message Query Name" Position="3"/>
+		<Field Name="Hit Count" Position="4"/>
+		<Field Name="This payload" Position="5"/>
+		<Field Name="Hits remaining" Position="6"/>
+	</Segment>
+	<Segment Name="QID">
+		<Field Name="Query Tag" Position="1"/>
+		<Field Name="Message Query Name" Position="2"/>
+	</Segment>
+	<Segment Name="QPD">
+		<Field Name="Message Query Name" Position="1"/>
+		<Field Name="Query Tag" Position="2"/>
+		<Field Name="User Parameters (in successive fields)" Position="3"/>
+	</Segment>
+	<Segment Name="QRD">
+		<Field Name="Query Date/Time" Position="1"/>
+		<Field Name="Query Format Code" Position="2"/>
+		<Field Name="Query Priority" Position="3"/>
+		<Field Name="Query ID" Position="4"/>
+		<Field Name="Deferred Response Type" Position="5"/>
+		<Field Name="Deferred Response Date/Time" Position="6"/>
+		<Field Name="Quantity Limited Request" Position="7"/>
+		<Field Name="Who Subject Filter" Position="8"/>
+		<Field Name="What Subject Filter" Position="9"/>
+		<Field Name="What Department Data Code" Position="10"/>
+		<Field Name="What Data Code Value Qual." Position="11"/>
+		<Field Name="Query Results Level" Position="12"/>
+	</Segment>
+	<Segment Name="QRF">
+		<Field Name="Where Subject Filter" Position="1"/>
+		<Field Name="When Data Start Date/Time" Position="2"/>
+		<Field Name="When Data End Date/Time" Position="3"/>
+		<Field Name="What User Qualifier" Position="4"/>
+		<Field Name="Other QRY Subject Filter" Position="5"/>
+		<Field Name="Which Date/Time Qualifier" Position="6"/>
+		<Field Name="Which Date/Time Status Qualifier" Position="7"/>
+		<Field Name="Date/Time Selection Qualifier" Position="8"/>
+		<Field Name="When Quantity/Timing Qualifier" Position="9"/>
+		<Field Name="Search Confidence Threshold" Position="10"/>
+	</Segment>
+	<Segment Name="QRI">
+		<Field Name="Candidate Confidence" Position="1"/>
+		<Field Name="Match Reason Code" Position="2"/>
+		<Field Name="Algorithm Descriptor" Position="3"/>
+	</Segment>
+	<Segment Name="RCP">
+		<Field Name="Query Priority" Position="1"/>
+		<Field Name="Quantity Limited Request" Position="2"/>
+		<Field Name="Response Modality" Position="3"/>
+		<Field Name="Execution and Delivery Time" Position="4"/>
+		<Field Name="Modify Indicator" Position="5"/>
+		<Field Name="Sort-by Field" Position="6"/>
+		<Field Name="Segment group inclusion" Position="7"/>
+	</Segment>
+	<Segment Name="RDF">
+		<Field Name="Number of Columns per Row" Position="1"/>
+		<Field Name="Column Description" Position="2"/>
+	</Segment>
+	<Segment Name="RDT">
+		<Field Name="Column Value" Position="1"/>
+	</Segment>
+	<Segment Name="RF1">
+		<Field Name="Referral Status" Position="1"/>
+		<Field Name="Referral Priority" Position="2"/>
+		<Field Name="Referral Type" Position="3"/>
+		<Field Name="Referral Disposition" Position="4"/>
+		<Field Name="Referral Category" Position="5"/>
+		<Field Name="Originating Referral Identifier" Position="6"/>
+		<Field Name="Effective Date" Position="7"/>
+		<Field Name="Expiration Date" Position="8"/>
+		<Field Name="Process Date" Position="9"/>
+		<Field Name="Referral Reason" Position="10"/>
+		<Field Name="External Referral Identifier" Position="11"/>
+	</Segment>
+	<Segment Name="RGS">
+		<Field Name="Set ID - RGS" Position="1"/>
+		<Field Name="Segment Action Code" Position="2"/>
+		<Field Name="Resource Group ID" Position="3"/>
+	</Segment>
+	<Segment Name="RMI">
+		<Field Name="Risk Management Incident Code" Position="1"/>
+		<Field Name="Date/Time Incident" Position="2"/>
+		<Field Name="Incident Type Code" Position="3"/>
+	</Segment>
+	<Segment Name="ROL">
+		<Field Name="Role Instance ID" Position="1"/>
+		<Field Name="Action Code" Position="2"/>
+		<Field Name="Role-ROL" Position="3"/>
+		<Field Name="Role Person" Position="4"/>
+		<Field Name="Role Begin Date/Time" Position="5"/>
+		<Field Name="Role End Date/Time" Position="6"/>
+		<Field Name="Role Duration" Position="7"/>
+		<Field Name="Role Action Reason" Position="8"/>
+		<Field Name="Provider Type" Position="9"/>
+		<Field Name="Organization Unit Type" Position="10"/>
+		<Field Name="Office/Home Address/Birthplace" Position="11"/>
+		<Field Name="Phone" Position="12"/>
+	</Segment>
+	<Segment Name="RQ1">
+		<Field Name="Anticipated Price" Position="1"/>
+		<Field Name="Manufacturer Identifier" Position="2"/>
+		<Field Name="Manufacturer's Catalog" Position="3"/>
+		<Field Name="Vendor ID" Position="4"/>
+		<Field Name="Vendor Catalog" Position="5"/>
+		<Field Name="Taxable" Position="6"/>
+		<Field Name="Substitute Allowed" Position="7"/>
+	</Segment>
+	<Segment Name="RQD">
+		<Field Name="Requisition Line Number" Position="1"/>
+		<Field Name="Item Code - Internal" Position="2"/>
+		<Field Name="Item Code - External" Position="3"/>
+		<Field Name="Hospital Item Code" Position="4"/>
+		<Field Name="Requisition Quantity" Position="5"/>
+		<Field Name="Requisition Unit of Measure" Position="6"/>
+		<Field Name="Dept. Cost Center" Position="7"/>
+		<Field Name="Item Natural Account Code" Position="8"/>
+		<Field Name="Deliver To ID" Position="9"/>
+		<Field Name="Date Needed" Position="10"/>
+	</Segment>
+	<Segment Name="RXA">
+		<Field Name="Give Sub-ID Counter" Position="1"/>
+		<Field Name="Administration Sub-ID Counter" Position="2"/>
+		<Field Name="Date/Time Start of Administration" Position="3"/>
+		<Field Name="Date/Time End of Administration" Position="4"/>
+		<Field Name="Administered Code" Position="5"/>
+		<Field Name="Administered Amount" Position="6"/>
+		<Field Name="Administered Units" Position="7"/>
+		<Field Name="Administered Dosage Form" Position="8"/>
+		<Field Name="Administration Notes" Position="9"/>
+		<Field Name="Administering Provider" Position="10"/>
+		<Field Name="Administered-at Location" Position="11"/>
+		<Field Name="Administered Per (Time Unit)" Position="12"/>
+		<Field Name="Administered Strength" Position="13"/>
+		<Field Name="Administered Strength Units" Position="14"/>
+		<Field Name="Substance Lot Number" Position="15"/>
+		<Field Name="Substance Expiration Date" Position="16"/>
+		<Field Name="Substance Manufacturer Name" Position="17"/>
+		<Field Name="Substance/Treatment Refusal Reason" Position="18"/>
+		<Field Name="Indication" Position="19"/>
+		<Field Name="Completion Status" Position="20"/>
+		<Field Name="Action Code - RXA" Position="21"/>
+		<Field Name="System Entry Date/Time" Position="22"/>
+		<Field Name="Administered Drug Strength Volume" Position="23"/>
+		<Field Name="Administered Drug Strength Volume Units" Position="24"/>
+		<Field Name="Administered Barcode Identifier" Position="25"/>
+		<Field Name="Pharmacy Order Type" Position="26"/>
+	</Segment>
+	<Segment Name="RXC">
+		<Field Name="RX Component Type" Position="1"/>
+		<Field Name="Component Code" Position="2"/>
+		<Field Name="Component Amount" Position="3"/>
+		<Field Name="Component Units" Position="4"/>
+		<Field Name="Component Strength" Position="5"/>
+		<Field Name="Component Strength Units" Position="6"/>
+		<Field Name="Supplementary Code" Position="7"/>
+		<Field Name="Component Drug Strength Volume" Position="8"/>
+		<Field Name="Component Drug Strength Volume Units" Position="9"/>
+	</Segment>
+	<Segment Name="RXD">
+		<Field Name="Dispense Sub-ID Counter" Position="1"/>
+		<Field Name="Dispense/Give Code" Position="2"/>
+		<Field Name="Date/Time Dispensed" Position="3"/>
+		<Field Name="Actual Dispense Amount" Position="4"/>
+		<Field Name="Actual Dispense Units" Position="5"/>
+		<Field Name="Actual Dosage Form" Position="6"/>
+		<Field Name="Prescription Number" Position="7"/>
+		<Field Name="Number of Refills Remaining" Position="8"/>
+		<Field Name="Dispense Notes" Position="9"/>
+		<Field Name="Dispensing Provider" Position="10"/>
+		<Field Name="Substitution Status" Position="11"/>
+		<Field Name="Total Daily Dose" Position="12"/>
+		<Field Name="Dispense-to Location" Position="13"/>
+		<Field Name="Needs Human Review" Position="14"/>
+		<Field Name="Pharmacy/Treatment Supplier's Special Dispensing Instructions" Position="15"/>
+		<Field Name="Actual Strength" Position="16"/>
+		<Field Name="Actual Strength Unit" Position="17"/>
+		<Field Name="Substance Lot Number" Position="18"/>
+		<Field Name="Substance Expiration Date" Position="19"/>
+		<Field Name="Substance Manufacturer Name" Position="20"/>
+		<Field Name="Indication" Position="21"/>
+		<Field Name="Dispense Package Size" Position="22"/>
+		<Field Name="Dispense Package Size Unit" Position="23"/>
+		<Field Name="Dispense Package Method" Position="24"/>
+		<Field Name="Supplementary Code" Position="25"/>
+		<Field Name="Initiating Location" Position="26"/>
+		<Field Name="Packaging/Assembly Location" Position="27"/>
+		<Field Name="Actual Drug Strength Volume" Position="28"/>
+		<Field Name="Actual Drug Strength Volume Units" Position="29"/>
+		<Field Name="Dispense to Pharmacy" Position="30"/>
+		<Field Name="Dispense to Pharmacy Address" Position="31"/>
+		<Field Name="Pharmacy Order Type" Position="32"/>
+		<Field Name="Dispense Type" Position="33"/>
+	</Segment>
+	<Segment Name="RXE">
+		<Field Name="Quantity/Timing" Position="1"/>
+		<Field Name="Give Code" Position="2"/>
+		<Field Name="Give Amount - Minimum" Position="3"/>
+		<Field Name="Give Amount - Maximum" Position="4"/>
+		<Field Name="Give Units" Position="5"/>
+		<Field Name="Give Dosage Form" Position="6"/>
+		<Field Name="Provider's Administration Instructions" Position="7"/>
+		<Field Name="Deliver-To Location" Position="8"/>
+		<Field Name="Substitution Status" Position="9"/>
+		<Field Name="Dispense Amount" Position="10"/>
+		<Field Name="Dispense Units" Position="11"/>
+		<Field Name="Number Of Refills" Position="12"/>
+		<Field Name="Ordering Provider's DEA Number" Position="13"/>
+		<Field Name="Pharmacist/Treatment Supplier's Verifier ID" Position="14"/>
+		<Field Name="Prescription Number" Position="15"/>
+		<Field Name="Number of Refills Remaining" Position="16"/>
+		<Field Name="Number of Refills/Doses Dispensed" Position="17"/>
+		<Field Name="D/T of Most Recent Refill or Dose Dispensed" Position="18"/>
+		<Field Name="Total Daily Dose" Position="19"/>
+		<Field Name="Needs Human Review" Position="20"/>
+		<Field Name="Pharmacy/Treatment Supplier's Special Dispensing Instructions" Position="21"/>
+		<Field Name="Give Per (Time Unit)" Position="22"/>
+		<Field Name="Give Rate Amount" Position="23"/>
+		<Field Name="Give Rate Units" Position="24"/>
+		<Field Name="Give Strength" Position="25"/>
+		<Field Name="Give Strength Units" Position="26"/>
+		<Field Name="Give Indication" Position="27"/>
+		<Field Name="Dispense Package Size" Position="28"/>
+		<Field Name="Dispense Package Size Unit" Position="29"/>
+		<Field Name="Dispense Package Method" Position="30"/>
+		<Field Name="Supplementary Code" Position="31"/>
+		<Field Name="Original Order Date/Time" Position="32"/>
+		<Field Name="Give Drug Strength Volume" Position="33"/>
+		<Field Name="Give Drug Strength Volume Units" Position="34"/>
+		<Field Name="Controlled Substance Schedule" Position="35"/>
+		<Field Name="Formulary Status" Position="36"/>
+		<Field Name="Pharmaceutical Substance Alternative" Position="37"/>
+		<Field Name="Pharmacy of Most Recent Fill" Position="38"/>
+		<Field Name="Initial Dispense Amount" Position="39"/>
+		<Field Name="Dispensing Pharmacy" Position="40"/>
+		<Field Name="Dispensing Pharmacy Address" Position="41"/>
+		<Field Name="Deliver-to Patient Location" Position="42"/>
+		<Field Name="Deliver-to Address" Position="43"/>
+		<Field Name="Pharmacy Order Type" Position="44"/>
+	</Segment>
+	<Segment Name="RXG">
+		<Field Name="Give Sub-ID Counter" Position="1"/>
+		<Field Name="Dispense Sub-ID Counter" Position="2"/>
+		<Field Name="Quantity/Timing" Position="3"/>
+		<Field Name="Give Code" Position="4"/>
+		<Field Name="Give Amount - Minimum" Position="5"/>
+		<Field Name="Give Amount - Maximum" Position="6"/>
+		<Field Name="Give Units" Position="7"/>
+		<Field Name="Give Dosage Form" Position="8"/>
+		<Field Name="Administration Notes" Position="9"/>
+		<Field Name="Substitution Status" Position="10"/>
+		<Field Name="Dispense-to Location" Position="11"/>
+		<Field Name="Needs Human Review" Position="12"/>
+		<Field Name="Pharmacy/Treatment Supplier's Special Administration Instructions" Position="13"/>
+		<Field Name="Give Per (Time Unit)" Position="14"/>
+		<Field Name="Give Rate Amount" Position="15"/>
+		<Field Name="Give Rate Units" Position="16"/>
+		<Field Name="Give Strength" Position="17"/>
+		<Field Name="Give Strength Units" Position="18"/>
+		<Field Name="Substance Lot Number" Position="19"/>
+		<Field Name="Substance Expiration Date" Position="20"/>
+		<Field Name="Substance Manufacturer Name" Position="21"/>
+		<Field Name="Indication" Position="22"/>
+		<Field Name="Give Drug Strength Volume" Position="23"/>
+		<Field Name="Give Drug Strength Volume Units" Position="24"/>
+		<Field Name="Give Barcode Identifier" Position="25"/>
+		<Field Name="Pharmacy Order Type" Position="26"/>
+	</Segment>
+	<Segment Name="RXO">
+		<Field Name="Requested Give Code" Position="1"/>
+		<Field Name="Requested Give Amount - Minimum" Position="2"/>
+		<Field Name="Requested Give Amount - Maximum" Position="3"/>
+		<Field Name="Requested Give Units" Position="4"/>
+		<Field Name="Requested Dosage Form" Position="5"/>
+		<Field Name="Provider's Pharmacy/Treatment Instructions" Position="6"/>
+		<Field Name="Provider's Administration Instructions" Position="7"/>
+		<Field Name="Deliver-To Location" Position="8"/>
+		<Field Name="Allow Substitutions" Position="9"/>
+		<Field Name="Requested Dispense Code" Position="10"/>
+		<Field Name="Requested Dispense Amount" Position="11"/>
+		<Field Name="Requested Dispense Units" Position="12"/>
+		<Field Name="Number Of Refills" Position="13"/>
+		<Field Name="Ordering Provider's DEA Number" Position="14"/>
+		<Field Name="Pharmacist/Treatment Supplier's Verifier ID" Position="15"/>
+		<Field Name="Needs Human Review" Position="16"/>
+		<Field Name="Requested Give Per (Time Unit)" Position="17"/>
+		<Field Name="Requested Give Strength" Position="18"/>
+		<Field Name="Requested Give Strength Units" Position="19"/>
+		<Field Name="Indication" Position="20"/>
+		<Field Name="Requested Give Rate Amount" Position="21"/>
+		<Field Name="Requested Give Rate Units" Position="22"/>
+		<Field Name="Total Daily Dose" Position="23"/>
+		<Field Name="Supplementary Code" Position="24"/>
+		<Field Name="Requested Drug Strength Volume" Position="25"/>
+		<Field Name="Requested Drug Strength Volume Units" Position="26"/>
+		<Field Name="Pharmacy Order Type" Position="27"/>
+		<Field Name="Dispensing Interval" Position="28"/>
+	</Segment>
+	<Segment Name="RXR">
+		<Field Name="Route" Position="1"/>
+		<Field Name="Administration Site" Position="2"/>
+		<Field Name="Administration Device" Position="3"/>
+		<Field Name="Administration Method" Position="4"/>
+		<Field Name="Routing Instruction" Position="5"/>
+		<Field Name="Administration Site Modifier" Position="6"/>
+	</Segment>
+	<Segment Name="SAC">
+		<Field Name="External Accession Identifier" Position="1"/>
+		<Field Name="Accession Identifier" Position="2"/>
+		<Field Name="Container Identifier" Position="3"/>
+		<Field Name="Primary (parent) Container Identifier" Position="4"/>
+		<Field Name="Equipment Container Identifier" Position="5"/>
+		<Field Name="Specimen Source" Position="6"/>
+		<Field Name="Registration Date/Time" Position="7"/>
+		<Field Name="Container Status" Position="8"/>
+		<Field Name="Carrier Type" Position="9"/>
+		<Field Name="Carrier Identifier" Position="10"/>
+		<Field Name="Position in Carrier" Position="11"/>
+		<Field Name="Tray Type - SAC" Position="12"/>
+		<Field Name="Tray Identifier" Position="13"/>
+		<Field Name="Position in Tray" Position="14"/>
+		<Field Name="Location" Position="15"/>
+		<Field Name="Container Height" Position="16"/>
+		<Field Name="Container Diameter" Position="17"/>
+		<Field Name="Barrier Delta" Position="18"/>
+		<Field Name="Bottom Delta" Position="19"/>
+		<Field Name="Container Height/Diameter/Delta Units" Position="20"/>
+		<Field Name="Container Volume" Position="21"/>
+		<Field Name="Available Specimen Volume" Position="22"/>
+		<Field Name="Initial Specimen Volume" Position="23"/>
+		<Field Name="Volume Units" Position="24"/>
+		<Field Name="Separator Type" Position="25"/>
+		<Field Name="Cap Type" Position="26"/>
+		<Field Name="Additive" Position="27"/>
+		<Field Name="Specimen Component" Position="28"/>
+		<Field Name="Dilution Factor" Position="29"/>
+		<Field Name="Treatment" Position="30"/>
+		<Field Name="Temperature" Position="31"/>
+		<Field Name="Hemolysis Index" Position="32"/>
+		<Field Name="Hemolysis Index Units" Position="33"/>
+		<Field Name="Lipemia Index" Position="34"/>
+		<Field Name="Lipemia Index Units" Position="35"/>
+		<Field Name="Icterus Index" Position="36"/>
+		<Field Name="Icterus Index Units" Position="37"/>
+		<Field Name="Fibrin Index" Position="38"/>
+		<Field Name="Fibrin Index Units" Position="39"/>
+		<Field Name="System Induced Contaminants" Position="40"/>
+		<Field Name="Drug Interference" Position="41"/>
+		<Field Name="Artificial Blood" Position="42"/>
+		<Field Name="Special Handling Code" Position="43"/>
+		<Field Name="Other Environmental Factors" Position="44"/>
+	</Segment>
+	<Segment Name="SCH">
+		<Field Name="Placer Appointment ID" Position="1"/>
+		<Field Name="Filler Appointment ID" Position="2"/>
+		<Field Name="Occurrence Number" Position="3"/>
+		<Field Name="Placer Group Number" Position="4"/>
+		<Field Name="Schedule ID" Position="5"/>
+		<Field Name="Event Reason" Position="6"/>
+		<Field Name="Appointment Reason" Position="7"/>
+		<Field Name="Appointment Type" Position="8"/>
+		<Field Name="Appointment Duration" Position="9"/>
+		<Field Name="Appointment Duration Units" Position="10"/>
+		<Field Name="Appointment Timing Quantity" Position="11"/>
+		<Field Name="Placer Contact Person" Position="12"/>
+		<Field Name="Placer Contact Phone Number" Position="13"/>
+		<Field Name="Placer Contact Address" Position="14"/>
+		<Field Name="Placer Contact Location" Position="15"/>
+		<Field Name="Filler Contact Person" Position="16"/>
+		<Field Name="Filler Contact Phone Number" Position="17"/>
+		<Field Name="Filler Contact Address" Position="18"/>
+		<Field Name="Filler Contact Location" Position="19"/>
+		<Field Name="Entered By Person" Position="20"/>
+		<Field Name="Entered By Phone Number" Position="21"/>
+		<Field Name="Entered By Location" Position="22"/>
+		<Field Name="Parent Placer Appointment ID" Position="23"/>
+		<Field Name="Parent Filler Appointment ID" Position="24"/>
+		<Field Name="Filler Status Code" Position="25"/>
+		<Field Name="Placer Order Number" Position="26"/>
+		<Field Name="Filler Order Number" Position="27"/>
+	</Segment>
+	<Segment Name="SFT">
+		<Field Name="Software Vendor Organization" Position="1"/>
+		<Field Name="Software Certified Version or Release Number" Position="2"/>
+		<Field Name="Software Product Name" Position="3"/>
+		<Field Name="Software Binary ID" Position="4"/>
+		<Field Name="Software Product Information" Position="5"/>
+		<Field Name="Software Install Date" Position="6"/>
+	</Segment>
+	<Segment Name="SID">
+		<Field Name="Application / Method Identifier" Position="1"/>
+		<Field Name="Substance Lot Number" Position="2"/>
+		<Field Name="Substance Container Identifier" Position="3"/>
+		<Field Name="Substance Manufacturer Identifier" Position="4"/>
+	</Segment>
+	<Segment Name="SPM">
+		<Field Name="Set ID _ SPM" Position="1"/>
+		<Field Name="Specimen ID" Position="2"/>
+		<Field Name="Specimen Parent IDs" Position="3"/>
+		<Field Name="Specimen Type" Position="4"/>
+		<Field Name="Specimen Type Modifier" Position="5"/>
+		<Field Name="Specimen Additives" Position="6"/>
+		<Field Name="Specimen Collection Method" Position="7"/>
+		<Field Name="Specimen Source Site" Position="8"/>
+		<Field Name="Specimen Source Site Modifier" Position="9"/>
+		<Field Name="Specimen Collection Site" Position="10"/>
+		<Field Name="Specimen Role" Position="11"/>
+		<Field Name="Specimen Collection Amount" Position="12"/>
+		<Field Name="Grouped Specimen Count" Position="13"/>
+		<Field Name="Specimen Description" Position="14"/>
+		<Field Name="Specimen Handling Code" Position="15"/>
+		<Field Name="Specimen Risk Code" Position="16"/>
+		<Field Name="Specimen Collection Date/Time" Position="17"/>
+		<Field Name="Specimen Received Date/Time" Position="18"/>
+		<Field Name="Specimen Expiration Date/Time" Position="19"/>
+		<Field Name="Specimen Availability" Position="20"/>
+		<Field Name="Specimen Reject Reason" Position="21"/>
+		<Field Name="Specimen Quality" Position="22"/>
+		<Field Name="Specimen Appropriateness" Position="23"/>
+		<Field Name="Specimen Condition" Position="24"/>
+		<Field Name="Specimen Current Quantity" Position="25"/>
+		<Field Name="Number of Specimen Containers" Position="26"/>
+		<Field Name="Container Type" Position="27"/>
+		<Field Name="Container Condition" Position="28"/>
+		<Field Name="Specimen Child Role" Position="29"/>
+	</Segment>
+	<Segment Name="SPR">
+		<Field Name="Query Tag" Position="1"/>
+		<Field Name="Query/Response Format Code" Position="2"/>
+		<Field Name="Stored Procedure Name" Position="3"/>
+		<Field Name="Input Parameter List" Position="4"/>
+	</Segment>
+	<Segment Name="STF">
+		<Field Name="Primary Key Value - STF" Position="1"/>
+		<Field Name="Staff Identifier List" Position="2"/>
+		<Field Name="Staff Name" Position="3"/>
+		<Field Name="Staff Type" Position="4"/>
+		<Field Name="Administrative Sex" Position="5"/>
+		<Field Name="Date/Time of Birth" Position="6"/>
+		<Field Name="Active/Inactive Flag" Position="7"/>
+		<Field Name="Department" Position="8"/>
+		<Field Name="Hospital Service - STF" Position="9"/>
+		<Field Name="Phone" Position="10"/>
+		<Field Name="Office/Home Address/Birthplace" Position="11"/>
+		<Field Name="Institution Activation Date" Position="12"/>
+		<Field Name="Institution Inactivation Date" Position="13"/>
+		<Field Name="Backup Person ID" Position="14"/>
+		<Field Name="E-Mail Address" Position="15"/>
+		<Field Name="Preferred Method of Contact" Position="16"/>
+		<Field Name="Marital Status" Position="17"/>
+		<Field Name="Job Title" Position="18"/>
+		<Field Name="Job Code/Class" Position="19"/>
+		<Field Name="Employment Status Code" Position="20"/>
+		<Field Name="Additional Insured on Auto" Position="21"/>
+		<Field Name="Driver's License Number - Staff" Position="22"/>
+		<Field Name="Copy Auto Ins" Position="23"/>
+		<Field Name="Auto Ins. Expires" Position="24"/>
+		<Field Name="Date Last DMV Review" Position="25"/>
+		<Field Name="Date Next DMV Review" Position="26"/>
+		<Field Name="Race" Position="27"/>
+		<Field Name="Ethnic Group" Position="28"/>
+		<Field Name="Re-activation Approval Indicator" Position="29"/>
+		<Field Name="Citizenship" Position="30"/>
+		<Field Name="Death Date and Time" Position="31"/>
+		<Field Name="Death Indicator" Position="32"/>
+		<Field Name="Institution Relationship Type Code" Position="33"/>
+		<Field Name="Institution Relationship Period" Position="34"/>
+		<Field Name="Expected Return Date" Position="35"/>
+		<Field Name="Cost Center Code" Position="36"/>
+		<Field Name="Generic Classification Indicator" Position="37"/>
+		<Field Name="Inactive Reason Code" Position="38"/>
+	</Segment>
+	<Segment Name="TCC">
+		<Field Name="Universal Service Identifier" Position="1"/>
+		<Field Name="Test Application Identifier" Position="2"/>
+		<Field Name="Specimen Source" Position="3"/>
+		<Field Name="Auto-Dilution Factor Default" Position="4"/>
+		<Field Name="Rerun Dilution Factor Default" Position="5"/>
+		<Field Name="Pre-Dilution Factor Default" Position="6"/>
+		<Field Name="Endogenous Content of Pre-Dilution Diluent" Position="7"/>
+		<Field Name="Inventory Limits Warning Level" Position="8"/>
+		<Field Name="Automatic Rerun Allowed" Position="9"/>
+		<Field Name="Automatic Repeat Allowed" Position="10"/>
+		<Field Name="Automatic Reflex Allowed" Position="11"/>
+		<Field Name="Equipment Dynamic Range" Position="12"/>
+		<Field Name="Units" Position="13"/>
+		<Field Name="Processing Type" Position="14"/>
+	</Segment>
+	<Segment Name="TCD">
+		<Field Name="Universal Service Identifier" Position="1"/>
+		<Field Name="Auto-Dilution Factor" Position="2"/>
+		<Field Name="Rerun Dilution Factor" Position="3"/>
+		<Field Name="Pre-Dilution Factor" Position="4"/>
+		<Field Name="Endogenous Content of Pre-Dilution Diluent" Position="5"/>
+		<Field Name="Automatic Repeat Allowed" Position="6"/>
+		<Field Name="Reflex Allowed" Position="7"/>
+		<Field Name="Analyte Repeat Status" Position="8"/>
+	</Segment>
+	<Segment Name="TQ1">
+		<Field Name="Set ID - TQ1" Position="1"/>
+		<Field Name="Quantity" Position="2"/>
+		<Field Name="Repeat Pattern" Position="3"/>
+		<Field Name="Explicit Time" Position="4"/>
+		<Field Name="Relative Time and Units" Position="5"/>
+		<Field Name="Service Duration" Position="6"/>
+		<Field Name="Start date/time" Position="7"/>
+		<Field Name="End date/time" Position="8"/>
+		<Field Name="Priority" Position="9"/>
+		<Field Name="Condition text" Position="10"/>
+		<Field Name="Text instruction" Position="11"/>
+		<Field Name="Conjunction" Position="12"/>
+		<Field Name="Occurrence duration" Position="13"/>
+		<Field Name="Total occurrence's" Position="14"/>
+	</Segment>
+	<Segment Name="TQ2">
+		<Field Name="Set ID - TQ2" Position="1"/>
+		<Field Name="Sequence/Results Flag" Position="2"/>
+		<Field Name="Related Placer Number" Position="3"/>
+		<Field Name="Related Filler Number" Position="4"/>
+		<Field Name="Related Placer Group Number" Position="5"/>
+		<Field Name="Sequence Condition Code" Position="6"/>
+		<Field Name="Cyclic Entry/Exit Indicator" Position="7"/>
+		<Field Name="Sequence Condition Time Interval" Position="8"/>
+		<Field Name="Cyclic Group Maximum Number of Repeats" Position="9"/>
+		<Field Name="Special Service Request Relationship" Position="10"/>
+	</Segment>
+	<Segment Name="TXA">
+		<Field Name="Set ID- TXA" Position="1"/>
+		<Field Name="Document Type" Position="2"/>
+		<Field Name="Document Content Presentation" Position="3"/>
+		<Field Name="Activity Date/Time" Position="4"/>
+		<Field Name="Primary Activity Provider Code/Name" Position="5"/>
+		<Field Name="Origination Date/Time" Position="6"/>
+		<Field Name="Transcription Date/Time" Position="7"/>
+		<Field Name="Edit Date/Time" Position="8"/>
+		<Field Name="Originator Code/Name" Position="9"/>
+		<Field Name="Assigned Document Authenticator" Position="10"/>
+		<Field Name="Transcriptionist Code/Name" Position="11"/>
+		<Field Name="Unique Document Number" Position="12"/>
+		<Field Name="Parent Document Number" Position="13"/>
+		<Field Name="Placer Order Number" Position="14"/>
+		<Field Name="Filler Order Number" Position="15"/>
+		<Field Name="Unique Document File Name" Position="16"/>
+		<Field Name="Document Completion Status" Position="17"/>
+		<Field Name="Document Confidentiality Status" Position="18"/>
+		<Field Name="Document Availability Status" Position="19"/>
+		<Field Name="Document Storage Status" Position="20"/>
+		<Field Name="Document Change Reason" Position="21"/>
+		<Field Name="Authentication Person, Time Stamp" Position="22"/>
+		<Field Name="Distributed Copies (Code and Name of Recipients)" Position="23"/>
+	</Segment>
+	<Segment Name="UB1">
+		<Field Name="Set ID - UB1" Position="1"/>
+		<Field Name="Blood Deductible  (43)" Position="2"/>
+		<Field Name="Blood Furnished-Pints Of (40)" Position="3"/>
+		<Field Name="Blood Replaced-Pints (41)" Position="4"/>
+		<Field Name="Blood Not Replaced-Pints(42)" Position="5"/>
+		<Field Name="Co-Insurance Days (25)" Position="6"/>
+		<Field Name="Condition Code (35-39)" Position="7"/>
+		<Field Name="Covered Days - (23)" Position="8"/>
+		<Field Name="Non Covered Days - (24)" Position="9"/>
+		<Field Name="Value Amount &amp; Code (46-49)" Position="10"/>
+		<Field Name="Number Of Grace Days (90)" Position="11"/>
+		<Field Name="Special Program Indicator (44)" Position="12"/>
+		<Field Name="PSRO/UR Approval Indicator (87)" Position="13"/>
+		<Field Name="PSRO/UR Approved Stay-Fm (88)" Position="14"/>
+		<Field Name="PSRO/UR Approved Stay-To (89)" Position="15"/>
+		<Field Name="Occurrence (28-32)" Position="16"/>
+		<Field Name="Occurrence Span (33)" Position="17"/>
+		<Field Name="Occur Span Start Date(33)" Position="18"/>
+		<Field Name="Occur Span End Date (33)" Position="19"/>
+		<Field Name="UB-82 Locator 2" Position="20"/>
+		<Field Name="UB-82 Locator 9" Position="21"/>
+		<Field Name="UB-82 Locator 27" Position="22"/>
+		<Field Name="UB-82 Locator 45" Position="23"/>
+	</Segment>
+	<Segment Name="UB2">
+		<Field Name="Set ID - UB2" Position="1"/>
+		<Field Name="Co-Insurance Days (9)" Position="2"/>
+		<Field Name="Condition Code (24-30)" Position="3"/>
+		<Field Name="Covered Days (7)" Position="4"/>
+		<Field Name="Non-Covered Days (8)" Position="5"/>
+		<Field Name="Value Amount &amp; Code" Position="6"/>
+		<Field Name="Occurrence Code &amp; Date (32-35)" Position="7"/>
+		<Field Name="Occurrence Span Code/Dates (36)" Position="8"/>
+		<Field Name="UB92 Locator 2 (State)" Position="9"/>
+		<Field Name="UB92 Locator 11 (State)" Position="10"/>
+		<Field Name="UB92 Locator 31 (National)" Position="11"/>
+		<Field Name="Document Control Number" Position="12"/>
+		<Field Name="UB92 Locator 49 (National)" Position="13"/>
+		<Field Name="UB92 Locator 56 (State)" Position="14"/>
+		<Field Name="UB92 Locator 57 (National)" Position="15"/>
+		<Field Name="UB92 Locator 78 (State)" Position="16"/>
+		<Field Name="Special Visit Count" Position="17"/>
+	</Segment>
+	<Segment Name="URD">
+		<Field Name="R/U Date/Time" Position="1"/>
+		<Field Name="Report Priority" Position="2"/>
+		<Field Name="R/U Who Subject Definition" Position="3"/>
+		<Field Name="R/U What Subject Definition" Position="4"/>
+		<Field Name="R/U What Department Code" Position="5"/>
+		<Field Name="R/U Display/Print Locations" Position="6"/>
+		<Field Name="R/U Results Level" Position="7"/>
+	</Segment>
+	<Segment Name="URS">
+		<Field Name="R/U Where Subject Definition" Position="1"/>
+		<Field Name="R/U When Data Start Date/Time" Position="2"/>
+		<Field Name="R/U When Data End Date/Time" Position="3"/>
+		<Field Name="R/U What User Qualifier" Position="4"/>
+		<Field Name="R/U Other Results Subject Definition" Position="5"/>
+		<Field Name="R/U Which Date/Time Qualifier" Position="6"/>
+		<Field Name="R/U Which Date/Time Status Qualifier" Position="7"/>
+		<Field Name="R/U Date/Time Selection Qualifier" Position="8"/>
+		<Field Name="R/U Quantity/Timing Qualifier" Position="9"/>
+	</Segment>
+	<Segment Name="VAR">
+		<Field Name="Variance Instance ID" Position="1"/>
+		<Field Name="Documented Date/Time" Position="2"/>
+		<Field Name="Stated Variance Date/Time" Position="3"/>
+		<Field Name="Variance Originator" Position="4"/>
+		<Field Name="Variance Classification" Position="5"/>
+		<Field Name="Variance Description" Position="6"/>
+	</Segment>
+	<Segment Name="VTQ">
+		<Field Name="Query Tag" Position="1"/>
+		<Field Name="Query/Response Format Code" Position="2"/>
+		<Field Name="VT Query Name" Position="3"/>
+		<Field Name="Virtual Table Name" Position="4"/>
+		<Field Name="Selection Criteria" Position="5"/>
+	</Segment>
+	<Segment Name="ZL7"/>
+</SequenceNumbers>

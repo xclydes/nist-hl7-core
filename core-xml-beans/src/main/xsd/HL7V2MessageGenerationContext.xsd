@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 (http://www.altova.com) by Sydney Henrard (NIST) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.nist.gov/healthcare/generation/message" xmlns:message="http://www.nist.gov/healthcare/message" xmlns:generation="http://www.nist.gov/healthcare/generation" targetNamespace="http://www.nist.gov/healthcare/generation/message" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:import namespace="http://www.nist.gov/healthcare/message" schemaLocation="Message.xsd"/>
+	<xs:import namespace="http://www.nist.gov/healthcare/generation" schemaLocation="Generation.xsd"/>
+	<xs:complexType name="HL7V2MessageGenerationContextDefinition">
+		<xs:sequence>
+			<xs:element name="Encoding" type="message:EncodingConstants"/>
+			<xs:element name="MessagePopulationModule" type="generation:MessagePopulationModule" minOccurs="0"/>
+			<xs:element name="MessageInstanceSpecificValues" type="generation:MessageInstanceSpecificValuesGeneration" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="HL7V2MessageGenerationContextDefinition" type="HL7V2MessageGenerationContextDefinition"/>
+</xs:schema>

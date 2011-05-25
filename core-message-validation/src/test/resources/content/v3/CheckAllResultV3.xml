@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<context:HL7V3MessageValidationContextDefinition xmlns:context="http://www.nist.gov/healthcare/validation/message/hl7/v3/context"
+                                                 xmlns:message="http://www.nist.gov/healthcare/message"
+                                                 xmlns:validation="http://www.nist.gov/healthcare/validation">
+	  <context:FailureInterpretation>
+		    <context:MessageFailure Type="DATA" Result="ERROR"/>
+	  </context:FailureInterpretation>
+	  <context:MessageInstanceSpecificValues>
+		    <context:DataValueLocationItem>
+			      <context:XPath CheckAll="true">/*:PRPA_IN201301UV02/*:controlActProcess/*:subject/*:registrationEvent/*:subject1/*:patient/*:patientPerson/*:asOtherIDs/*:id/@root</context:XPath>
+			      <context:Value>
+				        <validation:PlainText>2.16.840.1.113883.4.1</validation:PlainText>
+			      </context:Value>
+			      <context:Value>
+				        <validation:PlainText>1.2.840.114350.1.13.99997.2.3412</validation:PlainText>
+			      </context:Value>
+		    </context:DataValueLocationItem>
+		    <context:DataValueLocationItem>
+			      <context:XPath CheckAll="true">/*:PRPA_IN201301UV02/*:controlActProcess/*:subject/*:registrationEvent/*:subject1/*:patient/*:patientPerson/*:asOtherIDs/*:id/@root</context:XPath>
+			      <context:Value>
+				        <validation:Regex>(\d.*3412)|(\d.*1)</validation:Regex>
+			      </context:Value>
+		    </context:DataValueLocationItem>
+	  </context:MessageInstanceSpecificValues>
+</context:HL7V3MessageValidationContextDefinition>

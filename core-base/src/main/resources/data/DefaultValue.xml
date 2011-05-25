@@ -1,0 +1,105 @@
+<DefaultValueLibrary xmlns="http://www.nist.gov/healthcare/generation/message/data">
+	<SimpleValue Datatype="ST">
+		<Item Value="X"/>
+		<Item Value="abc"/>
+		<Item Value="text"/>
+		<Item Value="long default text"/>
+	</SimpleValue>
+	<SimpleValue Datatype="TX">
+		<Item Value="X"/>
+		<Item Value="abc"/>
+		<Item Value="text"/>
+		<Item Value="long default text"/>
+	</SimpleValue>
+	<SimpleValue Datatype="FT">
+		<Item Value="X"/>
+		<Item Value="abc"/>
+		<Item Value="text"/>
+		<Item Value="long default text"/>
+	</SimpleValue>
+	<SimpleValue Datatype="NM">
+		<Item Value="6"/>
+		<Item Value="23"/>
+		<Item Value="87424"/>
+		<Item Value="949498432"/>
+	</SimpleValue>
+	<SimpleValue Datatype="SI">
+		<Item Value="6"/>
+		<Item Value="23"/>
+		<Item Value="8724"/>
+		<Item Value="9494"/>
+	</SimpleValue>
+	<SimpleValue Datatype="ID">
+		<Item Value="A"/>
+		<Item Value="1"/>
+	</SimpleValue>
+	<SimpleValue Datatype="IS">
+		<Item Value="A"/>
+		<Item Value="1"/>
+	</SimpleValue>
+	<SimpleValue Datatype="DT">
+		<Item Value="2006"/>
+		<Item Value="200510"/>
+		<Item Value="19520408"/>
+	</SimpleValue>
+	<SimpleValue Datatype="TM">
+		<Item Value="14"/>
+		<Item Value="0247"/>
+		<Item Value="155214"/>
+		<Item Value="095441.24"/>
+		<Item Value="042614.2658"/>
+	</SimpleValue>
+	<SimpleValue Datatype="DTM">
+		<Item Value="2006"/>
+		<Item Value="200510"/>
+		<Item Value="19520408"/>
+		<Item Value="19520408155214"/>
+	</SimpleValue>
+	<SimpleValue Datatype="TS">
+		<Item Value="2006"/>
+		<Item Value="200510"/>
+		<Item Value="19520408"/>
+		<Item Value="19520408155214"/>
+	</SimpleValue>
+	<SimpleValue Datatype="TN">
+		<Item Value="(301)975-4864"/>
+		<Item Value="(301)975-6478X4864"/>
+		<Item Value="234-4532CWEEKENDS"/>
+	</SimpleValue>
+	<TableValue Datatype="ST">
+		<Item Value="G"/>
+	</TableValue>
+	<TableValue Datatype="TX">
+		<Item Value="G"/>
+	</TableValue>
+	<TableValue Datatype="FT">
+		<Item Value="G"/>
+	</TableValue>
+	<TableValue Datatype="NM">
+		<Item Value="0"/>
+	</TableValue>
+	<TableValue Datatype="SI">
+		<Item Value="0"/>
+	</TableValue>
+	<TableValue Datatype="ID">
+		<Item Value="G"/>
+	</TableValue>
+	<TableValue Datatype="IS">
+		<Item Value="G"/>
+	</TableValue>
+	<TableValue Datatype="DT">
+		<Item Value="1900"/>
+	</TableValue>
+	<TableValue Datatype="TM">
+		<Item Value="01"/>
+	</TableValue>
+	<TableValue Datatype="DTM">
+		<Item Value="19000101010101"/>
+	</TableValue>
+	<TableValue Datatype="TS">
+		<Item Value="19000101010101"/>
+	</TableValue>
+	<TableValue Datatype="TN">
+		<Item Value="G"/>
+	</TableValue>
+</DefaultValueLibrary>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urn:FAKE-ROOT xmlns:urn="urn:hl7-org:v2xml"><urn:MSH>
+<urn:MSH.1>|</urn:MSH.1>
+<urn:MSH.2>^~\&amp;</urn:MSH.2>
+<urn:MSH.3><urn:HD.1>SA</urn:HD.1></urn:MSH.3>
+<urn:MSH.4><urn:HD.1>SF</urn:HD.1></urn:MSH.4>
+<urn:MSH.5><urn:HD.1>RA</urn:HD.1></urn:MSH.5>
+<urn:MSH.6><urn:HD.1>RF</urn:HD.1></urn:MSH.6>
+<urn:MSH.7><urn:TS.1>20100421</urn:TS.1></urn:MSH.7>
+<urn:MSH.9><urn:CM.1>RSP</urn:CM.1><urn:CM.2>K22</urn:CM.2><urn:CM.3>RSP_K21</urn:CM.3></urn:MSH.9>
+<urn:MSH.10>text</urn:MSH.10>
+<urn:MSH.11><urn:PT.1>P</urn:PT.1></urn:MSH.11>
+<urn:MSH.12><urn:VID.1>2.5</urn:VID.1></urn:MSH.12>
+<urn:MSH.13>1254</urn:MSH.13>
+</urn:MSH><urn:MSA>
+<urn:MSA.1>AA</urn:MSA.1>
+<urn:MSA.2>text</urn:MSA.2>
+</urn:MSA><urn:QAK>
+<urn:QAK.1>text</urn:QAK.1>
+<urn:QAK.2>OK</urn:QAK.2>
+</urn:QAK><urn:QPD>
+<urn:QPD.1><urn:CE.2>text</urn:CE.2></urn:QPD.1>
+<urn:QPD.2>IHE Query</urn:QPD.2>
+<urn:QPD.3><urn:QIP.1>text</urn:QIP.1><urn:QIP.2>text</urn:QIP.2></urn:QPD.3>
+<urn:QPD.3><urn:QIP.1>text</urn:QIP.1><urn:QIP.2>text</urn:QIP.2></urn:QPD.3>
+<urn:QPD.8><urn:CX.4><urn:HD.1>SF</urn:HD.1><urn:HD.2>text</urn:HD.2></urn:CX.4></urn:QPD.8>
+</urn:QPD><urn:RSP_K21.QUERY_RESPONSE>
+<urn:PID>
+<urn:PID.1>007</urn:PID.1>
+<urn:PID.3>
+<urn:CX.1>text</urn:CX.1>
+<urn:CX.4><urn:HD.1>RF</urn:HD.1><urn:HD.2>text</urn:HD.2><urn:HD.3>HL7</urn:HD.3></urn:CX.4>
+</urn:PID.3>
+<urn:PID.5>
+<urn:XPN.1><urn:FN.1>text</urn:FN.1></urn:XPN.1>
+<urn:XPN.7>B</urn:XPN.7>
+<urn:XPN.12><urn:TS.1>20100421</urn:TS.1></urn:XPN.12>
+</urn:PID.5>
+<urn:PID.8>M</urn:PID.8>
+</urn:PID>
+</urn:RSP_K21.QUERY_RESPONSE><urn:YYY>
+<urn:YYY.1>20100421</urn:YYY.1>
+<urn:YYY.2>(301)975-2000</urn:YYY.2>
+</urn:YYY></urn:FAKE-ROOT>

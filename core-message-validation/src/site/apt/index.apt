@@ -1,0 +1,41 @@
+What is the HL7 message validation project
+
+  The intent of this project is to provide a Java library that validates HL7 messages. The current version validates V2 messages in both encodings ER7 and XML, and also V3 messages.
+
+* Features
+
+  The library validates the structure and the content of the messages. The following checks are done for the structure:
+
+    * Version: The version in the message (MSH.12.1) must match the version in the profile.
+
+    * Message Type: The message type (3 components of element MSH.9) in the message must match the message code, the trigger event and the message structure id in the profile.
+
+    * Message Structure: The order of the message element must match the definition found in the profle.
+
+    * Usage: Related to the message structure, the validation checks for the presence or not of the message elements.
+
+    * Cardinality: Related to the message structure, the validation checks for the cardinality of the message elements.
+
+    * Length: The value length in the message must be less than the maximum length specified in the profile.
+
+    * Table: The value must come from a table set.
+
+    * Constant: The value must match the constant value defined in the profile.
+
+    * Datatype: Thae value must match a regular expression depending on the datatype defined in the profile.
+
+  and the content:
+
+    * Plain Text: The value at a specific location must match the value defined in the context.
+
+    * Regular Expression: The value at a specific location must match with the regular expression in the context.
+
+    * Conditional: The context supports conditional checks (if then else).
+
+    * Specific Datatype: The validation makes specific checks for HD and CE datatype.
+
+  In addition we provide {{{sample-test-messages.html}sample test messages}}. For each type of errors, we provide a pair profile/message that replicate the error. So these test messages can be used to test HL7 message validator.
+
+* Usage
+
+  In order to use the message validation in your project, you just have to include it to your classpath like a regular library. The configuration is done in XML, you can find the documentation for {{{validation-context-v2.html}V2}} and {{{validation-context-v3.html}V3}} messages. The documentation also contains a {{{validate-message.html}simple client}} to run the validation.

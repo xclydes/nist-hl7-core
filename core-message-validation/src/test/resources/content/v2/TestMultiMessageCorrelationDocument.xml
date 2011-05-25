@@ -1,0 +1,25 @@
+<MessageValidationCorrelation xmlns="http://www.nist.gov/healthcare/validation/message/hl7/context" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.nist.gov/healthcare/validation/message/hl7/context file:///D:/home/svn/core-maven/trunk/core-xml-beans/src/main/xsd/MessageValidationCorrelation.xsd">
+	<Correlations>
+		<Correlation>
+			<SingleValue>
+				<Between>MSH[1].3[1].1</Between>
+				<And messageKey="query">MSH[1].5[1].1</And>
+			</SingleValue>
+			<SingleValue>
+				<Between>MSH[1].4[1].1</Between>
+				<And messageKey="query">MSH[1].6[1].1</And>
+			</SingleValue>
+			<SingleValue>
+				<Between>MSH[1].5[1].1</Between>
+				<And messageKey="query">MSH[1].3[1].1</And>
+			</SingleValue>
+			<SingleValue>
+				<Between>MSH[1].6[1].1</Between>
+				<And messageKey="query">MSH[1].4[1].1</And>
+			</SingleValue>
+			<Copy>
+				<Source messageKey="query">QPD[1]</Source>
+			</Copy>
+		</Correlation>
+	</Correlations>
+</MessageValidationCorrelation>

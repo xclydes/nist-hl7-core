@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mes:HL7V2MessageGenerationContextDefinition xmlns:mes="http://www.nist.gov/healthcare/generation/message" xmlns:gen="http://www.nist.gov/healthcare/generation" xmlns:mes1="http://www.nist.gov/healthcare/message">
+	<mes:Encoding>ER7</mes:Encoding>
+	<mes:MessageInstanceSpecificValues>
+		<!-- -->
+		<gen:DataValueLocationItem>
+			<gen:Location>
+				<mes1:SegmentGroup Name="PATIENT_RESULT">
+					<mes1:SegmentGroup Name="PATIENT">
+						<mes1:Segment Name="PID"/>
+					</mes1:SegmentGroup>
+				</mes1:SegmentGroup>
+			</gen:Location>
+			<gen:Value>|</gen:Value>
+		</gen:DataValueLocationItem>
+	</mes:MessageInstanceSpecificValues>
+</mes:HL7V2MessageGenerationContextDefinition>

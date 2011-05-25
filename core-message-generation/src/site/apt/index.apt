@@ -1,0 +1,13 @@
+What is the HL7 message generation project
+
+  The intent of this project is to provide a Java library that generates HL7 V2 messages. The messages can be valid or invalid.
+
+* Features
+
+  * Valid messages generation: The message are valid against the structure defined in the profile. The message is also populated based on the profile requirements.
+
+  * Message Population: The generation can be configure with your own set of data to populate the messages.
+
+* Usage
+
+  In order to use the message generation in your project, you just have to include it to your classpath like a regular library. The configuration is done in XML, you can find the documentation {{{generation-context.html}here}}. The documentation also contains a {{{generate-message.html}simple client}} to run the validation.

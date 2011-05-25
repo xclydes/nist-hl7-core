@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ADT_A04 xmlns="urn:hl7-org:v2xml">
+<MSH>
+<MSH.1>|</MSH.1>
+<MSH.2>^~\&amp;</MSH.2>
+<MSH.3>
+<HD.1>MOCKUP_SENDER</HD.1>
+</MSH.3>
+<MSH.4>
+<HD.1>MOCKUP</HD.1>
+</MSH.4>
+<MSH.5>
+<HD.1>JUNIT_RECEIVER</HD.1>
+</MSH.5>
+<MSH.6>
+<HD.1>JUNIT</HD.1>
+</MSH.6>
+<MSH.7>
+<TS.1>20090810141748</TS.1>
+<TS.2>H</TS.2>
+</MSH.7>
+<MSH.8>Security</MSH.8>
+<MSH.9>
+<MSG.1>ADT</MSG.1>
+<MSG.2>A04</MSG.2>
+<MSG.3>ADT_A04</MSG.3>
+</MSH.9>
+<MSH.10>Flame-990001</MSH.10>
+<MSH.11>
+<PT.1>P</PT.1>
+</MSH.11>
+<MSH.12>
+<VID.1>2.3.1</VID.1>
+</MSH.12>
+</MSH>
+<TST><TST.1>Value For Testing Purpose</TST.1></TST>
+</ADT_A04>
+  

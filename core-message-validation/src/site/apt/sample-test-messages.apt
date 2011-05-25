@@ -1,0 +1,152 @@
+  The goal of that document is to provide several test cases to validate an HL7 V2 message validator. All the profiles and messages can be downloaded here. All these tests are used as JUnit test to validate our validation.
+
+Version
+
+  Test: The version in the message (MSH.12.1) must match the version in the profile (/HL7v2xConformanceProfile/@HL7Version).
+
+Message Code
+
+  Test: The message code in the message (MSH.9.1) must match the message code in the profile (/HL7v2xConformanceProfile/HL7v2xStaticDef/@MsgType).
+
+TriggerEvent
+
+  Test: The trigger event in the message (MSH.9.2) must match the trigger event in the profile (/HL7v2xConformanceProfile/HL7v2xStaticDef/@EventType).
+  <Note: For version 2.3.1 the trigger event can be empty if the message code is ACK.>
+
+Message Structure Id
+
+  Test: The message structure id in the message (MSH.9.3) must match the message structure id in the profile (/HL7v2xConformanceProfile/HL7v2xStaticDef/@MsgStructID).
+  <Note: For version 2.3.1 the message structure id can be empty.>
+
+R-Usage
+
+  An element with a Usage attribute set to R means that this element must be present in the message. It is true for all elements except the segment groups that have no representation in an ER7 message. All the tests will consist in ommiting a required element in a message.
+
+  Test: The segment group QUERY_RESPONSE is required but it is missing in the message.\
+  <Note: This test is only for XML message.>
+
+  Test: The segment QAK is required but it is missing in the message.\
+  Test: The segment PID is required but it is missing in the message.
+
+  Test: The field QPD.2 is required but it is missing in the message.\
+  Test: The field PID.8 is required but it is missing in the message.
+
+  Test: The component QPD.3[1].1 is required but it is missing in the message.\
+  Test: The component PID.5.7 is required but it is missing in the message.
+
+  Test: The subcomponent QPD.8.4.2 is required but it is missing in the message.\
+  Test: The subcomponent PID.5.1.1 is required but it is missing in the message.
+
+X-Usage
+
+  An element with a Usage attribute set to X means that this element must not be present in the message. It is true for all elements except the segment groups that have no representation in an ER7 message. All the tests will consist in putting an unsupported element in a message.
+
+  Test: The segment group QUERY_RESPONSE is unsupported but it is present in the message.\
+  <Note: This test is only for XML message.>
+
+  Test: The segment DSC is unsupported but it is present in the message.\
+  Test: The segment PID is unsupported but it is present in the message.
+
+  Test: The field MSA.3 is unsupported but it is present in the message.\
+  Test: The field PID.12 is unsupported but it is present in the message.
+
+  Test: The component MSH.7.2 is unsupported but it is present in the message.\
+  Test: The component PID.5.6 is unsupported but it is present in the message.
+
+  Test: The subcomponent MSH.12.2.2 is unsupported but it is present in the message.\
+  Test: The subcomponent PID.5.12.2 is unsupported but it is present in the message.
+
+Cardinality and RE-Usage
+
+  The cardinality of an element is defined by the Min and Max attributes. The number of times an element can be present is in between the Min value and the Max value. This is true for all R and RE elements. However an element with a Usage attribute set to RE means that this element is optional so it is mandatory for that element to be present in the message. So a RE element with a cardinality of 2 to 5 can be present 2 to 5 times or not present.
+
+  Test: The field QPD.3 can be present 2 to 4 times and it is present only once in the message.\
+  Test: The field QPD.3 can be present 2 to 4 times and it is present 5 times in the message.\
+  Test: The segment DSC can be present once or twice or missing. It is to test an RE element with a Min cardinality greater than 0. The message should be valid.
+
+Length
+
+  The Length attribute defines the length of the value in the message.
+
+  Test: The element MSA.2 has a maximum length of 20 but the value "TextOfOver20Characters" is of length 23.
+
+Table
+
+  The Table attribute defines the table identifier from where the value must come from.
+
+  Test: The component MSH.11.1 must have a value that comes from table #0103 but the value "X" in the message is not.
+
+Constant
+
+  The Constant attribute sets the value of an element.
+
+  Test: The field QPD.2 must be set to "IHE Query" but it is "Other Query Tag" in the message.
+
+Datatype
+
+  Depending on the datatype, the value must follow a regular expression.
+
+  Test: The component MSH.7.1 is of datatype DTM but the value "2010-04-21" is not matching the regular expression for DTM datatype.\
+  Test: The field ZID.1 is of datatype TM but the value "2010-04-21" is not matching the regular expression for TM datatype.\
+  Test: The component QPD.8.7 is of datatype DT but the value "10-04-21" is not matching the regular expression for DT datatype.\
+  Test: The field PID.1 is of datatype SI but the value "XJG0" is not matching the regular expression for SI datatype.\
+  Test: The field MSH.13 is of datatype NM but the value "text" is not matching the regular expression for NM datatype.\
+  Test: The field ZID.2 is of datatype TN but the value "301-975-2000" is not matching the regular expression for TN datatype.
+
+Value in Non Primitive Element
+
+  A non primitive element can't have a value but only elements. It only applies to XML message.
+
+  Test: The segment group RSP_K21.QUERY_RESPONSE is a non primitive element but contains a value.
+
+  Test: The segment QPD is a non primitive element but contains a value.\
+  Test: The segment PID is a non primitive element but contains a value.
+
+  Test: The field QPD.3 is a non primitive element but contains a value.\
+  Test: The field PID.5 is a non primitive element but contains a value.
+
+  Test: The component QPD.8.4 is a non primitive element but contains a value.\
+  Test: The component PID.3.4 is a non primitive element but contains a value.
+
+Root Element
+
+  The root element of a message must match the message type of the profile. It only applies to XML message.
+
+  Test: The root element tag is set to "FAKE-ROOT".
+
+Empty Value
+
+  An element must have a value when required. In XML message the element can be present (i.e. the XML tags are in the message <QPD.2></QPD.2>) but with an empty value.
+
+  Test: The field QPD.2 is required and present but has an empty value.\
+  Test: The field PID.8 is required and present but has an empty value.
+
+  Test: The component QPD.3[1].1 is required and present but has an empty value.\
+  Test: The component PID.5.7 is required and present but has an empty value.
+
+  Test: The subcomponent QPD.8.4.2 is required and present but has an empty value.\
+  Test: The subcomponent PID.5.1.1 is required and present but has an empty value.
+
+Missing Child
+
+  A required element defined with no required child element must have at least one child populated.
+
+  Test: The segment MSA is required and all its children are not required.\
+  Test: The field QAK.3 is required and all its children are not required.\
+  Test: The component QPD.8.4 is required and all its children are not required.
+
+Table Attribute for Non Primitive Element
+
+  A primitive element can have a Table attribute but it applies to one of its children. For CE datatype field, the Table attribute applies to the first component.
+
+  Test: The field QPD.1 is a CE datatype with Table attribute set to 0471. The component CE.1 has a value that is not part of table #0471.
+
+Extra Element
+
+  An undefined element is present in the message.
+
+  Test: The segment group RSP_K22.EXTRA is undefined but is present.\
+  Test: The segment XTA is undefined but is present.\
+  Test: The field PID.70 is undefined but is present.\
+  Test: The component PID.5.37 is undefined but is present.\
+  Test: The subcomponent QPD.8.4.10 is undefined but is present.

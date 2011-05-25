@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 (http://www.altova.com) by Sydney Henrard (NIST) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.nist.gov/healthcare/validation/profile/hl7/v2/context" xmlns:profile="http://www.nist.gov/healthcare/profile" xmlns:common="http://www.nist.gov/healthcare/validation" targetNamespace="http://www.nist.gov/healthcare/validation/profile/hl7/v2/context" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:import namespace="http://www.nist.gov/healthcare/profile" schemaLocation="Profile.xsd"/>
+	<xs:import namespace="http://www.nist.gov/healthcare/validation" schemaLocation="Validation.xsd"/>
+	<xs:complexType name="ProfileFailureInterpretation">
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="ProfileFailure" type="ProfileFailure"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ProfileFailure">
+		<xs:attribute name="Result" type="common:AssertionResultConstants" use="required"/>
+		<xs:attribute name="Type" type="common:AssertionTypeProfileConstants" use="required"/>
+	</xs:complexType>
+	<xs:complexType name="HL7V2ProfileValidationContextDefinition">
+		<xs:sequence>
+			<xs:element name="FailureInterpretation" type="ProfileFailureInterpretation"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="HL7V2ProfileValidationContextDefinition" type="HL7V2ProfileValidationContextDefinition"/>
+</xs:schema>

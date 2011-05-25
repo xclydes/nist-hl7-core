@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TableLibrary Name="Local Table" HL7Version="" xmlns="http://www.nist.gov/healthcare/data">
+	<TableDefinition Id="0300" Name="" Codesys="HL7" Type="User">
+		<TableElement Code="G" DisplayName="" Source=""/>
+		<TableElement Code="SA" DisplayName="" Source=""/>
+		<TableElement Code="SF" DisplayName="" Source=""/>
+		<TableElement Code="RA" DisplayName="" Source=""/>
+		<TableElement Code="RF" DisplayName="" Source=""/>
+	</TableDefinition>
+	<TableDefinition Id="0289" Name="County/parish" Codesys="HL7" Type="User">
+		<TableElement Code="..." DisplayName="No suggested values defined" Source="HL7"/>
+		<TableElement Code="text" DisplayName="Just for JUnit Test" Source="HL7"/>
+	</TableDefinition>
+	<TableDefinition Id="0471" Name="County/parish" Codesys="HL7" Type="User">
+		<TableElement Code="..." DisplayName="No suggested values defined" Source="HL7"/>
+	</TableDefinition>
+</TableLibrary>

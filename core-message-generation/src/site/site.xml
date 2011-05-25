@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<project>
+	<publishDate position="navigation-bottom"/>
+	<bannerLeft>
+		<name>Hotel Database</name>
+		<src>http://maven.apache.org/images/apache-maven-project.png</src>
+		<href>http://maven.apache.org/</href>
+	</bannerLeft>
+	<body>
+		<links>
+			<item name="Maven" href="http://maven.apache.org/"/>
+			<item name="Apache" href="http://www.apache.org/"/>
+		</links>
+		<menu name="HL7 Message Generation Project">
+			<item name="Overview" href="/index.html"/>
+			<item name="Generate a Message" href="/generate-message.html"/>
+			<item name="Customize the Generation" href="/generation-context.html"/>
+		</menu>
+		<!--    <menu ref="reports"/> -->
+		<!--    ${reports}-->
+	</body>
+</project>

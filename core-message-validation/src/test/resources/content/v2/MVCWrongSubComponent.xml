@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<context:HL7V2MessageValidationContextDefinition xmlns:context="http://www.nist.gov/healthcare/validation/message/hl7/v2/context" xmlns:message="http://www.nist.gov/healthcare/message" xmlns:validation="http://www.nist.gov/healthcare/validation">
+	<context:ValidationConfiguration>
+		<context:HL7Tables>
+			<context:All/>
+		</context:HL7Tables>
+		<context:UserTables>
+			<context:All/>
+		</context:UserTables>
+	</context:ValidationConfiguration>
+	<context:FailureInterpretation>
+		<context:MessageFailure Type="MESSAGE_STRUCTURE" Result="ERROR"/>
+		<context:MessageFailure Type="USAGE" Result="ERROR"/>
+		<context:MessageFailure Type="CARDINALITY" Result="ERROR"/>
+		<context:MessageFailure Type="LENGTH" Result="IGNORE"/>
+		<context:MessageFailure Type="DATATYPE" Result="ERROR"/>
+		<context:MessageFailure Type="DATA" Result="ERROR"/>
+	</context:FailureInterpretation>
+	<context:MessageInstanceSpecificValues>
+		<context:DataValueLocationItem>
+			<context:Location>
+				<message:SegmentGroup Name="GROUP1">
+					<message:Segment Name="EVN">
+						<message:Field Position="5">
+							<message:Component Position="16">
+								<message:SubComponent Position="64"/>
+							</message:Component>
+						</message:Field>
+					</message:Segment>
+				</message:SegmentGroup>
+			</context:Location>
+			<context:Value>
+				<validation:PlainText>Gazelle Sending Application</validation:PlainText>
+			</context:Value>
+		</context:DataValueLocationItem>
+	</context:MessageInstanceSpecificValues>
+</context:HL7V2MessageValidationContextDefinition>

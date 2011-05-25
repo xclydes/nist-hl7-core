@@ -1,0 +1,8 @@
+<HL7V3MessageValidationContextDefinition xmlns="http://www.nist.gov/healthcare/validation/message/hl7/v3/context" xmlns:validation="http://www.nist.gov/healthcare/validation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<FailureInterpretation>
+		<MessageFailure Type="DATA" Result="ERROR"/>
+		<MessageFailure Type="MESSAGE_VALIDATION_CONTEXT" Result="ERROR"/>
+	</FailureInterpretation>
+	<MessageInstanceSpecificValues>
+	</MessageInstanceSpecificValues>
+</HL7V3MessageValidationContextDefinition>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TableLibrary Name="User Table" HL7Version="" xmlns="http://www.nist.gov/healthcare/data">
+	<TableDefinition Id="0300" Name="" Codesys="HL7" Type="User">
+	</TableDefinition>
+	<TableDefinition Id="0289" Name="County/parish" Codesys="HL7" Type="User">
+		<TableElement Code="text" DisplayName="Just for JUnit Test" Source="HL7"/>
+	</TableDefinition>
+	<TableDefinition Id="0471" Name="County/parish" Codesys="HL7" Type="User">
+	</TableDefinition>
+</TableLibrary>

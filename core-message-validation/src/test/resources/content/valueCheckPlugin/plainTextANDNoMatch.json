@@ -1,0 +1,1 @@
+{"values":[{"options":{},"type":"REGEX","text":"\\d"}, {"options":{},"type":"PLAIN","text":"3"}],"matchAll":true,"minMatch":0,"maxMatch":null,"location":"OBR[1].1[1]"}

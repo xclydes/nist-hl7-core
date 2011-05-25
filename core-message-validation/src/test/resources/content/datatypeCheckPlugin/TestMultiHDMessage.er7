@@ -1,0 +1,8 @@
+MSH|^~\&|SA|SF|RA|RF|20100421||RSP^K22^RSP_K21|text|P|2.5|1254
+MSA|AA|text
+QAK|text|OK
+QPD|^text|IHE Query|text^text~text^text|||||^^^SF&text
+PID|007||text^^^RF&text&HL7||text^^^^^^B^^^^^20100421|||M
+ZHD|^Invalid Only HD.2~Valid Only HD.1
+ZHD|^^Invalid Only HD.3~Valid HD.1 + HD.2 + HD.3^Valid HD.1 + HD.2 + HD.3^Valid HD.1 + HD.2 + HD.3
+ZHD|Invalid HD.1 + HD.2^Invalid HD.1 + HD.2~^Valid HD.2 + HD.3^Valid HD.2 + HD.3~Invalid HD.1 + HD.3^^Invalid HD.1 + HD.3

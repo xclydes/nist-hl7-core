@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TableLibrary Name="CETable" OrganizationName="HL7 NIST" HL7Version="2.5.1" TableLibraryVersion="1.0" Status="Active" TableLibraryIdentifier="2.16.840.1.113883.3.72.4.1.00007" Description="" xmlns="http://www.nist.gov/healthcare/data">
+	<TableDefinition Id="ISO1251" Name="" Codesys="HL7" Type="User">
+		<TableElement Code="eng" DisplayName="" Source=""/>
+	</TableDefinition>
+	<TableDefinition Id="HHC" Name="" Codesys="HL7" Type="User">
+		<TableElement Code="X" DisplayName="" Source="NIST"/>
+	</TableDefinition>
+	<TableDefinition Id="NUBC" Name="" Codesys="HL7" Type="User">
+		<TableElement Code="abc" DisplayName="" Source="NIST"/>
+	</TableDefinition>
+</TableLibrary>

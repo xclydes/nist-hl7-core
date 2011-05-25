@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<context:HL7V2MessageValidationContextDefinition xmlns:context="http://www.nist.gov/healthcare/validation/message/hl7/v2/context" xmlns:message="http://www.nist.gov/healthcare/message" xmlns:validation="http://www.nist.gov/healthcare/validation">
+	<context:ValidationConfiguration>
+		<context:HL7Tables>
+			<context:All/>
+		</context:HL7Tables>
+		<context:UserTables>
+			<context:All/>
+		</context:UserTables>
+	</context:ValidationConfiguration>
+	<context:FailureInterpretation>
+		<context:MessageFailure Type="MESSAGE_STRUCTURE" Result="ERROR"/>
+		<context:MessageFailure Type="USAGE" Result="ERROR"/>
+		<context:MessageFailure Type="CARDINALITY" Result="ERROR"/>
+		<context:MessageFailure Type="LENGTH" Result="IGNORE"/>
+		<context:MessageFailure Type="DATATYPE" Result="ERROR"/>
+		<context:MessageFailure Type="DATA" Result="ERROR"/>
+	</context:FailureInterpretation>
+	<context:IfThenElse>
+		<context:If>
+			<context:Location>
+				<message:Segment Name="MSH">
+					<message:Field Position="9">
+						<message:Component Position="2"/>
+					</message:Field>
+				</message:Segment>
+			</context:Location>
+			<context:Value>
+				<validation:PlainText>A19</validation:PlainText>
+			</context:Value>
+		</context:If>
+		<context:Then>
+			<context:Location>
+				<message:Segment Name="EVN">
+					<message:Field Position="1"/>
+				</message:Segment>
+			</context:Location>
+			<context:Value>
+				<validation:PlainText>A19</validation:PlainText>
+			</context:Value>
+		</context:Then>
+	</context:IfThenElse>
+	<context:IfThenElse>
+		<context:If>
+			<context:Location>
+				<message:Segment Name="MSH">
+					<message:Field Position="9">
+						<message:Component Position="2"/>
+					</message:Field>
+				</message:Segment>
+			</context:Location>
+			<context:Value>
+				<validation:PlainText>A19</validation:PlainText>
+			</context:Value>
+		</context:If>
+		<context:Then>
+			<context:Location>
+				<message:Segment Name="EVN">
+					<message:Field Position="1"/>
+				</message:Segment>
+			</context:Location>
+			<context:Value>
+				<validation:PlainText>ADR</validation:PlainText>
+			</context:Value>
+		</context:Then>
+	</context:IfThenElse>
+	<context:IfThenElse>
+		<context:If>
+			<context:Location>
+				<message:Segment Name="MSH">
+					<message:Field Position="12">
+						<message:Component Position="1"/>
+					</message:Field>
+				</message:Segment>
+			</context:Location>
+			<context:Value>
+				<validation:PlainText>2.3</validation:PlainText>
+			</context:Value>
+		</context:If>
+		<context:Then>
+			<context:Location>
+				<message:Segment Name="EVN">
+					<message:Field Position="1"/>
+				</message:Segment>
+			</context:Location>
+			<context:Value>
+				<validation:PlainText>A19</validation:PlainText>
+			</context:Value>
+		</context:Then>
+		<context:Else>
+			<context:Location>
+				<message:Segment Name="MSH">
+					<message:Field Position="21">
+						<message:Component Position="1"/>
+					</message:Field>
+				</message:Segment>
+			</context:Location>
+			<context:Value>
+				<validation:PlainText>G</validation:PlainText>
+			</context:Value>
+			<context:Value>
+				<validation:PlainText>text</validation:PlainText>
+			</context:Value>
+		</context:Else>
+	</context:IfThenElse>
+	<context:IfThenElse>
+		<context:If>
+			<context:Location>
+				<message:Segment Name="MSH">
+					<message:Field Position="12">
+						<message:Component Position="1"/>
+					</message:Field>
+				</message:Segment>
+			</context:Location>
+			<context:Value>
+				<validation:PlainText>2.3</validation:PlainText>
+			</context:Value>
+		</context:If>
+		<context:Then>
+			<context:Location>
+				<message:Segment Name="EVN">
+					<message:Field Position="1"/>
+				</message:Segment>
+			</context:Location>
+			<context:Value>
+				<validation:PlainText>A19</validation:PlainText>
+			</context:Value>
+		</context:Then>
+		<context:Else>
+			<context:Location>
+				<message:Segment Name="MSH">
+					<message:Field Position="21">
+						<message:Component Position="1"/>
+					</message:Field>
+				</message:Segment>
+			</context:Location>
+			<context:Value>
+				<validation:PlainText>X</validation:PlainText>
+			</context:Value>
+		</context:Else>
+	</context:IfThenElse>
+	<context:IfThenElse>
+		<context:If>
+			<context:Location>
+				<message:Segment Name="MSH">
+					<message:Field Position="47">
+						<message:Component Position="2"/>
+					</message:Field>
+				</message:Segment>
+			</context:Location>
+			<context:Value>
+				<validation:PlainText>A19</validation:PlainText>
+			</context:Value>
+		</context:If>
+		<context:Then>
+			<context:Location>
+				<message:Segment Name="EVN">
+					<message:Field Position="1"/>
+				</message:Segment>
+			</context:Location>
+			<context:Value>
+				<validation:PlainText>A19</validation:PlainText>
+			</context:Value>
+		</context:Then>
+	</context:IfThenElse>
+	<context:IfThenElse>
+		<context:If>
+			<context:Location>
+				<message:Segment Name="MSH">
+					<message:Field Position="9">
+						<message:Component Position="2"/>
+					</message:Field>
+				</message:Segment>
+			</context:Location>
+			<context:Value>
+				<validation:PlainText>A19</validation:PlainText>
+			</context:Value>
+		</context:If>
+		<context:Then>
+			<context:Location>
+				<message:Segment Name="EVN">
+					<message:Field Position="148"/>
+				</message:Segment>
+			</context:Location>
+			<context:Value>
+				<validation:PlainText>A19</validation:PlainText>
+			</context:Value>
+		</context:Then>
+	</context:IfThenElse>
+	<context:IfThenElse>
+		<context:If>
+			<context:Location>
+				<message:Segment Name="MSH">
+					<message:Field Position="9">
+						<message:Component Position="2"/>
+					</message:Field>
+				</message:Segment>
+			</context:Location>
+			<context:Value>
+				<validation:PlainText>ADR</validation:PlainText>
+			</context:Value>
+		</context:If>
+		<context:Then>
+			<context:Location>
+				<message:Segment Name="EVN">
+					<message:Field Position="148"/>
+				</message:Segment>
+			</context:Location>
+			<context:Value>
+				<validation:PlainText>A19</validation:PlainText>
+			</context:Value>
+		</context:Then>
+		<context:Else>
+			<context:Location>
+				<message:Segment Name="EVN">
+					<message:Field Position="115"/>
+				</message:Segment>
+			</context:Location>
+			<context:Value>
+				<validation:PlainText>A19</validation:PlainText>
+			</context:Value>
+		</context:Else>
+	</context:IfThenElse>
+</context:HL7V2MessageValidationContextDefinition>

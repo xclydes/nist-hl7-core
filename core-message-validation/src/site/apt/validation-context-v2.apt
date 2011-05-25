@@ -1,0 +1,611 @@
+  This document will show you how to configure the message validation with a validation context.
+
+What is a Message Validation Context
+
+  A message validation context is an XML file used to configure the message validation. The configuration is three-fold:
+
+  * You can overwrite some rules defined in the profile. For now it consists on selecting which tables you want to check for.
+
+  * Each errors are categorized and you can configure the interpretation of these errors. For instance you can ignore the error related to length.
+
+  * You can write validation rules for the message content. For instance you want to check that the patient name is SMITH.
+
+Validation Configuration
+
+  The validation can be configured for table value checking. The profile associates some elements with specific table. It is possible to decide which tables the user wants to check for. It can be done for HL7 tables and User tables. You can ask for a list of tables or all or none of the tables.
+
+* List of Tables
+
+  In this example we want to check for all HL7 tables but only user table 0300.
+
++--+
+<context:HL7V2MessageValidationContextDefinition
+	xmlns:context="http://www.nist.gov/healthcare/validation/message/hl7/v2/context"
+	xmlns:message="http://www.nist.gov/healthcare/message"
+	xmlns:validation="http://www.nist.gov/healthcare/validation">
+	<context:ValidationConfiguration>
+		<context:HL7Tables>
+                	<context:All/>
+		</context:HL7Tables>
+		<context:UserTables>
+                	<context:UserTable>0300</context:UserTable>
+		</context:UserTables>
+	</context:ValidationConfiguration>
+        ...
+</context:HL7V2MessageValidationContextDefinition>
++--+
+
+* All Tables
+
++--+
+<context:HL7V2MessageValidationContextDefinition
+	xmlns:context="http://www.nist.gov/healthcare/validation/message/hl7/v2/context"
+	xmlns:message="http://www.nist.gov/healthcare/message"
+	xmlns:validation="http://www.nist.gov/healthcare/validation">
+	<context:ValidationConfiguration>
+		<context:HL7Tables>
+                	<context:All/>
+		</context:HL7Tables>
+		<context:UserTables>
+                	<context:All/>
+		</context:UserTables>
+	</context:ValidationConfiguration>
+        ...
+</context:HL7V2MessageValidationContextDefinition>
++--+
+
+* None of the Tables
+
++--+
+<context:HL7V2MessageValidationContextDefinition
+	xmlns:context="http://www.nist.gov/healthcare/validation/message/hl7/v2/context"
+	xmlns:message="http://www.nist.gov/healthcare/message"
+	xmlns:validation="http://www.nist.gov/healthcare/validation">
+	<context:ValidationConfiguration>
+		<context:HL7Tables>
+                	<context:None/>
+		</context:HL7Tables>
+		<context:UserTables>
+                	<context:None/>
+		</context:UserTables>
+	</context:ValidationConfiguration>
+        ...
+</context:HL7V2MessageValidationContextDefinition>
++--+
+
+Interpretation of Errors
+
+  The second part of configuration defines the interpretation of the different errors. Each type of error can be set to four different levels. The type of errors are:
+
+  * MESSAGE_STRUCTURE: The message structure is broken. It can be a missing segment, an extra element or a misspelled element (only XML message).
+
+  * USAGE: A required element is missing. This type of error is more precise than the MESSAGE_STRUCTURE but the meaning is quite the same; the message structure is broken.
+
+  * X-USAGE: An unsupported element is present.
+
+  * XTRA: An extra element (not defined in the profile) is present.
+
+  * CARDINALITY: An element is present a number of times less than the minimum cardinality or greater than the maximum cardinality specified in the profile.
+
+  * LENGTH : The length of a value is greater than the maximum length specified in the profile.
+
+  * DATATYPE: The value is not following the regular expression defined by the standard for certain datatype.
+
+  * DATA: The value does not match a constant specified in the profile. The value does not match a value defined in a table.
+
+  []
+
+  The different levels are:
+
+  * ERROR: This is an error, a message is considered valid if the number of error is 0.
+
+  * WARNING: The error is flagged as a warning.
+
+  * IGNORE: The error is ignored. For instance you can ignore the LENGTH error, even if there are some errors of this type, the message will be considered as valid.
+
+  * ALERT: This level is to distinguish a real error, and an error due to a user input error like not provided a local table, or specifying a location in the message that does not exist.
+
+  * AFFIRMATIVE: This level is to report any positive checks done during the validation.
+
++--+
+<context:HL7V2MessageValidationContextDefinition
+	xmlns:context="http://www.nist.gov/healthcare/validation/message/hl7/v2/context"
+	xmlns:message="http://www.nist.gov/healthcare/message"
+	xmlns:validation="http://www.nist.gov/healthcare/validation">
+	<context:FailureInterpretation>
+		<context:MessageFailure Type="MESSAGE_STRUCTURE" Result="ERROR"/>
+		<context:MessageFailure Type="USAGE" Result="ERROR"/>
+		<context:MessageFailure Type="X-USAGE" Result="ERROR"/>
+		<context:MessageFailure Type="XTRA" Result="ERROR"/>
+		<context:MessageFailure Type="CARDINALITY" Result="ERROR"/>
+		<context:MessageFailure Type="LENGTH" Result="IGNORE"/>
+		<context:MessageFailure Type="DATATYPE" Result="ERROR"/>
+		<context:MessageFailure Type="DATA" Result="ERROR"/>
+	</context:FailureInterpretation>
+        ...
+</context:HL7V2MessageValidationContextDefinition>
++--+
+
+Validation Rules (Message Content Validation)
+
+  The last part of configuration allows the user to make sure that a set of values has been set at a specific message location. Before going into the details of the configuration, we’ll explain how to express a message location. Let’s take the message location PID[2].4[3].4.1. This location refers to the first subcomponent, of the fourth component, of the third instance of the fourth field, of the second instance of the PID segment.
+
++--+
+PID[2]: It refers to the second instance of the PID segment.
+4[3]: It refers to the third instance of the fourth field.
+4: It refers to the fourth component
+1: It refers to the first subcomponent
++--+
+  <Note: There is no instance number for the component and subcomponent because they are not repeatable.>
+
+* Plain Text
+
+  In the following rules, we want to check that EVN[1].5[1].16.3 is equal to A or B. The segment group is necessary for XML encoded messages. The instance number for Segment and Field have been ommited, in that case the instance number is considered to be 1. The PlainText element have two attributes. ignoreCase which ignore the case when doing the comparison. interpretAsNumber which converts the value in the context and in the message to a decimal, and then do the comparison.
+
++--+
+<context:HL7V2MessageValidationContextDefinition
+	xmlns:context="http://www.nist.gov/healthcare/validation/message/hl7/v2/context"
+	xmlns:message="http://www.nist.gov/healthcare/message"
+	xmlns:validation="http://www.nist.gov/healthcare/validation">
+        ...
+	<context:MessageInstanceSpecificValues>
+		<context:DataValueLocationItem>
+			<context:Location>
+				<SegGroup Name="GROUP1">
+					<message:Segment Name="EVN">
+						<message:Field Position="5">
+							<message:Component Position="16">
+								<message:SubComponent Position="3"/>
+							</message:Component>
+						</message:Field>
+					</message:Segment>
+				</SegGroup>
+			</context:Location>
+			<context:Value>
+				<validation:PlainText>A</validation:PlainText>
+			</context:Value>
+			<context:Value>
+				<validation:PlainText>B</validation:PlainText>
+			</context:Value>
+		</context:DataValueLocationItem>
+	...
+	<context:MessageInstanceSpecificValues>
+</context:HL7V2MessageValidationContextDefinition>
++--+
+
+* Regular Expression
+
+  In the following rules, we want to check that EVN[1].5[1].16.3 is equal to A or B but with a regular expression [AB].
+
++--+
+<context:HL7V2MessageValidationContextDefinition
+	xmlns:context="http://www.nist.gov/healthcare/validation/message/hl7/v2/context"
+	xmlns:message="http://www.nist.gov/healthcare/message"
+	xmlns:validation="http://www.nist.gov/healthcare/validation">
+        ...
+	<context:MessageInstanceSpecificValues>
+		<context:DataValueLocationItem>
+			<context:Location>
+				<SegGroup Name="GROUP1">
+					<message:Segment Name="EVN">
+						<message:Field Position="5">
+							<message:Component Position="16">
+								<message:SubComponent Position="3"/>
+							</message:Component>
+						</message:Field>
+					</message:Segment>
+				</SegGroup>
+			</context:Location>
+			<context:Value>
+				<validation:RegEx>[AB]</validation:RegEx>
+			</context:Value>
+		</context:DataValueLocationItem>
+	...
+	<context:MessageInstanceSpecificValues>
+</context:HL7V2MessageValidationContextDefinition>
++--+
+
+* Presence
+
+  In the following rules, we want to check that EVN[1].5[1].16.3 is not present in the message.
+
++--+
+<context:HL7V2MessageValidationContextDefinition
+	xmlns:context="http://www.nist.gov/healthcare/validation/message/hl7/v2/context"
+	xmlns:message="http://www.nist.gov/healthcare/message"
+	xmlns:validation="http://www.nist.gov/healthcare/validation">
+        ...
+	<context:MessageInstanceSpecificValues>
+		<context:DataValueLocationItem>
+			<context:Location>
+				<SegGroup Name="GROUP1">
+					<message:Segment Name="EVN">
+						<message:Field Position="5">
+							<message:Component Position="16">
+								<message:SubComponent Position="3"/>
+							</message:Component>
+						</message:Field>
+					</message:Segment>
+				</SegGroup>
+			</context:Location>
+			<context:Value>
+				<validation:Empty/>
+			</context:Value>
+		</context:DataValueLocationItem>
+	...
+	<context:MessageInstanceSpecificValues>
+</context:HL7V2MessageValidationContextDefinition>
++--+
+
+  In the following rules, we want to check that EVN[1].5[1].16.3 is present in the message.
+
++--+
+<context:HL7V2MessageValidationContextDefinition
+	xmlns:context="http://www.nist.gov/healthcare/validation/message/hl7/v2/context"
+	xmlns:message="http://www.nist.gov/healthcare/message"
+	xmlns:validation="http://www.nist.gov/healthcare/validation">
+        ...
+	<context:MessageInstanceSpecificValues>
+		<context:DataValueLocationItem>
+			<context:Location>
+				<SegGroup Name="GROUP1">
+					<message:Segment Name="EVN">
+						<message:Field Position="5">
+							<message:Component Position="16">
+								<message:SubComponent Position="3"/>
+							</message:Component>
+						</message:Field>
+					</message:Segment>
+				</SegGroup>
+			</context:Location>
+			<context:Value>
+				<validation:Present/>
+			</context:Value>
+		</context:DataValueLocationItem>
+	...
+	<context:MessageInstanceSpecificValues>
+</context:HL7V2MessageValidationContextDefinition>
++--+
+
+* Assertion Result
+
+  It is possible to override the category in which the assertion will be categorized. In the following context, in a message where EVN[1].5[1].16.3 is not present, the generation would have categorized the assertion as an ERROR, but in this case it will be a WARNING.
+  
++--+
+<context:HL7V2MessageValidationContextDefinition
+	xmlns:context="http://www.nist.gov/healthcare/validation/message/hl7/v2/context"
+	xmlns:message="http://www.nist.gov/healthcare/message"
+	xmlns:validation="http://www.nist.gov/healthcare/validation">
+        ...
+	<context:MessageInstanceSpecificValues>
+		<context:DataValueLocationItem AssertionResult="WARNING">
+			<context:Location>
+				<SegGroup Name="GROUP1">
+					<message:Segment Name="EVN">
+						<message:Field Position="5">
+							<message:Component Position="16">
+								<message:SubComponent Position="3"/>
+							</message:Component>
+						</message:Field>
+					</message:Segment>
+				</SegGroup>
+			</context:Location>
+			<context:Value>
+				<validation:Present/>
+			</context:Value>
+		</context:DataValueLocationItem>
+	...
+	<context:MessageInstanceSpecificValues>
+</context:HL7V2MessageValidationContextDefinition>
++--+
+
+* Single Message Correlation
+
+  In the following rules, we want to check that PID[1].3[1].4.1 = MRG[1].1[1].4.1. The second part of the assertion must be present in the message. If it's not present, the validation will return a MESSAGE_VALIDATION_CONTEXT alert instead of a DATA error.
+
++--+
+<context:HL7V2MessageValidationContextDefinition
+	xmlns:context="http://www.nist.gov/healthcare/validation/message/hl7/v2/context"
+	xmlns:message="http://www.nist.gov/healthcare/message"
+	xmlns:validation="http://www.nist.gov/healthcare/validation">
+        ...
+	<context:DataValueLocationItem>
+		<context:Location>
+			<message:Segment Name="PID">
+				<message:Field Position="3">
+					<message:Component Position="4">
+						<message:SubComponent Position="1"/>
+					</message:Component>
+				</message:Field>
+			</message:Segment>
+		</context:Location>
+		<context:Value>
+			<validation:Location>
+				<message:Segment Name="MRG">
+					<message:Field Position="1">
+						<message:Component Position="4">
+							<message:SubComponent Position="1"/>
+						</message:Component>
+					</message:Field>
+				</message:Segment>
+			</validation:Location>
+		</context:Value>
+	</context:DataValueLocationItem>
+	...
+	<context:MessageInstanceSpecificValues>
+</context:HL7V2MessageValidationContextDefinition>
++--+
+
+* AnyInstanceNumber
+
+  In the following rules, we introduce the wildcard character when we don't know the instance number. We want to check that EVN[*].5[*].16.3 is equal to A or B. The validation will look into every EVN segment and EVN.5 field and will stop when finding one that have component #16 and subcomponent #3 that is equal to A or B. If the InstanceNumber attribute is set, the AnyInstanceNumber attribute is ignored.
+
++--+
+<context:HL7V2MessageValidationContextDefinition
+	xmlns:context="http://www.nist.gov/healthcare/validation/message/hl7/v2/context"
+	xmlns:message="http://www.nist.gov/healthcare/message"
+	xmlns:validation="http://www.nist.gov/healthcare/validation">
+        ...
+	<context:MessageInstanceSpecificValues>
+		<context:DataValueLocationItem>
+			<context:Location>
+				<SegGroup Name="GROUP1">
+					<message:Segment Name="EVN" AnyInstanceNumber="true">
+						<message:Field Position="5" AnyInstanceNumber="true">
+							<message:Component Position="16">
+								<message:SubComponent Position="3"/>
+							</message:Component>
+						</message:Field>
+					</message:Segment>
+				</SegGroup>
+			</context:Location>
+			<context:Value>
+				<validation:Empty/>
+			</context:Value>
+		</context:DataValueLocationItem>
+	...
+	<context:MessageInstanceSpecificValues>
+</context:HL7V2MessageValidationContextDefinition>
++--+
+
+* CheckAll
+
+  In the following rules, we want to check that all the values at the location EVN[*].5[1].16.3 is equal to A9 or match the regular expression B\d or that it is present. You have to set the attribute CheckAll to true in the Location element to use this feature.
+
++--+
+<context:HL7V2MessageValidationContextDefinition
+	xmlns:context="http://www.nist.gov/healthcare/validation/message/hl7/v2/context"
+	xmlns:message="http://www.nist.gov/healthcare/message"
+	xmlns:validation="http://www.nist.gov/healthcare/validation">
+        ...
+	<context:MessageInstanceSpecificValues>
+		<context:DataValueLocationItem>
+			<context:Location>
+				<SegGroup Name="GROUP1">
+					<message:Segment Name="EVN" AnyInstanceNumber="true">
+						<message:Field Position="5">
+							<message:Component Position="16">
+								<message:SubComponent Position="3"/>
+							</message:Component>
+						</message:Field>
+					</message:Segment>
+				</SegGroup>
+			</context:Location>
+			<context:Value>
+				<validation:PlainText>A</validation:PlainText>
+			</context:Value>
+			<context:Value>
+				<validation:RegEx>B\d</validation:RegEx>
+			</context:Value>
+			<context:Value>
+				<validation:RegEx>.+</validation:RegEx>
+			</context:Value>
+		</context:DataValueLocationItem>
+	...
+	<context:MessageInstanceSpecificValues>
+</context:HL7V2MessageValidationContextDefinition>
++--+
+
+* Conditional Check
+
+  In the following rules, we want to check that OBX[1].5[1] is A or B if the value of OBX[1].2[1] is ST or ID. If the value of OBX[1].2[1] is set to a value different from ST or ID, you want to check that the value of OBX[1].5[1] is C or D. The mechanism is similar to a if-then-else pattern.
+
++--+
+<context:HL7V2MessageValidationContextDefinition
+	xmlns:context="http://www.nist.gov/healthcare/validation/message/hl7/v2/context"
+	xmlns:message="http://www.nist.gov/healthcare/message"
+	xmlns:validation="http://www.nist.gov/healthcare/validation">
+        ...
+	<context:IfThenElse>
+		<context:If>
+			<context:Location>
+				<message:Segment Name="OBX">
+					<message:Field Position="2"/>
+				</message:Segment>
+			</context:Location>
+			<context:Value>
+				<validation:PlainText>ST</validation:PlainText>
+			</context:Value>
+			<context:Value>
+				<validation:PlainText>ID</validation:PlainText>
+			</context:Value>
+		</context:If>
+		<context:Then>
+			<context:Location>
+				<message:Segment Name="OBX">
+					<message:Field Position="5"/>
+				</message:Segment>
+			</context:Location>
+			<context:Value>
+				<validation:PlainText>A</validation:PlainText>
+			</context:Value>
+			<context:Value>
+				<validation:PlainText>B</validation:PlainText>
+			</context:Value>
+		</context:Then>
+		<context:Else>
+			<context:Location>
+				<message:Segment Name="OBX">
+					<message:Field Position="5"/>
+				</message:Segment>
+			</context:Location>
+			<context:Value>
+				<validation:PlainText>C</validation:PlainText>
+			</context:Value>
+			<context:Value>
+				<validation:PlainText>D</validation:PlainText>
+			</context:Value>
+		</context:Else>
+	</context:IfThenElse>
+	...
+</context:HL7V2MessageValidationContextDefinition>
++--+
+
+* MatchingSegmentInstanceNumber and MatchingFieldInstanceNumber
+
+  The attributes MatchingSegmentInstanceNumber and MatchingFieldInstanceNumber allow the user to do conditional check even if he doesn't know the instance number. If you want to do the same checks as in the previous section but this time you don't know the instance number, you have to use the attribute MatchingSegmentInstanceNumber and MatchingFieldInstanceNumber. Basically the validation will make sure that the check is done within the same instance of segment and field.
+
+  Let's say you have a message with OBX[1].2[1] = ST, OXB[1].5[1] = D, OXB[2].5[1] = B. The validation will do the if-then-else pattern for each segment, so if OBX[1].2[1] = ST then OXB[1].5[1] = A or B? and if OBX[2].2[1] = ST then OXB[2].5[1] = A or B?. The first check is not valid but the second is. The validation will not flag the first error since the second check is valid.
+
+  Anytime you have an AnyInstanceNumber in the location you might want to use these two attributes.
+  
++--+
+<context:HL7V2MessageValidationContextDefinition
+	xmlns:context="http://www.nist.gov/healthcare/validation/message/hl7/v2/context"
+	xmlns:message="http://www.nist.gov/healthcare/message"
+	xmlns:validation="http://www.nist.gov/healthcare/validation">
+        ...
+	<context:IfThenElse MatchingSegmentInstanceNumber="true" MatchingFieldInstanceNumber="true">
+		<context:If>
+			<context:Location>
+				<message:Segment Name="OBX" AnyInstanceNumber="true">
+					<message:Field Position="2"/>
+				</message:Segment>
+			</context:Location>
+			<context:Value>
+				<validation:PlainText>ST</validation:PlainText>
+			</context:Value>
+			<context:Value>
+				<validation:PlainText>ID</validation:PlainText>
+			</context:Value>
+		</context:If>
+		<context:Then>
+			<context:Location>
+				<message:Segment Name="OBX" AnyInstanceNumber="true">
+					<message:Field Position="5"/>
+				</message:Segment>
+			</context:Location>
+			<context:Value>
+				<validation:PlainText>A</validation:PlainText>
+			</context:Value>
+			<context:Value>
+				<validation:PlainText>B</validation:PlainText>
+			</context:Value>
+		</context:Then>
+		<context:Else>
+			<context:Location>
+				<message:Segment Name="OBX" AnyInstanceNumber="true">
+					<message:Field Position="5"/>
+				</message:Segment>
+			</context:Location>
+			<context:Value>
+				<validation:PlainText>C</validation:PlainText>
+			</context:Value>
+			<context:Value>
+				<validation:PlainText>D</validation:PlainText>
+			</context:Value>
+		</context:Else>
+	</context:IfThenElse>
+	...
+</context:HL7V2MessageValidationContextDefinition>
++--+
+
+* HD, CE and XTN Check
+
+  The HD datatype requires a combination of several checks. An HD element is composed by 3 children. The valid combination are:
+
+  * The first child is present
+
+  * The second and the third children are present
+
+  * All children are present
+  
+  []
+
+  In the following rules, we want to check that MSH[1].3[1] as a HD element is valued correctly.
+
++--+
+<context:HL7V2MessageValidationContextDefinition
+	xmlns:context="http://www.nist.gov/healthcare/validation/message/hl7/v2/context"
+	xmlns:message="http://www.nist.gov/healthcare/message"
+	xmlns:validation="http://www.nist.gov/healthcare/validation">
+        ...
+	<context:HDCheck>
+		<context:Location>
+			<message:Segment Name="MSH">
+				<message:Field Position="3"/>
+			</message:Segment>
+		</context:Location>
+	</context:HDCheck>
+	...
+</context:HL7V2MessageValidationContextDefinition>
++--+
+
+  The CE datatype requires a combination of several checks. A CE element is composed by 6 children. The valid combination are:
+
+  * The first 3 children are present
+
+  * The last 3 children are present
+
+  * All children are present
+
+  []
+
+  In the following rules, we want to check that OBX[1].17[1] as a CE element is valued correctly.
+
++--+
+<context:HL7V2MessageValidationContextDefinition
+	xmlns:context="http://www.nist.gov/healthcare/validation/message/hl7/v2/context"
+	xmlns:message="http://www.nist.gov/healthcare/message"
+	xmlns:validation="http://www.nist.gov/healthcare/validation">
+        ...
+	<context:CECheck>
+		<context:Location>
+			<message:Segment Name="OBX">
+				<message:Field Position="17"/>
+			</message:Segment>
+		</context:Location>
+	</context:CECheck>
+	...
+</context:HL7V2MessageValidationContextDefinition>
++--+
+
+  The XTN datatype requires a combination of several checks. An XTN element is composed by 3 children. The valid combination are:
+
+  * The first child is present
+
+  * The sixth and the seventh children are present
+
+  * All children are present
+
+  []
+
+  In the following rules, we want to check that PID[1].13[1] as a XTN element is valued correctly.
+
++--+
+<context:HL7V2MessageValidationContextDefinition
+	xmlns:context="http://www.nist.gov/healthcare/validation/message/hl7/v2/context"
+	xmlns:message="http://www.nist.gov/healthcare/message"
+	xmlns:validation="http://www.nist.gov/healthcare/validation">
+        ...
+	<context:HDCheck>
+		<context:Location>
+			<message:Segment Name="PID">
+				<message:Field Position="13"/>
+			</message:Segment>
+		</context:Location>
+	</context:HDCheck>
+	...
+</context:HL7V2MessageValidationContextDefinition>
++--+
+

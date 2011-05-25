@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<context:HL7V2MessageValidationContextDefinition xmlns:context="http://www.nist.gov/healthcare/validation/message/hl7/v2/context" xmlns:message="http://www.nist.gov/healthcare/message" xmlns:validation="http://www.nist.gov/healthcare/validation">
+	<context:ValidationConfiguration>
+		<context:HL7Tables>
+			<context:All/>
+		</context:HL7Tables>
+		<context:UserTables>
+			<context:All/>
+		</context:UserTables>
+	</context:ValidationConfiguration>
+	<context:FailureInterpretation>
+	</context:FailureInterpretation>
+	<context:MessageInstanceSpecificValues>
+		<!-- PID.3.4.1 = MRG.1.4.1 -->
+		<context:DataValueLocationItem>
+			<context:Location>
+				<message:Segment Name="PID">
+					<message:Field Position="3">
+						<message:Component Position="4">
+							<message:SubComponent Position="1"/>
+						</message:Component>
+					</message:Field>
+				</message:Segment>
+			</context:Location>
+			<context:Value>
+				<validation:Location>
+					<message:Segment Name="MRG">
+						<message:Field Position="1">
+							<message:Component Position="4">
+								<message:SubComponent Position="1"/>
+							</message:Component>
+						</message:Field>
+					</message:Segment>
+				</validation:Location>
+			</context:Value>
+		</context:DataValueLocationItem>
+		<!-- PID.3.1 = MRG.1.1 -->
+		<context:DataValueLocationItem>
+			<context:Location>
+				<message:Segment Name="PID">
+					<message:Field Position="3">
+						<message:Component Position="1"/>
+					</message:Field>
+				</message:Segment>
+			</context:Location>
+			<context:Value>
+				<validation:Location>
+					<message:Segment Name="MRG">
+						<message:Field Position="1">
+							<message:Component Position="1"/>
+						</message:Field>
+					</message:Segment>
+				</validation:Location>
+			</context:Value>
+		</context:DataValueLocationItem>
+		<!-- PID.3.1 = MRG.1.2 -->
+		<context:DataValueLocationItem>
+			<context:Location>
+				<message:Segment Name="PID">
+					<message:Field Position="3">
+						<message:Component Position="1"/>
+					</message:Field>
+				</message:Segment>
+			</context:Location>
+			<context:Value>
+				<validation:Location>
+					<message:Segment Name="MRG">
+						<message:Field Position="1">
+							<message:Component Position="2"/>
+						</message:Field>
+					</message:Segment>
+				</validation:Location>
+			</context:Value>
+		</context:DataValueLocationItem>
+		<!-- MRG.1.2 = PID.3.1 -->
+		<context:DataValueLocationItem>
+			<context:Location>
+				<message:Segment Name="MRG">
+					<message:Field Position="1">
+						<message:Component Position="2"/>
+					</message:Field>
+				</message:Segment>
+			</context:Location>
+			<context:Value>
+				<validation:Location>
+					<message:Segment Name="PID">
+						<message:Field Position="3">
+							<message:Component Position="1"/>
+						</message:Field>
+					</message:Segment>
+				</validation:Location>
+			</context:Value>
+		</context:DataValueLocationItem>
+	</context:MessageInstanceSpecificValues>
+</context:HL7V2MessageValidationContextDefinition>

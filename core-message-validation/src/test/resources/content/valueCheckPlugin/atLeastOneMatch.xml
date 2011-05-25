@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<context:HL7V2MessageValidationContextDefinition xmlns:context="http://www.nist.gov/healthcare/validation/message/hl7/v2/context" xmlns:message="http://www.nist.gov/healthcare/message" xmlns:validation="http://www.nist.gov/healthcare/validation">
+	<context:ValidationConfiguration>
+		<context:HL7Tables>
+			<context:All/>
+		</context:HL7Tables>
+		<context:UserTables>
+			<context:All/>
+		</context:UserTables>
+	</context:ValidationConfiguration>
+	<context:FailureInterpretation>
+	</context:FailureInterpretation>
+	<context:PluginCheck Name="gov.nist.healthcare.core.validation.message.plugin.value.ValueCheckPlugin">
+		<validation:Params>{"values":[{"options":{},"type":"PLAIN","text":"25186-8"}],"matchAll":false,"minMatch":1,"maxMatch":"*","location":"OBX[*].3[1].1"}</validation:Params>
+	</context:PluginCheck>
+</context:HL7V2MessageValidationContextDefinition>
+

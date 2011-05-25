@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<context:HL7V3MessageValidationContextDefinition xmlns:context="http://www.nist.gov/healthcare/validation/message/hl7/v3/context"
+                                                 xmlns:message="http://www.nist.gov/healthcare/message"
+                                                 xmlns:validation="http://www.nist.gov/healthcare/validation">
+	  <context:FailureInterpretation>
+		    <context:MessageFailure Type="DATA" Result="ERROR"/>
+	  </context:FailureInterpretation>
+	  <context:MessageInstanceSpecificValues>
+		    <context:DataValueLocationItem>
+			      <context:XPath>/*:PRPA_IN201301UV02/*:processingCode/@code</context:XPath>
+			      <context:Value>
+				        <validation:Empty/>
+			      </context:Value>
+		    </context:DataValueLocationItem>
+		    <context:DataValueLocationItem>
+			      <context:XPath>/*:PRPA_IN201301UV02/*:processingCode/@code</context:XPath>
+			      <context:Value>
+				        <validation:PlainText>P</validation:PlainText>
+			      </context:Value>
+		    </context:DataValueLocationItem>
+		    <context:DataValueLocationItem>
+			      <context:XPath>/*:PRPA_IN201301UV02/*:processingCode/@code</context:XPath>
+			      <context:Value>
+				        <validation:PlainText>X</validation:PlainText>
+			      </context:Value>
+		    </context:DataValueLocationItem>
+		    <context:DataValueLocationItem>
+			      <context:XPath>/*:PRPA_IN201301UV02/*:receiver/*:device/*:telecom/@value</context:XPath>
+			      <context:Value>
+				        <validation:Regex>https://.*</validation:Regex>
+			      </context:Value>
+		    </context:DataValueLocationItem>
+		    <context:DataValueLocationItem>
+			      <context:XPath>/*:PRPA_IN201301UV02/*:receiver/*:device/*:telecom/@value</context:XPath>
+			      <context:Value>
+				        <validation:Regex>https://www.*</validation:Regex>
+			      </context:Value>
+		    </context:DataValueLocationItem>
+	  </context:MessageInstanceSpecificValues>
+</context:HL7V3MessageValidationContextDefinition>

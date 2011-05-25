@@ -1,0 +1,50 @@
+  This document will show you how to run the validation in a Java program.
+
+Get the library
+
+  Your project must include core-message-validation jar and its dependencies. NEED to know if we distribute the lib using a maven repository.
+
+A Sample Client
+
+  This sample client validates a HL7V2 message encoded in ER7. To validate V3 messages, you have to use the same class but they are suffixed by V3 instead of V2 (e.g. MessageValidationV3 instead of MessageValidationV2).
+
++--+
+// Create a Profile
+Profile profile = new Profile("", new File(
+        MessageStructureValidationV2Test.class.getResource(
+                "/structure/v2/RSP_K22.xml").getFile()));
+
+// Create a default MessageValidationContext
+MessageValidationContextV2 context = new MessageValidationContextV2();
+
+// Set the length error interpreted as ERROR, they are ignored by default
+context.setFailureResult(AssertionTypeV2Constants.LENGTH,
+AssertionResultConstants.ERROR);
+
+// Load local table file
+TableLibraryDocument tableLibraryDocument = TableLibraryDocument.Factory.parse(new File(
+        MessageStructureValidationV2Test.class.getResource(
+                "/structure/v2/LocalTable.xml").getFile()));
+
+// Include all the tables used for the validation
+List<TableLibraryDocument> tableLibraryDocuments = new ArrayList<TableLibraryDocument>();
+tableLibraryDocuments.add(tableLibraryDocument);
+tableLibraryDocuments.add(TableLibraryDocument.Factory.parse(
+        MessageStructureValidationV2Test.class.getResourceAsStream(
+                Constants.getHl7Tables(profile.getHl7VersionAsString()))));
+
+// Load an ER7 message
+Er7Message er7 = new Er7Message(new File(getClass().getResource(
+        "/structure/v2/er7/TestValid.er7").getFile()));
+
+// Create the validation
+MessageValidationV2 validator = new MessageValidationV2();
+
+// Validate
+MessageValidationResultV2 mvr = validator.validate(message, profile, context,
+        tableLibraryDocuments);
+
+// Save the report
+HL7V2MessageValidationReportDocument report = mvr.getReport();
+report.save(new File("report.xml"));
++--+

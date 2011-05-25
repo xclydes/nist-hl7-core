@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ADR_A19 xmlns="urn:hl7-org:v2xml">
+	<MSH>
+		<MSH.1>|</MSH.1>
+		<MSH.2>^~\&amp;</MSH.2>
+		<MSH.3>
+			<HD.2>Child 2</HD.2>
+		</MSH.3>
+		<MSH.4>
+			<HD.3>Child 3</HD.3>
+		</MSH.4>
+		<MSH.5>
+			<HD.1>Child 1</HD.1>
+			<HD.2>Child 2</HD.2>
+		</MSH.5>
+		<MSH.6>
+			<HD.1>Child 1</HD.1>
+			<HD.3>Child 3</HD.3>
+		</MSH.6>
+		<MSH.7>
+			<TS.1>20080518</TS.1>
+			<TS.2>H</TS.2>
+		</MSH.7>
+		<MSH.8>Security</MSH.8>
+		<MSH.9>
+			<MSG.1>ADR</MSG.1>
+			<MSG.2>A19</MSG.2>
+			<MSG.3>ADR_A19</MSG.3>
+		</MSH.9>
+		<MSH.10>MSG.0</MSH.10>
+		<MSH.11>
+			<PT.1>D</PT.1>
+			<PT.2>Not present</PT.2>
+		</MSH.11>
+		<MSH.12>
+			<VID.1>2.5</VID.1>
+			<VID.2>
+				<CE.1>eng</CE.1>
+				<CE.2>English</CE.2>
+				<CE.3>ISOnnnn</CE.3>
+				<CE.4>long default text</CE.4>
+				<CE.5>X</CE.5>
+				<CE.6>UC</CE.6>
+			</VID.2>
+			<VID.3>
+				<CE.1>eng</CE.1>
+				<CE.2>English</CE.2>
+				<CE.3>ISOnnnn</CE.3>
+				<CE.4>X</CE.4>
+				<CE.5>abc</CE.5>
+				<CE.6>HHC</CE.6>
+			</VID.3>
+		</MSH.12>
+		<MSH.13>0</MSH.13>
+		<MSH.14>long default text</MSH.14>
+		<MSH.15>NE</MSH.15>
+		<MSH.16>NE</MSH.16>
+		<MSH.17>USA</MSH.17>
+		<MSH.18>ASCII</MSH.18>
+		<MSH.19>
+			<CE.1>eng</CE.1>
+			<CE.2>English</CE.2>
+			<CE.3>ISOnnnn</CE.3>
+			<CE.4>abc</CE.4>
+			<CE.5>abc</CE.5>
+			<CE.6>NUBC</CE.6>
+		</MSH.19>
+		<MSH.20>&lt;null&gt;</MSH.20>
+		<MSH.21>
+			<EI.1>text</EI.1>
+			<EI.2>G</EI.2>
+		</MSH.21>
+	</MSH>
+	<ADR_A19.GROUP1>
+		<EVN>
+			<EVN.1>A19</EVN.1>
+			<EVN.2>
+				<TS.1>20080808</TS.1>
+				<TS.2>H</TS.2>
+			</EVN.2>
+			<EVN.3>
+				<TS.1>20080808</TS.1>
+				<TS.2>L</TS.2>
+			</EVN.3>
+			<EVN.4>U</EVN.4>
+			<EVN.5>
+				<XCN.1>default text</XCN.1>
+				<XCN.2>
+					<FN.1>Smith</FN.1>
+					<FN.2>la</FN.2>
+					<FN.3>la</FN.3>
+					<FN.4>Van</FN.4>
+					<FN.5>Kittinger</FN.5>
+				</XCN.2>
+				<XCN.3>Alex</XCN.3>
+				<XCN.4>Ellen</XCN.4>
+				<XCN.5>JR</XCN.5>
+				<XCN.6>Mr.</XCN.6>
+				<XCN.7>EMT</XCN.7>
+				<XCN.9>
+					<HD.1>G</HD.1>
+				</XCN.9>
+				<XCN.10>T</XCN.10>
+				<XCN.11>c</XCN.11>
+				<XCN.13>MRT</XCN.13>
+				<XCN.14>
+					<HD.1>G</HD.1>
+				</XCN.14>
+				<XCN.15>A</XCN.15>
+				<XCN.16>
+					<CE.1>long default text</CE.1>
+					<CE.2>text</CE.2>
+					<CE.3>NDA</CE.3>
+					<CE.4>X</CE.4>
+					<CE.5>abc</CE.5>
+					<CE.6>ICDO</CE.6>
+				</XCN.16>
+				<XCN.17>
+					<DR.1>20080808</DR.1>
+					<DR.2>20080808</DR.2>
+				</XCN.17>
+				<XCN.18>F</XCN.18>
+				<XCN.19>
+					<TS.1>20080808</TS.1>
+					<TS.2>M</TS.2>
+				</XCN.19>
+				<XCN.20>
+					<TS.1>20080808</TS.1>
+					<TS.2>H</TS.2>
+				</XCN.20>
+				<XCN.21>abc</XCN.21>
+				<XCN.22>
+					<CWE.1>long default text</CWE.1>
+					<CWE.2>abc</CWE.2>
+					<CWE.3>SNM</CWE.3>
+					<CWE.4>long default text</CWE.4>
+					<CWE.5>long default text</CWE.5>
+					<CWE.6>OHA</CWE.6>
+					<CWE.7>text</CWE.7>
+					<CWE.8>text</CWE.8>
+					<CWE.9>X</CWE.9>
+				</XCN.22>
+				<XCN.23>
+					<CWE.1>abc</CWE.1>
+					<CWE.2>long default text</CWE.2>
+					<CWE.3>SNM</CWE.3>
+					<CWE.4>abc</CWE.4>
+					<CWE.5>X</CWE.5>
+					<CWE.6>CLP</CWE.6>
+					<CWE.7>X</CWE.7>
+					<CWE.8>X</CWE.8>
+					<CWE.9>text</CWE.9>
+				</XCN.23>
+			</EVN.5>
+			<EVN.6>
+				<TS.1>20080808</TS.1>
+				<TS.2>H</TS.2>
+			</EVN.6>
+			<EVN.7>
+				<HD.1>G</HD.1>
+			</EVN.7>
+		</EVN>
+	</ADR_A19.GROUP1>
+	<ZOE>
+		<ZOE.2>long default text</ZOE.2>
+		<ZOE.2>abc</ZOE.2>
+		<ZOE.2>long default text</ZOE.2>
+		<ZOE.4>A Value</ZOE.4>
+	</ZOE>
+	<ZID>
+		<ZID.1>A</ZID.1>
+		<ZID.1>B</ZID.1>
+	</ZID>
+	<ZID>
+		<ZID.1>C</ZID.1>
+		<ZID.1>D</ZID.1>
+	</ZID>
+</ADR_A19>

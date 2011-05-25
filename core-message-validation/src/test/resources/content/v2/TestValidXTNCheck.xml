@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<context:HL7V2MessageValidationContextDefinition xmlns:context="http://www.nist.gov/healthcare/validation/message/hl7/v2/context" xmlns:message="http://www.nist.gov/healthcare/message" xmlns:validation="http://www.nist.gov/healthcare/validation">
+	<context:ValidationConfiguration>
+		<context:HL7Tables>
+			<context:All/>
+		</context:HL7Tables>
+		<context:UserTables>
+			<context:All/>
+		</context:UserTables>
+	</context:ValidationConfiguration>
+	<context:FailureInterpretation>
+	</context:FailureInterpretation>
+	<context:XTNCheck>
+		<context:Location>
+			<message:Segment Name="EVN">
+				<message:Field Position="10"/>
+			</message:Segment>
+		</context:Location>
+	</context:XTNCheck>
+	<context:XTNCheck>
+		<context:Location>
+			<message:Segment Name="EVN">
+				<message:Field Position="11"/>
+			</message:Segment>
+		</context:Location>
+	</context:XTNCheck>
+	<context:XTNCheck>
+		<context:Location>
+			<message:Segment Name="EVN">
+				<message:Field Position="12"/>
+			</message:Segment>
+		</context:Location>
+	</context:XTNCheck>
+</context:HL7V2MessageValidationContextDefinition>

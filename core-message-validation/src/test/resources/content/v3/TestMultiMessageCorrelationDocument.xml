@@ -1,0 +1,25 @@
+<MessageValidationCorrelation xmlns="http://www.nist.gov/healthcare/validation/message/hl7/context" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.nist.gov/healthcare/validation/message/hl7/context file:///D:/home/svn/core-maven/trunk/core-xml-beans/src/main/xsd/MessageValidationCorrelation.xsd">
+	<Correlations>
+		<Correlation>
+			<SingleValue>
+				<Between>//*:receiver/*:device/*:id/@root</Between>
+				<And messageKey="query">//*:sender/*:device/*:id/@root</And>
+			</SingleValue>
+			<SingleValue optional="true">
+				<Between>//*:receiver/*:device/*:asAgent/*:representedOrganization/*:id/@root</Between>
+				<And messageKey="query">//*:sender/*:device/*:asAgent/*:representedOrganization/*:id/@root</And>
+			</SingleValue>
+			<SingleValue>
+				<Between>//*:sender/*:device/*:id/@root</Between>
+				<And messageKey="query">//*:receiver/*:device/*:id/@root</And>
+			</SingleValue>
+			<SingleValue optional="true">
+				<Between>//*:sender/*:device/*:asAgent/*:representedOrganization/*:id/@root</Between>
+				<And messageKey="query">//*:receiver/*:device/*:asAgent/*:representedOrganization/*:id/@root</And>
+			</SingleValue>
+			<Copy>
+				<Source messageKey="query">//*:controlActProcess/*:queryByParameter</Source>
+			</Copy>
+		</Correlation>
+	</Correlations>
+</MessageValidationCorrelation>

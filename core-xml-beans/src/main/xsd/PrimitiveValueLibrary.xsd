@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2009 sp1 (http://www.altova.com) by Sydney Henrard (NIST) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.nist.gov/healthcare/generation/message/data" targetNamespace="http://www.nist.gov/healthcare/generation/message/data" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="PrimitiveValueLibrary">
+		<xs:complexType>
+			<xs:sequence minOccurs="0" maxOccurs="unbounded">
+				<xs:element name="ProfileElement">
+					<xs:complexType>
+						<xs:sequence minOccurs="0" maxOccurs="unbounded">
+							<xs:element name="Item">
+								<xs:complexType>
+									<xs:attribute name="Value" type="xs:string" use="required"/>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<xs:attribute name="Segment" type="xs:string" use="required"/>
+						<xs:attribute name="Field" type="xs:string" use="required"/>
+						<xs:attribute name="Component" type="xs:string"/>
+						<xs:attribute name="SubComponent" type="xs:string"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

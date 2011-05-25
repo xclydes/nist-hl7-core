@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faqs title="Frequently Asked Questions">
+  <part id="General">
+    <faq id="location-expression-segment-group">
+      <question>How to express the message location when there are segment groups?</question>
+      <answer>
+        <p>
+        In the validation the first part of DataValueLocationItem is a Location element. In that element you specify the
+        message location. The segment groups are part of the profile but not of the message if the encoding is ER7. The 
+        problem occurs when there are repetition and segment groups involved. Let's take an example:
+        </p>
+        <p>The profile is:
+        <pre>
+            &lt;SegGroup Name="G4O" LongName="G4O" Usage="O" Min="0" Max="1"&gt;
+              &lt;SegGroup Name="ORDER" LongName="ORDER" Usage="R" Min="1" Max="*"&gt;
+                &lt;Segment Name="RXA" LongName="Pharmacy/Treatment Administration" Usage="R" Min="1" Max="1"&gt;
+                ...
+                &lt;/Segment&gt;
+              &lt;/SegGroup&gt;
+            &lt;/SegGroup&gt;
+        </pre>
+        </p>
+        <p>The ER7 message is:
+        <pre>
+        MSH|...
+        RXA|...
+        RXA|...
+        </pre>
+        </p>
+        <p>The equivalent XML message (VXU_V04 message type) would be:
+        <pre>
+        &lt;MSH&gt;...&lt;/MSH&gt;
+        &lt;VXU_V04.G4O&gt;
+          &lt;VXU_V04.ORDER&gt;
+            &lt;RXA&gt;...&lt;/RXA&gt;
+          &lt;/VXU_V04.ORDER&gt;
+        &lt;/VXU_V04.G4O&gt;
+        &lt;VXU_V04.G4O&gt;
+          &lt;VXU_V04.ORDER&gt;
+            &lt;RXA&gt;...&lt;/RXA&gt;
+          &lt;/VXU_V04.ORDER&gt;
+        &lt;/VXU_V04.G4O&gt;
+        </pre>
+        </p>
+        <p>Now we want to check that RXA[2].1 is equals to a specific value. In ER7 the validation context will be:
+        <pre>
+     &lt;gen:DataValueLocationItem&gt;
+      &lt;gen:Location&gt;
+            &lt;mes1:Segment Name="RXA" InstanceNumber="2"&gt;
+              &lt;mes1:Field Position="1"&gt;
+              &lt;/mes1:Field&gt;
+            &lt;/mes1:Segment&gt;
+      &lt;/gen:Location&gt;
+      &lt;gen:Value&gt;Specific Value&lt;/gen:Value&gt;
+    &lt;/gen:DataValueLocationItem&gt;
+        </pre>
+        whereas in XML it will be:
+        <pre>
+     &lt;gen:DataValueLocationItem&gt;
+      &lt;gen:Location&gt;
+        &lt;mes1:SegmentGroup Name="G4O"&gt;
+          &lt;mes1:SegmentGroup Name="ORDER" InstanceNumber="2"&gt;
+            &lt;mes1:Segment Name="RXA" InstanceNumber="1"&gt;
+              &lt;mes1:Field Position="1"&gt;
+              &lt;/mes1:Field&gt;
+            &lt;/mes1:Segment&gt;
+          &lt;/mes1:SegmentGroup&gt;
+        &lt;/mes1:SegmentGroup&gt;
+      &lt;/gen:Location&gt;
+      &lt;gen:Value&gt;Specific Value&lt;/gen:Value&gt;
+    &lt;/gen:DataValueLocationItem&gt;
+        </pre>
+        The InstanceNumber is set on the segment group for XML and on the segment for ER7. For ER7 the segment groups is 
+        optional and should not be used since ER7 message has no concept of segment group.
+        </p>
+      </answer>
+    </faq>
+  </part>
+</faqs>

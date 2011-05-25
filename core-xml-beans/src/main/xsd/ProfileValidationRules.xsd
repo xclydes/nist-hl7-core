@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2008 rel. 2 sp2 (http://www.altova.com) by Caroline Rosin (NIST) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.nist.gov/healthcare/validation/profile/hl7/v2/rules" targetNamespace="http://www.nist.gov/healthcare/validation/profile/hl7/v2/rules" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="HL7V2ProfileValidationRulesDefinition">
+		<xs:complexType>
+			<xs:sequence maxOccurs="unbounded">
+				<xs:element ref="ValidationRule"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ValidationRule">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="RuleItems"/>
+			</xs:sequence>
+			<xs:attribute name="Type" type="ruleType" use="required"/>
+			<xs:attribute name="Name" type="xs:string" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="RuleParameters">
+		<xs:complexType>
+			<xs:sequence maxOccurs="unbounded">
+				<xs:element name="RuleParameter">
+					<xs:complexType>
+						<xs:attributeGroup ref="paramAttr"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="RuleItems">
+		<xs:complexType>
+			<xs:sequence maxOccurs="unbounded">
+				<xs:element name="RuleItem">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element ref="RuleParameters"/>
+						</xs:sequence>
+						<xs:attribute name="SeqNo" type="xs:int" use="required"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:attributeGroup name="paramAttr">
+		<xs:attribute name="Name" type="xs:string" use="required"/>
+		<xs:attribute name="Value" type="xs:string" use="required"/>
+	</xs:attributeGroup>
+	<xs:simpleType name="ruleType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="checkSegment"/>
+			<xs:enumeration value="checkDatatype"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

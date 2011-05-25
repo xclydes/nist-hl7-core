@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:HL7V2MessageValidationContextDefinition xmlns:con="http://www.nist.gov/healthcare/validation/message/hl7/v2/context" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<con:ValidationConfiguration>
+		<con:HL7Tables>
+			<con:All/>
+		</con:HL7Tables>
+		<con:UserTables>
+			<con:All/>
+		</con:UserTables>
+	</con:ValidationConfiguration>
+	<con:FailureInterpretation>
+		<con:MessageFailure Result="IGNORE" Type="LENGTH"/>
+	</con:FailureInterpretation>
+	<con:MessageInstanceSpecificValues>
+	</con:MessageInstanceSpecificValues>
+</con:HL7V2MessageValidationContextDefinition>

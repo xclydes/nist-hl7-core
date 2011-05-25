@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2011 sp1 (http://www.altova.com) by Sydney (NIST) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.nist.gov/healthcare/validation/message/hl7/v2/context" xmlns:message="http://www.nist.gov/healthcare/message" xmlns:validation="http://www.nist.gov/healthcare/validation" xmlns:xml="http://www.w3.org/XML/1998/namespace" targetNamespace="http://www.nist.gov/healthcare/validation/message/hl7/v2/context" elementFormDefault="qualified" attributeFormDefault="unqualified" xml:common="http://www.nist.gov/healthcare/validation/message/hl7">
+	<xs:import namespace="http://www.nist.gov/healthcare/message" schemaLocation="Message.xsd"/>
+	<xs:import namespace="http://www.nist.gov/healthcare/validation" schemaLocation="Validation.xsd"/>
+	<xs:simpleType name="DatatypeCheckConstants">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="HD"/>
+			<xs:enumeration value="CE"/>
+			<xs:enumeration value="CWE"/>
+			<xs:enumeration value="CNE"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="MessageFailureInterpretationV2">
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="MessageFailure" type="MessageFailureV2"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="DataValueLocationItemV2">
+		<xs:sequence>
+			<xs:element name="Location">
+				<xs:complexType>
+					<xs:complexContent>
+						<xs:extension base="message:MessageElement">
+							<xs:attribute name="CheckAll" type="xs:boolean"/>
+						</xs:extension>
+					</xs:complexContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="Value" type="validation:Value" maxOccurs="unbounded"/>
+			<xs:element name="Comment" type="validation:CommentType" minOccurs="0"/>
+		</xs:sequence>
+		<xs:attribute name="AssertionResult" type="validation:AssertionResultConstants"/>
+	</xs:complexType>
+	<xs:complexType name="MessageInstanceSpecificValuesV2">
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="DataValueLocationItem" type="DataValueLocationItemV2"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="MessageFailureV2">
+		<xs:attribute name="Result" type="validation:AssertionResultConstants" use="required"/>
+		<xs:attribute name="Type" type="validation:AssertionTypeV2Constants" use="required"/>
+	</xs:complexType>
+	<xs:complexType name="HL7V2MessageValidationContextDefinition">
+		<xs:sequence>
+			<xs:element name="ValidationConfiguration">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="HL7Tables">
+							<xs:complexType>
+								<xs:choice minOccurs="0">
+									<xs:element name="HL7Table" type="xs:string" maxOccurs="unbounded"/>
+									<xs:element name="All">
+										<xs:simpleType>
+											<xs:restriction base="xs:string">
+												<xs:length value="0"/>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:element>
+									<xs:element name="None">
+										<xs:simpleType>
+											<xs:restriction base="xs:string">
+												<xs:length value="0"/>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:element>
+								</xs:choice>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="UserTables">
+							<xs:complexType>
+								<xs:choice minOccurs="0">
+									<xs:element name="UserTable" type="xs:string" maxOccurs="unbounded"/>
+									<xs:element name="All">
+										<xs:simpleType>
+											<xs:restriction base="xs:string">
+												<xs:length value="0"/>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:element>
+									<xs:element name="None">
+										<xs:simpleType>
+											<xs:restriction base="xs:string">
+												<xs:length value="0"/>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:element>
+								</xs:choice>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="FailureInterpretation" type="MessageFailureInterpretationV2"/>
+			<xs:element name="MessageInstanceSpecificValues" type="MessageInstanceSpecificValuesV2" minOccurs="0"/>
+			<xs:element name="IfThenElse" minOccurs="0" maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="If" type="DataValueLocationItemV2"/>
+						<xs:element name="Then" type="DataValueLocationItemV2"/>
+						<xs:element name="Else" type="DataValueLocationItemV2" minOccurs="0"/>
+					</xs:sequence>
+					<xs:attribute name="MatchingSegmentInstanceNumber" type="xs:boolean"/>
+					<xs:attribute name="MatchingFieldInstanceNumber" type="xs:boolean"/>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="DatatypeCheck" minOccurs="0" maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Location" type="message:MessageElement"/>
+						<xs:element name="Comment" type="validation:CommentType" minOccurs="0"/>
+					</xs:sequence>
+					<xs:attribute name="Datatype" type="DatatypeCheckConstants" use="required"/>
+					<xs:attribute name="AssertionResult" type="validation:AssertionResultConstants"/>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="PluginCheck" type="validation:PluginCheckType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="HL7V2MessageValidationContextDefinition" type="HL7V2MessageValidationContextDefinition"/>
+</xs:schema>

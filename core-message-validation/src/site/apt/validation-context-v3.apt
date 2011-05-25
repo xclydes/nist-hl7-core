@@ -1,0 +1,185 @@
+  This document will show you how to configure the message validation with a validation context.
+
+What is a Message Validation Context
+
+  A message validation context is an XML file used to configure the message validation. The configuration is two-fold:
+
+  * Each errors are categorized and you can configure the interpretation of these errors. For instance you can ignore the error related to length.
+
+  * You can write validation rules for the message content. For instance you want to check that the patient name is SMITH.
+
+Interpretation of Errors
+
+  The first part of configuration defines the interpretation of the different errors. Each type of error can be set to four different levels. The type of errors are:
+
+  * DATA: The value does not match a constant specified in the profile. The value does not match a value defined in a table.
+
+  []
+
+  The different levels are:
+
+  * ERROR: This is an error, a message is considered valid if the number of error is 0.
+
+  * WARNING: The error is flagged as a warning.
+
+  * IGNORE: The error is ignored. For instance you can ignore the LENGTH error, even if there are some errors of this type, the message will be considered as valid.
+
+  * ALERT: This level is to distinguish a real error, and an error due to a user input error like not provided a local table, or specifying a location in the message that does not exist.
+
+  * AFFIRMATIVE: This level is to report any positive checks done during the validation.
+
++--+
+<context:HL7V3MessageValidationContextDefinition
+	xmlns:context="http://www.nist.gov/healthcare/validation/message/hl7/v3/context"
+	xmlns:message="http://www.nist.gov/healthcare/message"
+	xmlns:validation="http://www.nist.gov/healthcare/validation">
+	<context:FailureInterpretation>
+		<context:MessageFailure Type="DATA" Result="ERROR"/>
+	</context:FailureInterpretation>
+        ...
+</context:HL7V3MessageValidationContextDefinition>
++--+
+
+Validation Rules (Message Content Validation)
+
+* Plain Text
+
+  In the following rules, we want to check that one of the values at /*:PRPA_IN201301UV02/*:processingCode/@code is equal to A or B.
+
++--+
+<context:HL7V3MessageValidationContextDefinition
+	xmlns:context="http://www.nist.gov/healthcare/validation/message/hl7/v3/context"
+	xmlns:message="http://www.nist.gov/healthcare/message"
+	xmlns:validation="http://www.nist.gov/healthcare/validation">
+        ...
+	<context:MessageInstanceSpecificValues>
+		<context:DataValueLocationItem>
+			<context:XPath>/*:PRPA_IN201301UV02/*:processingCode/@code</context:XPath>
+			<context:Value>
+				<validation:PlainText>A</validation:PlainText>
+			</context:Value>
+			<context:Value>
+				<validation:PlainText>B</validation:PlainText>
+			</context:Value>
+		</context:DataValueLocationItem>
+	...
+	<context:MessageInstanceSpecificValues>
+</context:HL7V3MessageValidationContextDefinition>
++--+
+
+* Regular Expression
+
+  In the following rules, we want to check that one the values at /*:PRPA_IN201301UV02/*:processingCode/@code is equal to A or B but with a regular expression [AB].
+
++--+
+<context:HL7V3MessageValidationContextDefinition
+	xmlns:context="http://www.nist.gov/healthcare/validation/message/hl7/v3/context"
+	xmlns:message="http://www.nist.gov/healthcare/message"
+	xmlns:validation="http://www.nist.gov/healthcare/validation">
+        ...
+	<context:MessageInstanceSpecificValues>
+		<context:DataValueLocationItem>
+			<context:XPath>/*:PRPA_IN201301UV02/*:processingCode/@code</context:XPath>
+			<context:Value>
+				<validation:RegEx>[AB]</validation:RegEx>
+			</context:Value>
+		</context:DataValueLocationItem>
+	...
+	<context:MessageInstanceSpecificValues>
+</context:HL7V3MessageValidationContextDefinition>
++--+
+
+* Presence
+
+  In the following rules, we want to check that /*:PRPA_IN201301UV02/*:processingCode/@code is not present in the message.
+  <You can also check that an element is present by using the regular expression .+>
+
++--+
+<context:HL7V3MessageValidationContextDefinition
+	xmlns:context="http://www.nist.gov/healthcare/validation/message/hl7/v3/context"
+	xmlns:message="http://www.nist.gov/healthcare/message"
+	xmlns:validation="http://www.nist.gov/healthcare/validation">
+        ...
+	<context:MessageInstanceSpecificValues>
+		<context:DataValueLocationItem>
+			<context:XPath>/*:PRPA_IN201301UV02/*:processingCode/@code</context:XPath>
+			<context:Value>
+				<validation:Empty/>
+			</context:Value>
+		</context:DataValueLocationItem>
+	...
+	<context:MessageInstanceSpecificValues>
+</context:HL7V3MessageValidationContextDefinition>
++--+
+
+* CheckAll
+
+  In the following rules, we want to check that all the values at the location /*:PRPA_IN201301UV02/*:processingCode/@code is equal to A9 or match the regular expression B\d or that it is present. You have to set the attribute CheckAll to true in the Location element to use this feature.
+
++--+
+<context:HL7V3MessageValidationContextDefinition
+	xmlns:context="http://www.nist.gov/healthcare/validation/message/hl7/v3/context"
+	xmlns:message="http://www.nist.gov/healthcare/message"
+	xmlns:validation="http://www.nist.gov/healthcare/validation">
+        ...
+	<context:MessageInstanceSpecificValues>
+		<context:DataValueLocationItem>
+			<context:XPath>/*:PRPA_IN201301UV02/*:processingCode/@code</context:XPath>
+			<context:Value>
+				<validation:PlainText>A</validation:PlainText>
+			</context:Value>
+			<context:Value>
+				<validation:RegEx>B\d</validation:RegEx>
+			</context:Value>
+			<context:Value>
+				<validation:RegEx>.+</validation:RegEx>
+			</context:Value>
+		</context:DataValueLocationItem>
+	...
+	<context:MessageInstanceSpecificValues>
+</context:HL7V3MessageValidationContextDefinition>
++--+
+
+* Conditional Check
+
+  In the following rules, we want to check that that the value at /*:PRPA_IN201301UV02/*:receiver/*:device/*:telecom/@value is A or B if the value at /*:PRPA_IN201301UV02/*:processingCode/@code is ST or ID. If the value at /*:PRPA_IN201301UV02/*:processingCode/@code is set to a value different from ST or ID, you want to check that the value at //*:asOtherIDs/*:id/@root is C or D. The mechanism is similar to a if-then-else pattern.
+
+
++--+
+<context:HL7V3MessageValidationContextDefinition
+	xmlns:context="http://www.nist.gov/healthcare/validation/message/hl7/v3/context"
+	xmlns:message="http://www.nist.gov/healthcare/message"
+	xmlns:validation="http://www.nist.gov/healthcare/validation">
+        ...
+	<context:IfThenElse>
+		<context:If>
+                        <context:XPath>/*:PRPA_IN201301UV02/*:processingCode/@code</context:XPath>
+			<context:Value>
+				<validation:PlainText>ST</validation:PlainText>
+			</context:Value>
+			<context:Value>
+				<validation:PlainText>ID</validation:PlainText>
+			</context:Value>
+		</context:If>
+		<context:Then>
+                        <context:XPath>/*:PRPA_IN201301UV02/*:receiver/*:device/*:telecom/@value</context:XPath>
+			<context:Value>
+				<validation:PlainText>A</validation:PlainText>
+			</context:Value>
+			<context:Value>
+				<validation:PlainText>B</validation:PlainText>
+			</context:Value>
+		</context:Then>
+		<context:Else>
+                        <context:XPath>//*:asOtherIDs/*:id/@root</context:XPath>
+			<context:Value>
+				<validation:PlainText>C</validation:PlainText>
+			</context:Value>
+			<context:Value>
+				<validation:PlainText>D</validation:PlainText>
+			</context:Value>
+		</context:Else>
+	</context:IfThenElse>
+	...
+</context:HL7V3MessageValidationContextDefinition>
++--+

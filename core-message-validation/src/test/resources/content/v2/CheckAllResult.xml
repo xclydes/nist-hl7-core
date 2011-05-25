@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<context:HL7V2MessageValidationContextDefinition xmlns:context="http://www.nist.gov/healthcare/validation/message/hl7/v2/context" xmlns:message="http://www.nist.gov/healthcare/message" xmlns:validation="http://www.nist.gov/healthcare/validation">
+	<context:ValidationConfiguration>
+		<context:HL7Tables>
+			<context:All/>
+		</context:HL7Tables>
+		<context:UserTables>
+			<context:All/>
+		</context:UserTables>
+	</context:ValidationConfiguration>
+	<context:FailureInterpretation>
+		<context:MessageFailure Type="MESSAGE_STRUCTURE" Result="ERROR"/>
+		<context:MessageFailure Type="USAGE" Result="ERROR"/>
+		<context:MessageFailure Type="CARDINALITY" Result="ERROR"/>
+		<context:MessageFailure Type="LENGTH" Result="IGNORE"/>
+		<context:MessageFailure Type="DATATYPE" Result="ERROR"/>
+		<context:MessageFailure Type="DATA" Result="ERROR"/>
+	</context:FailureInterpretation>
+	<context:MessageInstanceSpecificValues>
+		<context:DataValueLocationItem>
+			<context:Location CheckAll="true">
+				<message:Segment Name="ZOE">
+					<message:Field Position="2" AnyInstanceNumber="true">
+					</message:Field>
+				</message:Segment>
+			</context:Location>
+			<context:Value>
+				<validation:Regex>\w{3}</validation:Regex>
+			</context:Value>
+			<context:Value>
+				<validation:PlainText>abc</validation:PlainText>
+			</context:Value>
+			<context:Value>
+				<validation:PlainText>long default text</validation:PlainText>
+			</context:Value>
+		</context:DataValueLocationItem>
+		<context:DataValueLocationItem>
+			<context:Location CheckAll="true">
+				<message:Segment Name="ZID" AnyInstanceNumber="true">
+					<message:Field Position="1" InstanceNumber="1">
+					</message:Field>
+				</message:Segment>
+			</context:Location>
+			<context:Value>
+				<validation:Regex>A|C</validation:Regex>
+			</context:Value>
+		</context:DataValueLocationItem>
+		<context:DataValueLocationItem>
+			<context:Location CheckAll="true">
+				<message:Segment Name="ZID" InstanceNumber="1">
+					<message:Field Position="1" AnyInstanceNumber="true">
+					</message:Field>
+				</message:Segment>
+			</context:Location>
+			<context:Value>
+				<validation:Regex>A|B</validation:Regex>
+			</context:Value>
+		</context:DataValueLocationItem>
+		<context:DataValueLocationItem>
+			<context:Location CheckAll="true">
+				<message:Segment Name="ZID" AnyInstanceNumber="true">
+					<message:Field Position="1" AnyInstanceNumber="true">
+					</message:Field>
+				</message:Segment>
+			</context:Location>
+			<context:Value>
+				<validation:Regex>A|B|C|D</validation:Regex>
+			</context:Value>
+		</context:DataValueLocationItem>
+	</context:MessageInstanceSpecificValues>
+</context:HL7V2MessageValidationContextDefinition>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<context:HL7V2MessageValidationContextDefinition xmlns:context="http://www.nist.gov/healthcare/validation/message/hl7/v2/context"
+                                                 xmlns:message="http://www.nist.gov/healthcare/message"
+                                                 xmlns:validation="http://www.nist.gov/healthcare/validation">
+	  <context:FailureInterpretation>
+		    <context:MessageFailure Type="MESSAGE_STRUCTURE" Result="ERROR"/>
+		    <context:MessageFailure Type="USAGE" Result="ERROR"/>
+		    <context:MessageFailure Type="CARDINALITY" Result="ERROR"/>
+		    <context:MessageFailure Type="LENGTH" Result="IGNORE"/>
+		    <context:MessageFailure Type="DATATYPE" Result="ERROR"/>
+		    <context:MessageFailure Type="DATA" Result="ERROR"/>
+	  </context:FailureInterpretation>
+	  <context:MessageInstanceSpecificValues>
+		    <context:DataValueLocationItem>
+			      <context:Location>
+				        <SegGroup Name="GROUP1">
+					          <message:Segment Name="EVN">
+						            <message:Field Position="5">
+							              <message:Component Position="5" InstanceNumber="2"/>
+						            </message:Field>
+					          </message:Segment>
+				        </SegGroup>
+			      </context:Location>
+			      <context:Value>
+				        <validation:PlainText>Gazelle Sending Application</validation:PlainText>
+			      </context:Value>
+			      <context:Value>
+				        <validation:PlainText>Another Value</validation:PlainText>
+			      </context:Value>
+		    </context:DataValueLocationItem>
+		    <context:DataValueLocationItem>
+			      <context:Location>
+				        <SegGroup Name="GROUP1">
+					          <message:Segment Name="EVN">
+						            <message:Field Position="5">
+							              <message:Component Position="5"/>
+						            </message:Field>
+					          </message:Segment>
+				        </SegGroup>
+			      </context:Location>
+			      <context:Value>
+				        <validation:PlainText>Gazelle Sending Application</validation:PlainText>
+			      </context:Value>
+			      <context:Value>
+				        <validation:PlainText>Another Value</validation:PlainText>
+			      </context:Value>
+		    </context:DataValueLocationItem>
+		    <context:DataValueLocationItem>
+			      <context:Location>
+				        <SegGroup Name="GROUP1">
+					          <message:Segment Name="EVN">
+						            <message:Field Position="5">
+							              <message:Component Position="5"/>
+						            </message:Field>
+					          </message:Segment>
+				        </SegGroup>
+			      </context:Location>
+			      <context:Value>
+				        <validation:PlainText>Gazelle Sending Application</validation:PlainText>
+			      </context:Value>
+			      <context:Value>
+				        <validation:PlainText>Another Value</validation:PlainText>
+			      </context:Value>
+			      <context:Value>
+				        <validation:PlainText>JR</validation:PlainText>
+			      </context:Value>
+		    </context:DataValueLocationItem>
+	  </context:MessageInstanceSpecificValues>
+</context:HL7V2MessageValidationContextDefinition>

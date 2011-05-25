@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RSP_K21 xmlns="urn:hl7-org:v2xml">
+<MSH>
+<MSH.1>|</MSH.1>
+<MSH.2>^~\&amp;</MSH.2>
+<MSH.3><HD.1>SA</HD.1></MSH.3>
+<MSH.4><HD.1>SF</HD.1></MSH.4>
+<MSH.5><HD.1>RA</HD.1></MSH.5>
+<MSH.6><HD.1>RF</HD.1></MSH.6>
+<MSH.7><TS.1>20100421</TS.1></MSH.7>
+<MSH.9><CM.1>RSP</CM.1><CM.2>K22</CM.2><CM.3>RSP_K21</CM.3></MSH.9>
+<MSH.10>text</MSH.10>
+<MSH.11><PT.1>P</PT.1></MSH.11>
+<MSH.12><VID.1>2.5</VID.1></MSH.12>
+<MSH.13>1254</MSH.13>
+</MSH>
+<MSA>
+<MSA.1>AA</MSA.1>
+<MSA.2>text</MSA.2>
+</MSA>
+<QAK>
+<QAK.1>text</QAK.1>
+<QAK.2>OK</QAK.2>
+</QAK>
+<QPD>
+<QPD.1><CE.2>text</CE.2></QPD.1>
+<QPD.2>IHE Query</QPD.2>
+<QPD.3><QIP.1>text</QIP.1><QIP.2>text</QIP.2></QPD.3>
+<QPD.3><QIP.1>text</QIP.1><QIP.2>text</QIP.2></QPD.3>
+<QPD.8><CX.4><HD.1>SF</HD.1><HD.2>text</HD.2></CX.4></QPD.8>
+</QPD>
+<RSP_K21.QUERY_RESPONSE>
+<PID>
+<PID.1>007</PID.1>
+<PID.3>
+<CX.1>text</CX.1>
+<CX.4><HD.1>RF</HD.1><HD.2>text</HD.2><HD.3>HL7</HD.3></CX.4>
+</PID.3>
+<PID.5>
+<XPN.1><FN.1>text</FN.1></XPN.1>
+<XPN.7>B</XPN.7>
+<XPN.12><TS.1>20100421</TS.1></XPN.12><XPN.70>extra data</XPN.70>
+</PID.5>
+<PID.8>M</PID.8>
+</PID>
+</RSP_K21.QUERY_RESPONSE>
+<YYY>
+<YYY.1>20100421</YYY.1>
+<YYY.2>(301)975-2000</YYY.2>
+</YYY>
+</RSP_K21>

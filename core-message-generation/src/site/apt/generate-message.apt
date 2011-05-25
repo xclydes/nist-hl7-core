@@ -1,0 +1,33 @@
+  This document will show you how to run the validation in a Java program.
+
+Get the library
+
+  Your project must include core-message-generation jar and its dependencies. NEED to know if we distribute the lib using a maven repository.
+
+A Sample Client
+
+  This sample client generates a HL7V2 message encoded in ER7.
+
++--+
+// Load a Profile
+Profile profile = new Profile("",
+        new File(MessageGenerationClient.class.getResource(
+                "/ORU_R01.xml").getFile()));
+// Load a Message Validation Context
+HL7V2MessageGenerationContextDefinitionDocument context = HL7V2MessageGenerationContextDefinitionDocument.Factory.parse(
+        MessageGenerationClient.class.getResource("/GenerationContext.xml"));
+// Generate a message
+MessageGeneration generation = new MessageGeneration();
+MessageGenerationResult result = generation.generate(profile,
+        context);
+// List Errors
+System.out.println(String.format("Number of errors: %d",
+        result.getErrors().size()));
+for (String error : result.getErrors()) {
+    System.out.println(error);
+}
+// Show the generated message
+if (result.getMessages().size() == 1) {
+    System.out.println(result.getMessages().get(0).getMessageAsString());
+}
++--+

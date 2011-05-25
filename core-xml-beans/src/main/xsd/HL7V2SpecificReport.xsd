@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2011 sp1 (http://www.altova.com) by Sydney (NIST) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.nist.gov/healthcare/validation/message/hl7/v2/report" xmlns:context="http://www.nist.gov/healthcare/validation/message/hl7/v2/context" xmlns:validation="http://www.nist.gov/healthcare/validation" xmlns:profile="http://www.nist.gov/healthcare/profile" xmlns:message="http://www.nist.gov/healthcare/message" targetNamespace="http://www.nist.gov/healthcare/validation/message/hl7/v2/report" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:import namespace="http://www.nist.gov/healthcare/validation/message/hl7/v2/context" schemaLocation="HL7V2MessageValidationContext.xsd"/>
+	<xs:import namespace="http://www.nist.gov/healthcare/validation" schemaLocation="Validation.xsd"/>
+	<xs:import namespace="http://www.nist.gov/healthcare/profile" schemaLocation="Profile.xsd"/>
+	<xs:import namespace="http://www.nist.gov/healthcare/message" schemaLocation="Message.xsd"/>
+	<xs:complexType name="HL7V2MessageReport">
+		<xs:sequence>
+			<xs:element name="MetaData">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Profile">
+							<xs:complexType>
+								<xs:attribute name="Organization" type="xs:string"/>
+								<xs:attribute name="Name" type="xs:string"/>
+								<xs:attribute name="Type" type="xs:string"/>
+								<xs:attribute name="Version" type="xs:string"/>
+								<xs:attribute name="HL7Version" type="xs:string"/>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="Message">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="XmlMessage" type="xs:anyType" minOccurs="0"/>
+									<xs:element name="Er7Message" type="xs:string" minOccurs="0"/>
+								</xs:sequence>
+								<xs:attribute name="Id" type="xs:string"/>
+								<xs:attribute name="Filename" type="xs:string"/>
+								<xs:attribute name="Encoding" type="message:EncodingConstants" use="required"/>
+								<xs:attribute name="Transformed" type="xs:boolean" use="required"/>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="Context" type="context:HL7V2MessageValidationContextDefinition" minOccurs="0"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="AssertionList" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element name="Assertion">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="Location">
+										<xs:complexType>
+											<xs:sequence>
+												<xs:element name="Line" type="xs:int" minOccurs="0"/>
+												<xs:element name="Column" type="xs:int" minOccurs="0"/>
+												<xs:element name="Path" type="xs:string" minOccurs="0">
+													<xs:annotation>
+														<xs:documentation>Notation MSH[1].2[3].4.5</xs:documentation>
+													</xs:annotation>
+												</xs:element>
+												<xs:element name="XPath" type="xs:string" minOccurs="0">
+													<xs:annotation>
+														<xs:documentation>XPath expression</xs:documentation>
+													</xs:annotation>
+												</xs:element>
+												<xs:element name="ProfileElement" type="profile:ProfileElement" minOccurs="0"/>
+											</xs:sequence>
+										</xs:complexType>
+									</xs:element>
+									<xs:element name="Content" type="xs:string" minOccurs="0"/>
+									<xs:element name="Description" type="xs:string"/>
+									<xs:element name="AssertionDeclaration" type="xs:string" minOccurs="0"/>
+									<xs:element name="Reference" type="xs:string" minOccurs="0"/>
+								</xs:sequence>
+								<xs:attribute name="Type" type="validation:AssertionTypeV2Constants" use="required"/>
+								<xs:attribute name="Result" type="validation:AssertionResultConstants" use="required"/>
+								<xs:attribute name="Severity" type="validation:ErrorSeverityConstants" use="required"/>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="ValidationSupportedHL7VersionType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="2.5"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<context:HL7V3MessageValidationContextDefinition xmlns:context="http://www.nist.gov/healthcare/validation/message/hl7/v3/context"
+                                                 xmlns:message="http://www.nist.gov/healthcare/message"
+                                                 xmlns:validation="http://www.nist.gov/healthcare/validation">
+	  <context:FailureInterpretation>
+		    <context:MessageFailure Type="DATA" Result="ERROR"/>
+	  </context:FailureInterpretation>
+	  <context:MessageInstanceSpecificValues>
+		    <context:DataValueLocationItem>
+			      <context:XPath>/*:awrong/*:location</context:XPath>
+			      <context:Value>
+				        <validation:PlainText>A Value</validation:PlainText>
+			      </context:Value>
+		    </context:DataValueLocationItem>
+		    <context:DataValueLocationItem>
+			      <context:XPath>/*:awrong/*:location</context:XPath>
+			      <context:Value>
+				        <validation:Regex>.+</validation:Regex>
+			      </context:Value>
+		    </context:DataValueLocationItem>
+		    <context:DataValueLocationItem>
+			      <context:XPath>/*:awrong/*:location</context:XPath>
+			      <context:Value>
+				        <validation:Empty/>
+			      </context:Value>
+		    </context:DataValueLocationItem>
+	  </context:MessageInstanceSpecificValues>
+</context:HL7V3MessageValidationContextDefinition>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<context:HL7V2MessageValidationContextDefinition xmlns:context="http://www.nist.gov/healthcare/validation/message/hl7/v2/context" xmlns:message="http://www.nist.gov/healthcare/message" xmlns:validation="http://www.nist.gov/healthcare/validation">
+	<context:ValidationConfiguration>
+		<context:HL7Tables>
+			<context:All/>
+		</context:HL7Tables>
+		<context:UserTables>
+			<context:All/>
+		</context:UserTables>
+	</context:ValidationConfiguration>
+	<context:FailureInterpretation>
+	</context:FailureInterpretation>
+	<context:DatatypeCheck Datatype="CE" AssertionResult="WARNING">
+		<context:Location>
+			<message:Segment Name="MSH">
+				<message:Field Position="12">
+					<message:Component Position="2"/>
+				</message:Field>
+			</message:Segment>
+		</context:Location>
+	</context:DatatypeCheck>
+	<context:DatatypeCheck Datatype="CE" AssertionResult="WARNING">
+		<context:Location>
+			<message:Segment Name="MSH">
+				<message:Field Position="12">
+					<message:Component Position="3"/>
+				</message:Field>
+			</message:Segment>
+		</context:Location>
+	</context:DatatypeCheck>
+	<context:DatatypeCheck Datatype="CE" AssertionResult="WARNING">
+		<context:Location>
+			<message:Segment Name="MSH">
+				<message:Field Position="19"/>
+			</message:Segment>
+		</context:Location>
+	</context:DatatypeCheck>
+	<context:DatatypeCheck Datatype="CE" AssertionResult="WARNING">
+		<context:Location>
+			<message:SegmentGroup Name="GROUP1"/>
+		</context:Location>
+	</context:DatatypeCheck>
+	<context:DatatypeCheck Datatype="CE" AssertionResult="WARNING">
+		<context:Location>
+			<message:Segment Name="ZID"/>
+		</context:Location>
+	</context:DatatypeCheck>
+	<context:DatatypeCheck Datatype="CE" AssertionResult="WARNING">
+		<context:Location>
+			<message:SegmentGroup Name="GROUP1">
+				<message:Segment Name="EVN">
+					<message:Field Position="5">
+						<message:Component Position="2">
+							<message:SubComponent Position="1"/>
+						</message:Component>
+					</message:Field>
+				</message:Segment>
+			</message:SegmentGroup>
+		</context:Location>
+	</context:DatatypeCheck>
+</context:HL7V2MessageValidationContextDefinition>

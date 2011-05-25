@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 (http://www.altova.com) by Sydney Henrard (NIST) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.nist.gov/healthcare/validation/profile/hl7/v2/report" xmlns:profile="http://www.nist.gov/healthcare/profile" xmlns:validation="http://www.nist.gov/healthcare/validation" xmlns:context="http://www.nist.gov/healthcare/validation/profile/hl7/v2/context" targetNamespace="http://www.nist.gov/healthcare/validation/profile/hl7/v2/report" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:import namespace="http://www.nist.gov/healthcare/profile" schemaLocation="Profile.xsd"/>
+	<xs:import namespace="http://www.nist.gov/healthcare/validation" schemaLocation="Validation.xsd"/>
+	<xs:import namespace="http://www.nist.gov/healthcare/validation/profile/hl7/v2/context" schemaLocation="HL7V2ProfileValidationContext.xsd"/>
+	<xs:complexType name="ProfileMetadata">
+		<xs:attribute name="Organization" type="xs:string"/>
+		<xs:attribute name="Name" type="xs:string"/>
+		<xs:attribute name="Type" type="xs:string"/>
+		<xs:attribute name="Version" type="xs:string"/>
+		<xs:attribute name="HL7Version" type="xs:string"/>
+		<xs:attribute name="Filename" type="xs:string"/>
+	</xs:complexType>
+	<xs:complexType name="ProfileLocation">
+		<xs:sequence>
+			<xs:element name="ProfileElement" type="profile:ProfileElement" minOccurs="0"/>
+			<xs:element name="Line" type="xs:int" minOccurs="0"/>
+			<xs:element name="Column" type="xs:int" minOccurs="0"/>
+			<xs:element name="XPath" type="xs:string" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="HL7V2ProfileValidationReport">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Metadata">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Profile">
+								<xs:complexType>
+									<xs:complexContent>
+										<xs:extension base="ProfileMetadata"/>
+									</xs:complexContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="Context" type="context:HL7V2ProfileValidationContextDefinition"/>
+						</xs:sequence>
+						<xs:attribute name="ProfileValidationVersion" type="xs:string" use="required"/>
+						<xs:attribute name="Datetime" type="xs:dateTime" use="required"/>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="AssertionList" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence maxOccurs="unbounded">
+							<xs:element name="Assertion">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="Location" type="ProfileLocation" minOccurs="0"/>
+										<xs:element name="Description" type="xs:string"/>
+									</xs:sequence>
+									<xs:attribute name="Type" type="validation:AssertionTypeProfileConstants" use="required"/>
+									<xs:attribute name="Result" type="validation:AssertionResultConstants" use="required"/>
+									<xs:attribute name="Severity" type="validation:ErrorSeverityConstants" use="required"/>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<xs:attribute name="ErrorCount" type="xs:int" use="required"/>
+						<xs:attribute name="WarningCount" type="xs:int" use="required"/>
+						<xs:attribute name="IgnoreCount" type="xs:int" use="required"/>
+						<xs:attribute name="UserCount" type="xs:int" use="required"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

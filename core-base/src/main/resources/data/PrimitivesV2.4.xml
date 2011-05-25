@@ -1,0 +1,8 @@
+<PrimitiveValueLibrary xmlns="http://www.nist.gov/healthcare/generation/message/data">
+  <ProfileElement Segment="MSH" Field="Field Separator">
+    <Item Value="|"/>
+  </ProfileElement>
+  <ProfileElement Segment="MSH" Field="Encoding Characters">
+    <Item Value="^~\&amp;"/>
+  </ProfileElement>
+</PrimitiveValueLibrary>

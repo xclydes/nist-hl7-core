@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 (http://www.altova.com) by Sydney Henrard (NIST) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.nist.gov/healthcare/generation" xmlns:message="http://www.nist.gov/healthcare/message" xmlns:profile="http://www.nist.gov/healthcare/profile" targetNamespace="http://www.nist.gov/healthcare/generation" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:import namespace="http://www.nist.gov/healthcare/message" schemaLocation="Message.xsd"/>
+	<xs:import namespace="http://www.nist.gov/healthcare/profile" schemaLocation="Profile.xsd"/>
+	<xs:simpleType name="MessageSetConstants">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="VALID"/>
+			<xs:enumeration value="INVALID"/>
+			<xs:enumeration value="SAMPLE_MIN"/>
+			<xs:enumeration value="SAMPLE_RANDOM"/>
+			<xs:enumeration value="SAMPLE_MAX"/>
+			<xs:enumeration value="SPECIFIC"/>
+			<xs:enumeration value="USAGE_ERROR"/>
+			<xs:enumeration value="CARD_ERROR"/>
+			<xs:enumeration value="LENGTH_ERROR"/>
+			<xs:enumeration value="TABLE_ERROR"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="VariantConstants">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="USAGE_ERROR"/>
+			<xs:enumeration value="CARDINALITY_ERROR"/>
+			<xs:enumeration value="LENGTH_ERROR"/>
+			<xs:enumeration value="TABLE_ERROR"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="MessagePopulationResourceTypeConstants">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="PRIMITIVE"/>
+			<xs:enumeration value="TABLE"/>
+			<xs:enumeration value="DEFAULT"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="MessageSet">
+		<xs:sequence minOccurs="0">
+			<xs:element name="MessageInstanceSpecificValues" type="MessageInstanceSpecificValuesGeneration" minOccurs="0"/>
+			<xs:element name="MessageVariant" type="MessageVariant" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute name="Type" type="MessageSetConstants" use="required"/>
+		<xs:attribute name="NumberOfMessages" type="xs:int" use="required"/>
+		<xs:attribute name="Encoding" type="message:EncodingConstants" use="required"/>
+	</xs:complexType>
+	<xs:complexType name="MessageVariant">
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="Location" type="profile:ProfileElement"/>
+		</xs:sequence>
+		<xs:attribute name="Type" type="VariantConstants" use="required"/>
+	</xs:complexType>
+	<xs:complexType name="DataValueLocationItemGeneration">
+		<xs:sequence>
+			<xs:element name="Location" type="message:MessageElement"/>
+			<xs:element name="Value" type="xs:string" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="MessageInstanceSpecificValuesGeneration">
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="DataValueLocationItem" type="DataValueLocationItemGeneration"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="MessagePopulationModule">
+		<xs:sequence maxOccurs="unbounded">
+			<xs:element name="Resource">
+				<xs:complexType>
+					<xs:attribute name="Type" type="MessagePopulationResourceTypeConstants" use="required"/>
+					<xs:attribute name="Source" type="xs:string" use="required"/>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>
